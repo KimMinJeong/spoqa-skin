@@ -52,24 +52,33 @@ body{
 	margin-right:0px;
 	margin-bottom:0px;
 	margin-left:-15px;
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
+	opacity:0.85;
+
 }
 .phone_part{
 	margin-top:10px;
 	margin-right:-8px;
 	margin-bottom:0px;
 	margin-left:-10px;
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
+	opacity:0.85;
 }
 .gallery_part{
 	margin-top:0px;
 	margin-right:0px;
 	margin-bottom:0px;
 	margin-left:-15px;
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
+	opacity:0.85;
 }
 .address_part{
 	margin-top:0px;
 	margin-right:-8px;
 	margin-bottom:0px;
 	margin-left:-10px;
+	box-shadow: 0px 1px 1pxrgba(255,255,255,0.2);	
+	opacity:0.85;
 }
 @media (min-height: 960px) {
    .panel > .panel-body {
@@ -109,7 +118,7 @@ body{
 }
 .reward_part{
  	width:700px;
- 	margin-top:-5px;
+ 	padding-top:10px;
 }
 .navbar > .nav > li >img  {
 	padding-left:20px;
@@ -135,9 +144,13 @@ body{
 	color:#b2b2b2;
 	padding:10px;
 }
+.panel-heading{
+	margin-bottom:-15px;
+}
 .panel-heading > a{
 	color:#b2b2b2;
 }
+/*cardUI에 들어가는 css*/
 .panel-body{
 	background-color:#FFFFFF;
 	opacity:0.85;
@@ -185,18 +198,15 @@ li > a{
 	color:#333333;
 }
 
-.panel-body{
-	margin-top:-15px;
-}
-
 .menu_part{
 	width:700px;
-	padding-top:25px;
-	
+	padding-top:10px;
+
 }
 .reward_part{
 	width:700px;
-	margin-top:-5px;
+	padding-top:0px;
+	
 }
 .media-heading{
 	color:#333333;
