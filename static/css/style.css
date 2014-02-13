@@ -121,7 +121,7 @@ body{
 	border-bottom:1px solid #C9CED6; 
 	border-color:#c9ced6;	
 }
-.navbar >.nav >  a:hover{
+.navbar >.nav > a:link, a:hover{
 	background-color:#FFFFFF;
 	color:#e66125;
 } 
@@ -217,5 +217,80 @@ li > a{
 .media-object{
 	height:80px;
 	width:80px;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.bgImage{
+		background-color:#edeff2;
+			
+	}
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 480px) {
+	.bgImage{
+		background-color:#edeff2;
+			
+	}
+
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+.bgImage{
+		background-color:#edeff2;
+		background-image:none;		
+	}
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+.bgImage{
+		background-color:#edeff2;
+		background-image:none;		
+	}
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+
+}
+ 
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+
+}
+ 
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
 }
 
