@@ -20,6 +20,8 @@ body{
 }
 .icn{
 	opacity:0.4;
+	height:23px;
+	width:23px 
 }
 #image{
 	margin-top:20px;
@@ -74,8 +76,12 @@ body{
     min-height: 20px;
   }
 }
+
 .notice_part > .panel > .panel-body > h5{
 	color : #e66125;	
+}
+.notice_part > .panel > .panel-body > .orange_font{
+	color : #e66125;
 }
 .pic{
 	height:70px;
@@ -162,6 +168,9 @@ a{
 	margin-top:-20px;
 	
 }
+#inGallery > .tab-pane > .panel-body{
+	margin: -10px -20px -20px -20px;
+}
 a.thumbnail:hover,
 a.thumbnail.active{
 	opacity:1;
@@ -175,7 +184,27 @@ a.thumbnail{
 li > a{
 	color:#333333;
 }
+
 .panel-body{
 	margin-top:-15px;
+}
+
+.menu_part{
+	width:700px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.reward_part{
+	width:700px;
+	margin-top:-5px;
+}
+.media-heading{
+	color:#333333;
+}
+#phone{
+	margin-top:10px;
+}
+.grey_text{
+	color:#b2b2b2;
 }
 
