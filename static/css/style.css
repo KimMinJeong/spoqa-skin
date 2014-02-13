@@ -34,6 +34,10 @@ body{
    margin-right:5px;
    margin-left:-22px;
 }
+.notice{
+	width:700px;
+	margin-right:20px;
+}
 .notice_part{
 	margin-top:10px;
 	margin-right:0px;
