@@ -147,6 +147,9 @@ body{
 a{
 	color: #888888;
 }
+.gallery_expansion{
+	margin-top:5px;
+}
 .gallery_expansion > .panel{
 	width:700px;
 	margin-left:-15px;
@@ -168,9 +171,6 @@ a{
 	margin-top:-20px;
 	
 }
-#inGallery > .tab-pane > .panel-body{
-	margin: -10px -20px -20px -20px;
-}
 a.thumbnail:hover,
 a.thumbnail.active{
 	opacity:1;
@@ -191,8 +191,8 @@ li > a{
 
 .menu_part{
 	width:700px;
-	margin-top:10px;
-	margin-bottom:10px;
+	padding-top:25px;
+	
 }
 .reward_part{
 	width:700px;
@@ -206,5 +206,9 @@ li > a{
 }
 .grey_text{
 	color:#b2b2b2;
+}
+.media-object{
+	height:100px;
+	width:100px;
 }
 
