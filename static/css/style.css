@@ -39,6 +39,7 @@ body{
    margin-top:20px;
    margin-bottom:0px;
    margin-right:5px;
+   margin-left:
    
 }
 .notice{
@@ -261,6 +262,8 @@ li > a{
 }
 .snav{
 	display:none;
+	margin-right:20px;
+	margin-left:auto;
 }
 @media screen and (max-width: 320px) { 
 	body{
@@ -292,7 +295,8 @@ li > a{
 	}
 	.snav{
 		background-color:#FFFFFF;
-		vertical-align:middle!important
+		vertical-align:middle!important;
+		width:100%;
 	}
 	.snav, .menu_part, .reward_part{
 		display:inline-block;
@@ -342,4 +346,3 @@ li > a{
 
 	
 }
-

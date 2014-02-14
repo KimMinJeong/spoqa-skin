@@ -23,10 +23,9 @@
 					</ul>
 			</div>
 		</div>
-	
 		<div class="row">
 			<div class="col-md-3 col-md-offset-1" id="image">
-				<img src="../static/img/taco_2.png" class="img-responsive">
+				<img src="../static/img/taco_2.png" class="img-responsive" id="img-profile">
 				<div class="navbar navbar-default">
 				    <ul class="nav nav-tabs nav-stacked" id="myTab">
 						<li><h6>역삼,논현 > 레스토랑</h6>
@@ -46,9 +45,7 @@
 				<div id="cover">
 					<img src="../static/img/700x300.png" class="img-responsive">
 				</div>
-				
 				<div class="tab-content">
-					
 				<div class="tab-pane" id="gallery">
 				<div class="col-md-12">
 					<div class="gallery_expansion">
@@ -72,7 +69,6 @@
 									</a></li>
 								</ul>
 							</div>
-						
 							<div class="tab-content" id="inGallery">
 								<div class="tab-pane active" id="sample1"> 
 									<div class="panel-body">
@@ -325,6 +321,16 @@
 	
 	});
 </script>	
+<script type="text/javascript">
+	$('#smyTab li').on('click', function(){
+		if($(this).attr('class') != '#tab1'){
+			$('#img-profile').hide();
+		}
+		else{
+			$('#img-profile').show();
+		}
+	});
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
