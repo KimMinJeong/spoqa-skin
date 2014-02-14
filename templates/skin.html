@@ -2,15 +2,17 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
- 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script src="../static/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/style.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    
 </head>
 <body>
+	<script src="../static/js/bootstrap.min.js"></script>
+ 
 	<div class="bgImage"> </div>
 	<div class="container">
 		<div class="row">
@@ -20,7 +22,7 @@
 				    <ul class="nav nav-tabs nav-stacked" id="myTab">
 						<li><h6>역삼,논현 > 레스토랑</h6>
 						<h3>타코드부로</h3>
-						<img src="../static/img/icn_users.png" class="icn">
+						<img src="../static/img/icn_users.png">
 						<span style="color:#888888">1명이 도도 적립중입니다.</span></li>
 						<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
@@ -43,8 +45,7 @@
 							<div class="panel-heading"> 
 								<img src="../static/img/icn_gallery.png" class="icn">갤러리
 							</div>
-							<!-- 갤러리 확장
-								=======================================-->
+
 							<div class="panel-body">
 								<ul class="nav nav-tabs">
 									<li class="active">
@@ -59,7 +60,8 @@
 									</a></li>
 								</ul>
 							</div>
-						
+							<!-- 갤러리 확장
+								=======================================-->
 							<div class="tab-content" id="inGallery">
 								<div class="tab-pane active" id="sample1"> 
 									<div class="panel-body">
@@ -92,29 +94,31 @@
 						  		<img src="../static/img/icn_noti.png" height="23px" width="23px" class="icn">공지사항
 						  	</div>
 						  	<div class="panel-body">
-						    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+						    	<h5 class="orange">
+						    		도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
 									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
 									길이가 이정도 됨.
 								</h5>
-								<h6 align="right">2013.12.15</h6>
-							<hr>	
+								<h6 align="right" class="grey_text">2013.12.15</h6>
+								<hr />
 						  	</div>
 						  	<div class="panel-body">
-						    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+						    	<h5>
+						    		도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
 									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
 									길이가 이정도 됨.
 								</h5>
-								<h6 align="right">2013.12.15</h6>
+								<h6 align="right" class="grey_text">2013.12.15</h6>
+								<hr />
 						  	</div>
-							  	<hr>
 							<div class="panel-body">
-							   	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+							   	<h5>
+							   		도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
 									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
 									길이가 이정도 됨.
 								</h5>
-								<h6 align="right">2013.12.15</h6>
+								<h6 align="right" class="grey_text">2013.12.15</h6>
 							</div>
-							  	<hr>
 						</div>
 					</div>
 				</div>
@@ -161,9 +165,7 @@
 		        						</a>
 	        							<div class="media-body">
 		            						<h5 class="media-heading">바질프라운크림파스타</h5>
-		            						<small class="grey_text">12000
-		            						여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨.</small>
+		            						<small class="grey_text">12000</small>
 						        		</div>
 					    			</div>
 								</div>
@@ -186,9 +188,9 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<img src="../static/img/icn_book.png" class="icn">리워드
+								<small style="float:right" class="grey_text">매장 내의 도도포인트 태블릿으로 포인트를 쌓아 리워드를 받으실 수 있습니다.</small>
 							</div>
 							<div class="panel-body">
-								<h6>매장 내의 도도포인트 태블릿으로 포인트를 쌓아 리워드를 받으실 수 있습니다.</h6>
 								<div class="row">
 									<div class="col-md-3">
 										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
@@ -232,11 +234,11 @@
 								<img src="../static/img/icn_noti.png" height="23px" width="23px" class="icn">공지사항<a style="float:right" class="full-view">전체보기</a>
 							</div>
 						  	<div class="panel-body">
-						    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+						    	<h5 class="orange">도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
 									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
 									길이가 이정도 됨.
 								</h5>
-								<h6 align="right">2013.12.15</h6>
+								<h6 align="right" class="grey_text">2013.12.15</h6>
 						  	</div>
 						</div>
 					</div>
@@ -305,9 +307,7 @@
 		$('#myTab a:eq(2)').tab('show');
 	
 	});
-	
 
-</script>	
-
+</script>
 </html>
 
