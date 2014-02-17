@@ -69,9 +69,7 @@ body{
 }
 .gallery_part{
 	width:340px;
-	margin-top:-10px;
-	margin-right:0px;
-	margin-bottom:0px;
+	margin-top:-5px;
 	padding-right:0px;
 	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
@@ -79,8 +77,7 @@ body{
 }
 .address_part{
 	width:340px;
-	margin-top:10px;
-	margin-bottom:0px;
+	margin-top:-10px;
 	/*margin-right:-8px;*/
 	margin-left:-30px;
 	box-shadow: 0px 1px 1pxrgba(255,255,255,0.2);	
@@ -98,6 +95,8 @@ body{
     min-height: 20px;
   }
 }
+
+
 .orange_font{
 	color:#e66125;
 }
@@ -145,7 +144,7 @@ IMG.displayed {
 }
 .reward_part{
  	width:700px;
- 	padding-top:10px;
+ 	margin-top:-10px;
 }
 .reward_part .panel_body{
 	display:inline-block;
@@ -238,7 +237,7 @@ li > a{
 }
 .reward_part{
 	width:700px;
-	padding-top:0px;
+	padding-top:-10px;
 }
 .gallery{
 	width:120px;
@@ -265,6 +264,10 @@ li > a{
 	margin-right:20px;
 	margin-left:auto;
 }
+.black_text{
+	color:#333333;
+}
+/* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
 		background-color:#EDEFF2;
@@ -304,11 +307,11 @@ li > a{
 	#inGallery img{
 		float:none;
 		vertical-align:middle;
-}
+	}
 	.gallery_part{
 		display:inline-block;
 		width:280px;
-		margin-top:10px;
+		margin-top:-5px;
 		/*margin-left:-15px;*/
 		padding-right:0px;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
@@ -323,6 +326,7 @@ li > a{
 	.reward_part .panel-body{
 		display:inline-block;
 	}
+	
 	.gallery_expansion > .panel{
 		width:280px;
 		margin-top: 15px;
@@ -336,6 +340,9 @@ li > a{
 	.gallery{
 		height:70px;
 		width:70px;
+	}
+	.reward_part{
+		margin-top:-10px;
 	}
 }
 @media only screen 
@@ -383,7 +390,7 @@ and (max-width: 480px)
 	}
 	.gallery_part{
 		display:inline-block;
-		margin-top:10px;
+		margin-top:-5px;
 		/*margin-left:-15px;*/
 		padding-right:0px;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
@@ -411,11 +418,15 @@ and (max-width: 480px)
 		height:70px;
 		width:70px;
 	}
+	.reward_part{
+		margin-top:-10px;
+	}
+	.notice_part{
+		margin-top:-5px;
+	}
 }
 @media screen and (max-width: 800px) { 
 	
 }
 @media screen and (max-width: 1028px) { 
-
-	
 }
