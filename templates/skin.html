@@ -180,7 +180,7 @@
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
 	        							<div class="media-body">
-		            						<p class="media-heading">바질프라운크림파스타</v>
+		            						<p class="media-heading">바질프라운크림파스타</p>
 		            						<small class="grey_text"><i>12000</i></small>
 		            						<h6 class="grey_text">여기에 음식에 대한 설명을작성할 수 있습니다.
 		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨.</h6>
@@ -202,29 +202,27 @@
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6 class="black_text">5<img src="../static/img/point.png" height="12px" width="12px"></h6>
-									</div>
-									<div class="inline">
-										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
-										<div class="footer">
-										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6 class="black_text">5<img src="../static/img/point.png" height="12px" width="12px"></h6>
-										</div>
+										<h6 class="black_text">5<img src="../static/img/point.png" class="point"></h6>
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6 class="black_text">5<img src="../static/img/point.png" height="12px" width="12px"></h6>
+										<h6 class="black_text">5<img src="../static/img/point.png" class="point"></h6>
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6>5<img src="../static/img/point.png" height="12px" width="12px"></h6>
+										<h6 class="black_text">5<img src="../static/img/point.png" class="point"></h6>
+									</div>
+									<div class="inline">
+										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
+										<h6 class="black_text">모든 음료 한잔 무료</h6>
+										<h6>5<img src="../static/img/point.png"></h6>
 									</div>
 									<div class="inline">
 											<img src="../static/img/dodo.jpg" class="img-responsive gallery">
 											<h6>모든 음료 한잔 무료</h6>
-											<h6>5<img src="../static/img/point.png" height="12px" width="12px"></h6>
+											<h6>5<img src="../static/img/point.png" class="point"></h6>
 									</div>
 									
 							</div>
@@ -254,7 +252,7 @@
 						<div class="gallery_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_gallery.png" height="23px" width="23px" class="icn">갤러리<a style="float:right" class="full-image">전체보기</a><br>
+									<img src="../static/img/icn_gallery.png" class="icn">갤러리<a style="float:right" class="full-image">전체보기</a><br>
 								</div>
 							  	<div class="panel-body">
 							  		<img src="../static/img/dodo.jpg" class="pic">
@@ -274,7 +272,7 @@
 						<div class="phone_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_phone.png" height="23px" width="23px" class="icn">전화번호
+									<img src="../static/img/icn_phone.png" class="icn">전화번호
 								</div>
 							  	<div class="panel-body">
 							 		<p>02-1234-5678</p>
@@ -284,7 +282,7 @@
 						<div class="address_part">
 	                		<div class="panel panel-default">
 	                			<div class="panel-heading">
-	                				<img src="../static/img/icn_location.png" height="23px" width="23px" class="icn">주소  <a style="float:right;" href="http://map.naver.com/?dlevel=12&lat=37.5067524&lng=127.0550098&query=7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZwgNDM3&type=ADDRESS&tab=1&enc=b64"> 지도보기 ></a>
+	                				<img src="../static/img/icn_location.png" class="icn">주소  <a style="float:right;" href="http://map.naver.com/?dlevel=12&lat=37.5067524&lng=127.0550098&query=7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZwgNDM3&type=ADDRESS&tab=1&enc=b64"> 지도보기 ></a>
 	                			</div>
 		                   		<div class="panel-body">
 		                           	<p>서울시 강남구 테헤란로 437 삼영빌딩 7층</p>
@@ -341,7 +339,6 @@
 	});
 	$('.full-image').on('click', function(){
 		$('#smyTab a:eq(2)').tab('show');
-	
 	});
 </script>
 <script type="text/javascript">
@@ -349,6 +346,11 @@
 		if($(window).width() <= 400){
 		$('.inline').hide();
 		$('.inline:lt(3)').show();	}		
+	});
+	$('#showMore').on('click', function(){
+		$('.menu_part').toggle('hide');
+		$('.inline').show();
+		$('#showMore').hide();
 	});
 	
 </script>
