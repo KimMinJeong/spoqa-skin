@@ -276,6 +276,12 @@ div.inline{
 div.inline > img{
 	margin-left:10px;
 }
+span > hr{
+	
+}
+#showMore{
+	display:none;
+}
 
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
@@ -373,6 +379,20 @@ div.inline > img{
 	}
 	.reward_part{
 		margin-top:-10px;
+	}
+	.reward_part span{
+		vertical-align:middle!important;
+		text-align: center;
+		cursor:pointer;	
+		font-weight:normal;
+	}
+	#showMore{
+		display:block;
+	}
+	.reward_part hr{
+		margin:0 auto;
+		border-color:#c9ced6;
+		width:90%;
 	}
 	
 }

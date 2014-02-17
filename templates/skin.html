@@ -213,28 +213,22 @@
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
-										<div class="footer">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
 										<h6 class="black_text">5<img src="../static/img/point.png" height="12px" width="12px"></h6>
-										</div>
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive gallery">
-										<div class="footer">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
 										<h6>5<img src="../static/img/point.png" height="12px" width="12px"></h6>
-										</div>
 									</div>
-									
-									
 									<div class="inline">
 											<img src="../static/img/dodo.jpg" class="img-responsive gallery">
-											<div class="footer">
 											<h6>모든 음료 한잔 무료</h6>
 											<h6>5<img src="../static/img/point.png" height="12px" width="12px"></h6>
-											</div>
 									</div>
+									
 							</div>
+							<span id="showMore"><hr><p>리워드 전체보기 >></p></span>
 						</div>
 					</div>
 				</div>
@@ -349,6 +343,14 @@
 		$('#smyTab a:eq(2)').tab('show');
 	
 	});
+</script>
+<script type="text/javascript">
+	$(window).resize(function(){
+		if($(window).width() <= 400){
+		$('.inline').hide();
+		$('.inline:lt(3)').show();	}		
+	});
+	
 </script>
 
 </html>
