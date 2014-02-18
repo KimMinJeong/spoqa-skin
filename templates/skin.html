@@ -392,23 +392,27 @@
 		$('#img-profile').hide();
 		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
 		});
-		
 	});
 	$('.full-image').on('click', function(){
 		$('#myTab a:eq(2)').tab('show');
-	
 	});
-	
 </script>	
 <script type="text/javascript">
-	$('#smyTab li').on('click', function(){
-		if($(this).attr('class') != '#tab1'){
-			$('#img-profile').hide();
-		}
-		else{
-			$('#img-profile').show();
-		}
-	});
+	
+   $('#smyTab li').on('click', function(){
+   	console.log($(this).attr('class').search('#tab1'));
+      if($(this).attr('class').search('#tab1') != 0) {
+         $('#img-profile').hide();
+         $('.mobile_panel').hide();
+         $('.kakao').hide();
+      }
+      else{
+         $('#img-profile').show();
+         $('.mobile_panel').show();
+         $('.kakao').show();
+      }
+   });
+
 </script>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -419,12 +423,10 @@
 	});
 	$('.full-image').on('click', function(){
 		$('#smyTab a:eq(2)').tab('show');
-		
 	});
 	$('.full-point').on('click', function(){
 		$('#smyTab a:eq(6)').tab('show');
 	});
-	
 	$('.full-point').on('click', function(){
 		$('#smyTab a:eq(6)').tab('show');
 	});
@@ -435,7 +437,6 @@
 		$('.full-menu').hide();
 	});
 </script>
-
 <script type="text/javascript">
 	$(document).click(function(event){
 		if(event.target.id != 'info')
@@ -444,7 +445,6 @@
 			$('.kakao').hide();
 		}
 	});
-	
 </script>
 <script type="text/javascript">
 $.partlyShow = function(){
@@ -462,7 +462,6 @@ $.partlyShow = function(){
 		$('.inline').show();
 		$('#showMore').fadeOut();
 		});
-		
 	$('#smyTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
