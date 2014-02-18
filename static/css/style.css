@@ -12,9 +12,9 @@ body{
 .bgImage{
 	background-image:url('../img/taco.png');
 	width:100%; 
-	background-repeat:no-repeat; 
 	background-size:100%; 
 	height:100%;
+	background-repeat:no-repeat; 
 	-webkit-filter: blur(30px);
 	position:absolute;
 	-moz-filter: blur(30px); 
@@ -33,17 +33,18 @@ body{
    margin-top:20px;
    margin-bottom:0px;
    margin-right:-20px;
-   
    }
 #cover_photo{
    margin-top:20px;
    margin-bottom:0px;
    margin-right:5px;
    margin-left:
-   
+}
+#count{
+	display:none;
 }
 .notice{
-	width:700px;
+	max-width:700px;
 	margin-top:10px;
 	margin-right:20px;
 	position:absolute;
@@ -51,7 +52,7 @@ body{
 	opacity:0.85;
 }
 .notice_part{
-	width:340px;
+	max-width:340px;
 	margin-top:10px;
 	margin-bottom:0px;
 	/*margin-left:-15px;*/
@@ -60,7 +61,7 @@ body{
 
 }
 .phone_part{
-	width:340px;
+	max-width:340px;
 	margin-top:10px;
 	margin-bottom:0px;
 	margin-left:-30px;
@@ -68,19 +69,19 @@ body{
 	opacity:0.85;
 }
 .gallery_part{
-	width:340px;
-	margin-top:-10px;
+	max-width:340px;
+	margin-top:-5px;
 	padding-right:0px;
 	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
 .address_part{
-	width:340px;
+	max-width:340px;
 	margin-top:-10px;
 	/*margin-right:-8px;*/
 	margin-left:-30px;
-	box-shadow: 0px 1px 1pxrgba(255,255,255,0.2);	
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
 .address_part > .panel > .panel-body{
@@ -95,8 +96,6 @@ body{
     min-height: 20px;
   }
 }
-
-
 .orange_font{
 	color:#e66125;
 }
@@ -110,7 +109,9 @@ body{
 .notice_part > .panel > .panel-body > .orange_font{
 	color : #e66125;
 }
-
+.floLeft{
+	float:right!important;
+}
 IMG.pic{
 	height:70px;
 	width:70px;
@@ -123,6 +124,10 @@ IMG.displayed {
     margin-left: auto;
     margin-right: auto 
     }
+IMG.point{
+	height:12px;
+	width:12px;
+}
 .navbar{
 	width:230px;
 	background-color: #edeff2;
@@ -147,12 +152,13 @@ IMG.displayed {
 	color:#888888
 }
 .reward_part{
- 	width:700px;
+ 	max-width:700px;
  	margin-top:-10px;
 }
 .reward_part .panel_body{
 	display:inline-block;
 }
+
 .navbar > .nav > li >img  {
 	padding-left:20px;
 	padding-bottom:20px;
@@ -168,8 +174,9 @@ IMG.displayed {
 	color:#e66125;
 } 
 .gallery_expansion li {
-  	margin-left:-15px;
-  	margin-right:-15px;
+  	margin-left:-10px;
+  	margin-right:-10px;
+  	
 }
 .box{
 	height:96px;
@@ -195,10 +202,11 @@ a{
 	color: #888888;
 }
 .gallery_expansion{
+	
 	margin-top:5px;
 }
 .gallery_expansion > .panel{
-	width:700px;
+	max-width:700px;
 	margin-left:-15px;
 	margin-top: 15px;
 }
@@ -233,12 +241,8 @@ li > a{
 }
 
 .menu_part{
-	width:700px;
+	max-width:700px;
 	padding-top:10px;
-}
-.reward_part{
-	width:700px;
-	padding-top:-10px;
 }
 .point_part{
 	width:700px;
@@ -255,7 +259,7 @@ li > a{
 	color:#333333;
 }
 #phone{
-	margin-top:10px;
+	margin-top:1.3em;
 }
 .grey_text{
 	color:#b2b2b2;
@@ -272,6 +276,22 @@ li > a{
 .black_text{
 	color:#333333;
 }
+div.inline{
+	max-width:120px;
+	max-height:120px;
+	display:inline-block;
+	margin:0 auto;
+}
+div.inline > img{
+	margin-left:10px;
+}
+div.inline > h6{
+	text-align:center;
+}
+#showMore{
+	display:none;
+}
+
 .reward_part > .panel > .panel-body > img {
 	display:block;
 }
@@ -283,6 +303,7 @@ li > a{
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
+
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -323,8 +344,11 @@ li > a{
 	#inGallery img{
 		float:none;
 		vertical-align:middle;
+		height:250px;
 	}
 	.gallery_part{
+		display:inline-block;
+		margin-top:-5px;
 		width:280px;
 		margin-top:-10px;
 		/*margin-left:-15px;*/
@@ -341,16 +365,38 @@ li > a{
 	.reward_part .panel-body {
 		display:inline-block;
 	}
-	
+	.gallery_expansion{
+		position:fixed;
+		left:0;
+		top:30px;
+		height:100%;
+		float:inherit;
+		
+	}
+	#gallery{
+		width:100%;
+		height:100%;
+		float:inherit;
+		background-color:#FFFFFF;
+	}
 	.gallery_expansion > .panel{
-		width:280px;
-		margin-top: 15px;
+		width:100%;
+		height:100%;
+		margin:0 auto;
+	}
+	.gallery_expansion .panel-heading{
+		display:none;
+	}
+	.gallery_expansion > .panel > .panel-body{
+		margin-bottom:50px;	
+		padding-top:0px;
 	}
 	.gallery_expansion >.panel > .panel-body img{
 		display:inline-block;
-		margin: 10px;
-		height:40px;
-		width:40px;
+		margin: 0px;
+		height:60px;
+		width:60px;
+		
 	}
 	.gallery{
 		height:70px;
@@ -359,6 +405,32 @@ li > a{
 	.reward_part{
 		margin-top:-10px;
 	}
+	.reward_part span{
+		vertical-align:middle!important;
+		text-align: center;
+		cursor:pointer;	
+		font-weight:normal;
+	}
+	#showMore, #count{
+		display:block;
+	}
+	.reward_part hr{
+		margin:0 auto;
+		border-color:#c9ced6;
+		width:90%;
+	}
+	.reward_part .panel{
+		margin-top:10px;
+	}
+	
+	div.inline{
+		width:70px;
+		
+	}
+	div.inline > h6{
+	width:65px;
+	}
+
 	div.gallery_part{
 		display: inline-block;
 	}
@@ -433,6 +505,7 @@ and (max-width: 480px)
 	#cover, #myTab, #image > .navbar{
 		display:none;
 	}
+	
 	.snav{
 		background-color:#FFFFFF;
 		vertical-align:middle!important;
@@ -441,6 +514,12 @@ and (max-width: 480px)
 	.snav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
+	#gallery .nav-tabs{
+		margin-left:0 auto;
+		margin-right:0 auto;
+		display:block;
+		
+	}
 	#inGallery img{
 		float:none;
 		vertical-align:middle;
@@ -448,11 +527,12 @@ and (max-width: 480px)
 	.gallery_part{
 		width:380px;
 		margin-top:-5px;
-		/*margin-left:-15px;*/
+		
 		padding-right:0px;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
 	}
+
 	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .gallery_part, .point_part, .point_panel{
 		width:350px;
 		margin:0 auto;
@@ -465,9 +545,10 @@ and (max-width: 480px)
 	.gallery_expansion > .panel{
 		margin-top: 15px;
 	}
+	
 	.gallery_expansion >.panel > .panel-body img{
 		display:inline-block;
-		margin: 10px;
+		margin: 0 auto;
 		height:40px;
 		width:40px;
 	}
