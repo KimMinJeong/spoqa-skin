@@ -38,7 +38,6 @@ body{
    margin-top:20px;
    margin-bottom:0px;
    margin-right:5px;
-   margin-left:
 }
 #count{
 	display:none;
@@ -109,9 +108,6 @@ body{
 .notice_part > .panel > .panel-body > .orange_font{
 	color : #e66125;
 }
-.floLeft{
-	float:right!important;
-}
 IMG.pic{
 	height:70px;
 	width:70px;
@@ -122,7 +118,7 @@ IMG.pic{
 IMG.displayed {
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto;
     }
 IMG.point{
 	height:12px;
@@ -178,18 +174,11 @@ IMG.point{
   	margin-right:-10px;
   	
 }
-.box{
-	height:96px;
-	width:230px;
-	border:1px;
-	border-color:#c9ced6;
-	background-color:#FFFFFF;
-	filter: blur(1px);
-	color:#b2b2b2;
-	padding:10px;
-}
 .panel-heading > a{
 	color:#b2b2b2;
+}
+.panel > .panel-heading{
+	margin-bottom:-15px;
 }
 /*cardUI에 들어가는 css*/
 .panel-body{
@@ -245,11 +234,11 @@ li > a{
 	padding-top:10px;
 }
 .point_part{
-	width:700px;
-	/*display:none;*/
+	max-width:700px;
+	display:none;
 }
 .gallery{
-	width:120px;
+	max-width:120px;
 }
 .media{
 	float:left;
@@ -269,8 +258,12 @@ li > a{
 }
 .snav{
 	display:none;
-	margin-right:20px;
-	margin-left:auto;
+	margin:0 auto;
+}
+.snav li{
+	margin-left:-7px;
+	margin-right:-13px;
+
 }
 .black_text{
 	color:#333333;
@@ -298,7 +291,7 @@ div.inline > h6{
 	margin-bottom:1px;
 }
 .point_panel{
-	width:700px;
+	max-width:700px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
@@ -345,9 +338,7 @@ div.inline > h6{
 		vertical-align:middle;
 		height:250px;
 	}
-
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part, .point_panel{
-		width:280px;
+	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .gallery_part, .point_part,.gallery_part,.point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -393,15 +384,26 @@ div.inline > h6{
 		width:70px;
 	}
 	.reward_part{
+		position:relative;
 		margin-top:-10px;
+		width:100%
+	}
+	.point_part{
+		width:100%
+	}
+	.menu_part{
+ 		padding-top:0px;
+  		position: absolute;
+     	top: 100%;
+    	width:90%;
 	}
 	.reward_part span{
 		vertical-align:middle!important;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
-	}
-	#showMore, #count{
+	}	
+	#showMore, #count, .full-menu{
 		display:block;
 	}
 	.reward_part hr{
@@ -412,7 +414,6 @@ div.inline > h6{
 	.reward_part .panel{
 		margin-top:10px;
 	}
-	
 	div.inline{
 		width:70px;
 		
@@ -420,13 +421,9 @@ div.inline > h6{
 	div.inline > h6{
 	width:65px;
 	}
-
-	div.reward_part{
-		display: inline-block;
-	}
-	div.point_panel{
-		display:inline-block;
-	}
+	div.gallery_part, div.reward_part, div.point_panel{
+  		display: inline-block;
+  	}
 	#image{
 		position:relative;
 	}
@@ -448,12 +445,21 @@ div.inline > h6{
 		opacity:0.7;
 		color:#FFFFFF;
 	}
-	.point_part{
-		margin-bottom:-22px;
-	}
 	.point_panel{
 		display:none;
 	}
+	.point_part{
+ 		width:100%;	
+ 		margin-bottom:-22px;	
+  	}
+	.reward_part{
+ 		margin-top:-10px;
+		position:relative;
+		width:100%;
+  	}
+  	#p_r{
+ 		margin-top:10px;
+  	}
 	.notice{
 		margin-top:10px;
 	}
@@ -484,6 +490,7 @@ div.inline > h6{
 	.gallery_expansion{
 		margin-top: 10px;
 	}
+	
 }
 
 
@@ -539,7 +546,6 @@ and (max-width: 480px)
 	}
 
 	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .point_part, .point_panel{
-		width:350px;
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
