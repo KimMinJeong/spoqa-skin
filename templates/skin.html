@@ -357,6 +357,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<img src="../static/img/icn_phone_black.png"class="icn">전화번호
+									<a class="calling" style="float:right">전화하기 ></a>
 								</div>
 							  	<div class="panel-body">
 							 		<p>02-1234-5678</p>
@@ -386,13 +387,25 @@
 	<script src="../static/js/bootstrap.js"></script>
 </body>	
 
+<script>
+	$('.#tab1').click(function(){
+		if($(this).attr('class')=='#tab1'){
+			$('.#tab1').off("click");	
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	$(window).resize(function() {
+		$('.img-profile').show();
+	});
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
 	
 	$('.full-view').on('click', function(){
 		$('#myTab a:eq(3)').tab('show');
-		$('#img-profile').hide();
 		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
 		});
 		
@@ -456,6 +469,13 @@ $.partlyShow = function(){
 		$.partlyShow();
 		$('#showMore').show();
 		});
+</script>
+<script type="text/javascript">
+	$('#smyTab li').on('click', function(){
+		if($(this).attr('class') == '#tab1'){
+			$('.gallery_part').hide();
+		}
+	});
 </script>
 
 </html>
