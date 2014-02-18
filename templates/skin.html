@@ -6,16 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="../static/js/bootstrap.min.js"></script>
-	<script src="../static/js/jquery-1.10.2.js"></script>
 	<link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/style.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <!--[if IE 7]>
-		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
-	<![endif]-->
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 </head>
 <body>
 	<div class="bgImage"> </div>
@@ -149,49 +141,51 @@
 				<!--메뉴&리워드 상세 panel-->
 				<!--메뉴상세panel-->
 				<div class="tab-pane" id="menu_reward">
+					<div class="wrapper">
 					<div class="menu_part">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<img src="../static/img/icn_book_black.png" class="icn">메뉴
+								<span class="full-menu pull-right"> 전체보기 > </span>
 							</div>
 							<div class="panel-body">
 							<div class="row">
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
 	        							<a href="#" class="pull-left">
-		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive">
-		        						</a>
-	        							<div class="media-body">
-		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text"><i>12000</i></small>
-		            						<h6 class="grey_text">여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨. </h6>
-						        		</div>
-					    			</div>
-								</div>
-								<div class="col-sm-6 col-md-6">
-									<div class="media">
-	        							<a href="#" class="pull-left">
 		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive gallery">
 		        						</a>
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text"><i>12000</i></small>
-						        		</div>
-					    			</div>
-								</div>
-								</div>
-								<div class="row">
-								<div class="col-sm-6 col-md-6">
-									<div class="media">
-	        							<a href="#" class="pull-left">
-		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive gallery">
-		        						</a>
-	        							<div class="media-body">
-		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text">12000
+		            						<small class="grey_text">12,000원<br>
 		            						여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨.</small>
+		            							최대 2줄로 작성 가능합니다. </small>
+						        		</div>
+					    			</div>
+								</div>
+								<div class="col-sm-6 col-md-6">
+									<div class="media">
+	        							<a href="#" class="pull-left">
+		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive gallery">
+		        						</a>
+	        							<div class="media-body">
+		            						<p class="media-heading">바질프라운크림파스타</p>
+		            						<small class="grey_text">12,000원</small>
+						        		</div>
+					    			</div>
+								</div>
+								</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-6">
+									<div class="media">
+	        							<a href="#" class="pull-left">
+		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive gallery">
+		        						</a>
+	        							<div class="media-body">
+		            						<p class="media-heading">바질프라운크림파스타</p>
+		            						<small class="grey_text">12,000원<br>
+		            						여기에 음식에 대한 설명을작성할 수 있습니다.
+		            							최대 2줄로 작성 가능합니다.</small>
 						        		</div>
 					    			</div>
 								</div>
@@ -199,9 +193,9 @@
 									<div class="media">
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text"><i>12000</i></small>
-		            						<h6 class="grey_text">여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨.</h6>
+		            						<small class="grey_text">12,000원<br>
+		            						여기에 음식에 대한 설명을작성할 수 있습니다.
+		            							최대 2줄로 작성 가능합니다.</small>
 						        		</div>
 					    			</div>
 								</div>
@@ -210,15 +204,16 @@
 						</div>
 					</div>
 					<!--포인트-->
+				<div id="p_r">
 					<div class="point_part">
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-								<a class="full-point" style="float: right">156 <img src="../static/img/point.png" height="20" width="20"></a>
+								<a class="full-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20"></a>
 							</div>
 						</div>
 					</div>
-					<!--포인트 상세보기-->
+					<!--포인트 상세보기
 					<div class="tab-pane" id="point">
 						<div class="point_panel">
 							<div class="panel panel-default">
@@ -256,7 +251,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 					<!--리워드상세panel-->
 					<div class="reward_part">
 						<div class="panel panel-default">
@@ -296,6 +291,8 @@
 						</div>
 					</div>
 				</div>
+				</div>
+				</div>
 				<!--포인트 상세 panel-->
 				<div class="tab-pane">
 					<div class="row">
@@ -320,9 +317,9 @@
 				<div class="row">
 					<div class="col-sm-6 col-md-6">
 						<div class="notice_part">
-							<div class="panel panel-default" style="background-color:#edeff2;">
+							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a style="float:right" class="full-view">전체보기</a>
+									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a class="full-view pull-right">전체보기</a>
 								</div>
 							  	<div class="panel-body">
 							    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
@@ -357,7 +354,6 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<img src="../static/img/icn_phone_black.png"class="icn">전화번호
-									<a class="calling" style="float:right">전화하기 ></a>
 								</div>
 							  	<div class="panel-body">
 							 		<p>02-1234-5678</p>
@@ -383,48 +379,43 @@
 		</div>
 	</div>
 	
-	<script type="text/javascript" src="../static/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.js"></script>
 </body>	
 
-<script type="text/javascript">
-	$(window).resize(function() {
-		$('.img-profile').show();
-	});
-</script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
 	
 	$('.full-view').on('click', function(){
 		$('#myTab a:eq(3)').tab('show');
+		$('#img-profile').hide();
 		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
-		});	
+		});
 	});
 	$('.full-image').on('click', function(){
 		$('#myTab a:eq(2)').tab('show');
-	
 	});
-	
 </script>	
 <script type="text/javascript">
-	$('#smyTab li').on('click', function(){
-		if($(this).attr('class').search('#tab1') != 0) {
-			$('#img-profile').fadeOut();
-			$('.mobile_panel').fadeOut();
-			$('.kakao').fadeOut();
-		}
-		else{
-			$('#img-profile').show();
-			$('.mobile_panel').show();
-			$('.kakao').show();
-		}
-	});
-</script>
+	
+   $('#smyTab li').on('click', function(){
+   	console.log($(this).attr('class').search('#tab1'));
+      if($(this).attr('class').search('#tab1') != 0) {
+         $('#img-profile').hide();
+         $('.mobile_panel').hide();
+         $('.kakao').hide();
+      }
+      else{
+         $('#img-profile').show();
+         $('.mobile_panel').show();
+         $('.kakao').show();
+      }
+   });
 
+</script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
 	$('.full-view').on('click', function(){
 		$('#smyTab a:eq(3)').tab('show');
 		$('#smyTab li:nth-child(1)').attr('class', '#tab1 active');
@@ -432,35 +423,52 @@
 	});
 	$('.full-image').on('click', function(){
 		$('#smyTab a:eq(2)').tab('show');
-		
 	});
 	$('.full-point').on('click', function(){
 		$('#smyTab a:eq(6)').tab('show');
 	});
+	$('.full-point').on('click', function(){
+		$('#smyTab a:eq(6)').tab('show');
+	});
+	$('.full-menu').on('click', function(){
+		console.log($(this));
+		$('.reward_part').hide();
+		$('.media').show();
+		$('.full-menu').hide();
+	});
 </script>
-
-
+<script type="text/javascript">
+	$(document).click(function(event){
+		if(event.target.id != 'info')
+		{
+			$('.mobile_panel').hide();
+			$('.kakao').hide();
+		}
+	});
 </script>
 <script type="text/javascript">
 $.partlyShow = function(){
 		$('.inline').hide();
 		$('.inline:lt(3)').show();	
+		$('.media').hide();
+		$('.media:lt(3)').show();
 		return true;
 	};
 	if(($(window).width() <= 400)){
 		$.partlyShow();
 	}
 		$('#showMore').click( function(){
-		$('.menu_part').hide();
+		$('.menu_part').fadeOut();
 		$('.inline').show();
-		$('#showMore').hide();
+		$('#showMore').fadeOut();
 		});
 	$('#smyTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
 		$('#showMore').show();
+		$('.reward_part').show();
+		$('.full-menu').show();
 		});
 </script>
-
 
 </html>
