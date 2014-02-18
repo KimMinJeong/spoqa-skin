@@ -40,6 +40,9 @@ body{
    margin-right:5px;
    margin-left:
 }
+#count{
+	display:none;
+}
 .notice{
 	max-width:700px;
 	margin-top:10px;
@@ -151,6 +154,7 @@ IMG.point{
 .reward_part .panel_body{
 	display:inline-block;
 }
+
 .navbar > .nav > li >img  {
 	padding-left:20px;
 	padding-bottom:20px;
@@ -390,7 +394,7 @@ div.inline > h6{
 		cursor:pointer;	
 		font-weight:normal;
 	}
-	#showMore{
+	#showMore, #count{
 		display:block;
 	}
 	.reward_part hr{
@@ -398,6 +402,10 @@ div.inline > h6{
 		border-color:#c9ced6;
 		width:90%;
 	}
+	.reward_part .panel{
+		margin-top:10px;
+	}
+	
 	div.inline{
 		width:70px;
 		
@@ -440,6 +448,7 @@ and (max-width: 480px)
 	#cover, #myTab, #image > .navbar{
 		display:none;
 	}
+	
 	.snav{
 		background-color:#FFFFFF;
 		vertical-align:middle!important;
