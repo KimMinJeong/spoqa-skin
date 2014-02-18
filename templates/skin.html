@@ -104,7 +104,7 @@
 				=======================================-->
 				<div class="tab-pane fade" id="notice">
 					<div class="row">
-						<div class="col-sm-12 col-md-12">
+						<div class="col-sm-12 col-md-12" id="noti">
 						<div class="notice">
 							<div class="panel panel-default">
 							  	<div class="panel-heading">
@@ -141,6 +141,7 @@
 				<!--메뉴&리워드 상세 panel-->
 				<!--메뉴상세panel-->
 				<div class="tab-pane" id="menu_reward">
+					<div class="wrapper">
 					<div class="menu_part">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -174,7 +175,7 @@
 					    			</div>
 								</div>
 								</div>
-								<div class="row">
+							<div class="row">
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
 	        							<a href="#" class="pull-left">
@@ -203,15 +204,16 @@
 						</div>
 					</div>
 					<!--포인트-->
+				<div id="p_r">
 					<div class="point_part">
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-								<a class="full-point" style="float: right">156 <img src="../static/img/point.png" height="20" width="20"></a>
+								<a class="full-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20"></a>
 							</div>
 						</div>
 					</div>
-					<!--포인트 상세보기-->
+					<!--포인트 상세보기
 					<div class="tab-pane" id="point">
 						<div class="point_panel">
 							<div class="panel panel-default">
@@ -249,7 +251,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 					<!--리워드상세panel-->
 					<div class="reward_part">
 						<div class="panel panel-default">
@@ -288,6 +290,8 @@
 							<span id="showMore"><hr><p>리워드 전체보기 >></p></span>
 						</div>
 					</div>
+				</div>
+				</div>
 				</div>
 				<!--포인트 상세 panel-->
 				<div class="tab-pane">
@@ -399,7 +403,6 @@
 <script type="text/javascript">
 	$('#smyTab li').on('click', function(){
 		if($(this).attr('class') != '#tab1'){
-			console.log($(this));
 			$('#img-profile').hide();
 		}
 		else{
@@ -455,9 +458,9 @@ $.partlyShow = function(){
 		$.partlyShow();
 	}
 		$('#showMore').click( function(){
-		$('.menu_part').hide();
+		$('.menu_part').fadeOut();
 		$('.inline').show();
-		$('#showMore').hide();
+		$('#showMore').fadeOut();
 		});
 		
 	$('#smyTab a[href="#menu_reward"]').on('click', function(){

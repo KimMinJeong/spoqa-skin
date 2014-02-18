@@ -248,12 +248,12 @@ li > a{
 	padding-top:10px;
 }
 .point_part{
-	width:700px;
-	/*display:none;*/
+	max-width:700px;
+	display:none;
 }
 .gallery{
-	width:120px;
-	width:120px;
+	max-width:120px;
+	
 }
 .media{
 	float:left;
@@ -310,7 +310,7 @@ div.inline > h6{
 	margin-bottom:1px;
 }
 .point_panel{
-	width:700px;
+	max-width:700px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
@@ -352,6 +352,7 @@ div.inline > h6{
 	.snav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
+	
 	#inGallery img{
 		float:none;
 		vertical-align:middle;
@@ -377,7 +378,7 @@ div.inline > h6{
 		opacity:0.85;
 	}
 	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .gallery_part, .point_part, .point_panel{
-		width:280px;
+		
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -391,7 +392,6 @@ div.inline > h6{
 		top:30px;
 		height:100%;
 		float:inherit;
-		
 	}
 	#gallery{
 		width:100%;
@@ -416,7 +416,6 @@ div.inline > h6{
 		margin: 0px;
 		height:60px;
 		width:60px;
-		
 	}
 	.gallery{
 		height:90px;
@@ -425,11 +424,21 @@ div.inline > h6{
 	.reward_part{
 		margin-top:-10px;
 	}
+	#p_r{
+		position:relative;
+		
+	}
 	.reward_part span{
 		vertical-align:middle!important;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
+	}
+	
+	.menu_part{
+		position: absolute;
+   		top: 100%;
+   		width:100%;
 	}
 	
 	#showMore, #count, .full-menu{
@@ -484,6 +493,16 @@ div.inline > h6{
 	}
 	.point_part{
 		margin-bottom:-22px;
+	}
+	.wrapper{
+		position: relative;
+	}
+	.wrapper .menu_part{
+		
+		position: absolute;
+   		 top: 100;
+    	width: 100%;
+    	
 	}
 	.point_panel{
 		display:none;
@@ -555,7 +574,7 @@ and (max-width: 480px)
 	}
 
 	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .gallery_part, .point_part, .point_panel{
-		width:350px;
+		
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
