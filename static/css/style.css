@@ -24,6 +24,11 @@ body{
 	z-index:10;
 	position:relative;
 }
+.full-menu{
+		cursor:pointer;
+		color: #b2b2b2;
+		display:none;
+	}
 .icn{
 	opacity:0.4;
 	height:23px;
@@ -158,7 +163,6 @@ IMG.point{
 .reward_part .panel_body{
 	display:inline-block;
 }
-
 .navbar > .nav > li >img  {
 	padding-left:20px;
 	padding-bottom:20px;
@@ -176,7 +180,6 @@ IMG.point{
 .gallery_expansion li {
   	margin-left:-10px;
   	margin-right:-10px;
-  	
 }
 .box{
 	height:96px;
@@ -254,6 +257,17 @@ li > a{
 }
 .media{
 	float:left;
+	max-width:300px;
+	max-height:100px;
+}
+.media-body{
+	max-width:200px;
+	height:100px;
+}
+
+.media-object{
+	max-height:100px;
+	max-width:80px;
 }
 .media-heading{
 	color:#333333;
@@ -264,10 +278,7 @@ li > a{
 .grey_text{
 	color:#b2b2b2;
 }
-.media-object{
-	height:80px;
-	width:80px;
-}
+
 .snav{
 	display:none;
 	margin-right:20px;
@@ -346,6 +357,15 @@ div.inline > h6{
 		vertical-align:middle;
 		height:250px;
 	}
+	.media{
+		border-bottom:1px solid #b2b2b2;
+		margin-bottom: 5px;
+		border-bottom-width:100%;
+		
+	}
+	.media-body{
+		
+	}
 	.gallery_part{
 		display:inline-block;
 		margin-top:-5px;
@@ -399,7 +419,7 @@ div.inline > h6{
 		
 	}
 	.gallery{
-		height:70px;
+		height:90px;
 		width:70px;
 	}
 	.reward_part{
@@ -411,7 +431,8 @@ div.inline > h6{
 		cursor:pointer;	
 		font-weight:normal;
 	}
-	#showMore, #count{
+	
+	#showMore, #count, .full-menu{
 		display:block;
 	}
 	.reward_part hr{

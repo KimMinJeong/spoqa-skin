@@ -8,7 +8,6 @@
 	<script src="../static/js/bootstrap.min.js"></script>
 	<link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/style.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 	<div class="bgImage"> </div>
@@ -146,19 +145,20 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<img src="../static/img/icn_book_black.png" class="icn">메뉴
+								<span class="full-menu pull-right"> 전체보기 > </span>
 							</div>
 							<div class="panel-body">
 							<div class="row">
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
 	        							<a href="#" class="pull-left">
-		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive">
+		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive gallery">
 		        						</a>
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text"><i>12000</i></small>
-		            						<h6 class="grey_text">여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨. </h6>
+		            						<small class="grey_text">12,000원<br>
+		            						여기에 음식에 대한 설명을작성할 수 있습니다.
+		            							최대 2줄로 작성 가능합니다. </small>
 						        		</div>
 					    			</div>
 								</div>
@@ -169,7 +169,7 @@
 		        						</a>
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text"><i>12000</i></small>
+		            						<small class="grey_text">12,000원</small>
 						        		</div>
 					    			</div>
 								</div>
@@ -182,9 +182,9 @@
 		        						</a>
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text">12000
+		            						<small class="grey_text">12,000원<br>
 		            						여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨.</small>
+		            							최대 2줄로 작성 가능합니다.</small>
 						        		</div>
 					    			</div>
 								</div>
@@ -192,9 +192,9 @@
 									<div class="media">
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
-		            						<small class="grey_text"><i>12000</i></small>
-		            						<h6 class="grey_text">여기에 음식에 대한 설명을작성할 수 있습니다.
-		            							최대 텍스트수가 정해져 있어 최대로 2줄만 됨.</h6>
+		            						<small class="grey_text">12,000원<br>
+		            						여기에 음식에 대한 설명을작성할 수 있습니다.
+		            							최대 2줄로 작성 가능합니다.</small>
 						        		</div>
 					    			</div>
 								</div>
@@ -399,6 +399,7 @@
 <script type="text/javascript">
 	$('#smyTab li').on('click', function(){
 		if($(this).attr('class') != '#tab1'){
+			console.log($(this));
 			$('#img-profile').hide();
 		}
 		else{
@@ -406,10 +407,8 @@
 		}
 	});
 </script>
-
 <script type="text/javascript">
 	$(document).ready(function(){
-		
 	$('.full-view').on('click', function(){
 		$('#smyTab a:eq(3)').tab('show');
 		$('#smyTab li:nth-child(1)').attr('class', '#tab1 active');
@@ -421,6 +420,16 @@
 	});
 	$('.full-point').on('click', function(){
 		$('#smyTab a:eq(6)').tab('show');
+	});
+	
+	$('.full-point').on('click', function(){
+		$('#smyTab a:eq(6)').tab('show');
+	});
+	$('.full-menu').on('click', function(){
+		console.log($(this));
+		$('.reward_part').hide();
+		$('.media').show();
+		$('.full-menu').hide();
 	});
 </script>
 
@@ -438,6 +447,8 @@
 $.partlyShow = function(){
 		$('.inline').hide();
 		$('.inline:lt(3)').show();	
+		$('.media').hide();
+		$('.media:lt(3)').show();
 		return true;
 	};
 	if(($(window).width() <= 400)){
@@ -448,10 +459,13 @@ $.partlyShow = function(){
 		$('.inline').show();
 		$('#showMore').hide();
 		});
+		
 	$('#smyTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
 		$('#showMore').show();
+		$('.reward_part').show();
+		$('.full-menu').show();
 		});
 </script>
 
