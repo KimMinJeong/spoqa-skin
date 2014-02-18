@@ -347,30 +347,19 @@ $.partlyShow = function(){
 		$('.inline:lt(3)').show();	
 		return true;
 	};
-	
-	
-	if($(window).width() <= 400){
-		$.partlyShow();}
-			
-	
-	$(window).resize(function(){
-		if($(window).width() <= 400){
-		$.partlyShow();	}		
-	});
-	$('#showMore').click( function(){
+	if(($(window).width() <= 400)){
+		$.partlyShow();
+	}
+		$('#showMore').click( function(){
 		$('.menu_part').hide();
 		$('.inline').show();
-		$('.reward').css('margin-top', '100px');
 		$('#showMore').hide();
-	});
+		});
 	$('#smyTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
 		$('#showMore').show();
-	});
-	
-	
-
+		});
 </script>
 
 </html>
