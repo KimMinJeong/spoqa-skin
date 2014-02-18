@@ -16,22 +16,32 @@
 		<div class="row">
 			<div class="snav">
 					<ul class="nav nav-tabs" id="smyTab">
-						<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
+						<li class="#tab1 active"><a href="#cardUI" id="info" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
-						<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"></a></li>
+						<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"> </a></li>
+						<li class="#tab5"><a href="#chatting" data-toggle="tab">매장과 대화</a></li>
+						<li class="#tab6 hidden"><a href="#point" data-toggle="tab"> </a></li>
 					</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="image">
 				<img src="../static/img/taco_2.png" class="img-responsive" id="img-profile">
+				<div class="mobile_panel">
+					<h6>역삼,논현 > 레스토랑</h6>
+					<h3>타코드부로</h3>
+					<h6><img src="../static/img/icn_users.png" height="15px" width="15px">1명 적립중</h6>
+				</div>
+				<div class="kakao">
+					<img src="../static/img/img_katalk.png" height="40px" width="40px"style="margin-left:5px">
+					<p>카톡문의</p>
+				</div>
 				<div class="navbar navbar-default">
 				    <ul class="nav nav-tabs nav-stacked" id="myTab">
 						<li><h6>역삼,논현 > 레스토랑</h6>
 						<h3>타코드부로</h3>
-						<img src="../static/img/icn_users.png" align="bottom">
-						<span style="color:#888888">1명이 도도 적립중입니다.</span></li>
+						<p><img src="../static/img/icn_users.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
 						<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
@@ -47,11 +57,11 @@
 				</div>
 				<div class="tab-content">
 				<div class="tab-pane" id="gallery">
-				<div class="col-md-12">
+				<div class="col-sm-6 col-md-6">
 					<div class="gallery_expansion">
 						<div class="panel panel-default">
 							<div class="panel-heading"> 
-								<img src="../static/img/icn_gallery.png" class="icn">갤러리
+								<img src="../static/img/icn_gallery_black.png" class="icn">갤러리
 							</div>
 							<!-- 갤러리 확장
 								=======================================-->
@@ -94,46 +104,47 @@
 				=======================================-->
 				<div class="tab-pane fade" id="notice">
 					<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<div class="notice">
-						<div class="panel panel-default">
-						  	<div class="panel-heading">
-						  		<img src="../static/img/icn_noti.png" class="icn">공지사항
-						  	</div>
-						  	<div class="panel-body">
-						    	<h5 class="orange_font">도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
-									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
-									길이가 이정도 됨.
-								</h5>
-								<h6 class="grey_text" align="right">2013.12.15</h6>
-							<hr>	
-						  	</div>
-						  	<div class="panel-body">
-						    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
-									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
-									길이가 이정도 됨.
-								</h5>
-								<h6 class="grey_text" align="right">2013.12.15</h6>
-						  	</div>
-							  	<hr>
-							<div class="panel-body">
-							   	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
-									많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
-									길이가 이정도 됨.
-								</h5>
-								<h6 class="grey_text" align="right">2013.12.15</h6>
+						<div class="col-sm-12 col-md-12">
+						<div class="notice">
+							<div class="panel panel-default">
+							  	<div class="panel-heading">
+							  		<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항
+							  	</div>
+							  	<div class="panel-body">
+							    	<h5 class="orange_font">도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+										많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
+										길이가 이정도 됨.
+									</h5>
+									<h6 class="grey_text" align="right">2013.12.15</h6>
+								<hr>	
+							  	</div>
+							  	<div class="panel-body">
+							    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+										많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
+										길이가 이정도 됨.
+									</h5>
+									<h6 class="grey_text" align="right">2013.12.15</h6>
+							  	</div>
+								  	<hr>
+								<div class="panel-body">
+								   	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
+										많이 방문해주세요! 최대 글자수는 기존과 같이 100자이며 최대로 글자수를 쓰면
+										길이가 이정도 됨.
+									</h5>
+									<h6 class="grey_text" align="right">2013.12.15</h6>
+								</div>
 							</div>
 						</div>
 					</div>
+					</div>
 				</div>
-				</div>
-				</div>
-				<!--메뉴 & 리워드 상세panel-->
+				<!--메뉴&리워드 상세 panel-->
+				<!--메뉴상세panel-->
 				<div class="tab-pane" id="reward">
 					<div class="menu_part">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<img src="../static/img/icn_book.png" class="icn">메뉴
+								<img src="../static/img/icn_book_black.png" class="icn">메뉴
 							</div>
 							<div class="panel-body">
 							<div class="row">
@@ -190,11 +201,59 @@
 							</div>
 						</div>
 					</div>
+					<!--포인트-->
+					<div class="point_part">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
+								<a class="full-point" style="float: right">156 <img src="../static/img/point.png" height="20" width="20"></a>
+							</div>
+						</div>
+					</div>
+					<!--포인트 상세보기-->
+					<div class="tab-pane" id="point">
+						<div class="point_panel">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
+									<p style="float:right">156<img src="../static/img/point.png" height="20" width="20"></p>
+								</div>
+								<div class="panel-body">
+									<table align="center">
+										<tr>
+											<td>2012.02.16</td>
+											<td>22:02</td>
+											<td>+8</td>
+											<td>125</td>
+										</tr>
+										<tr>
+											<td>2012.02.16</td>
+											<td>22:02</td>
+											<td>+8</td>
+											<td>125</td>
+										</tr>
+										<tr>
+											<td>2012.02.16</td>
+											<td>22:02</td>
+											<td>+8</td>
+											<td>125</td>
+										</tr>
+										<tr>
+											<td>2012.02.16</td>
+											<td>22:02</td>
+											<td>+8</td>
+											<td>125</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 					<!--리워드상세panel-->
 					<div class="reward_part">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<img src="../static/img/icn_book.png" class="icn">리워드
+								<img src="../static/img/icn_gift_black.png" class="icn">리워드
 								<small class="grey_text" style="float:right" >매장 내의 도도포인트 태블릿으로 포인트를 쌓아 리워드를 받으실 수 있습니다.</small>
 							</div>
 							<div class="panel-body">
@@ -232,6 +291,24 @@
 						</div>
 					</div>
 				</div>
+				<!--포인트 상세 panel-->
+				<div class="tab-pane">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<img src="../static/img/icn_wallet_orangep5.png">내 포인트
+								</div>
+								<div class="panel-body">
+									<div class="col-md-3">2012.02.16</div>
+									<div class="col-md-3">22:06</div>
+									<div class="col-md-3">+8</div>
+									<div class="col-md-3">126</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Card UI 
 				=======================================-->
 				<div class="tab-pane active" id="cardUI">
@@ -240,7 +317,7 @@
 						<div class="notice_part">
 							<div class="panel panel-default" style="background-color:#edeff2;">
 								<div class="panel-heading">
-									<img src="../static/img/icn_noti.png" class="icn">공지사항<a style="float:right" class="full-view">전체보기</a>
+									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a style="float:right" class="full-view">전체보기</a>
 								</div>
 							  	<div class="panel-body">
 							    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
@@ -254,7 +331,7 @@
 						<div class="gallery_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_gallery.png" height="23px" width="23px" class="icn">갤러리<a style="float:right" class="full-image">전체보기</a><br>
+									<img src="../static/img/icn_gallery_black.png"class="icn">갤러리<a style="float:right" class="full-image">전체보기</a><br>
 								</div>
 							  	<div class="panel-body">
 							  		<img src="../static/img/dodo.jpg" class="pic">
@@ -274,7 +351,7 @@
 						<div class="phone_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_phone.png" height="23px" width="23px" class="icn">전화번호
+									<img src="../static/img/icn_phone_black.png"class="icn">전화번호
 								</div>
 							  	<div class="panel-body">
 							 		<p>02-1234-5678</p>
@@ -284,7 +361,7 @@
 						<div class="address_part">
 	                		<div class="panel panel-default">
 	                			<div class="panel-heading">
-	                				<img src="../static/img/icn_location.png" height="23px" width="23px" class="icn">주소  <a style="float:right;" href="http://map.naver.com/?dlevel=12&lat=37.5067524&lng=127.0550098&query=7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZwgNDM3&type=ADDRESS&tab=1&enc=b64"> 지도보기 ></a>
+	                				<img src="../static/img/icn_location_black.png"class="icn">주소  <a style="float:right;" href="http://map.naver.com/?dlevel=12&lat=37.5067524&lng=127.0550098&query=7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZwgNDM3&type=ADDRESS&tab=1&enc=b64"> 지도보기 ></a>
 	                			</div>
 		                   		<div class="panel-body">
 		                           	<p>서울시 강남구 테헤란로 437 삼영빌딩 7층</p>
@@ -299,6 +376,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="../static/js/bootstrap.js"></script>
 </body>	
@@ -306,9 +384,10 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+	
 	$('.full-view').on('click', function(){
 		$('#myTab a:eq(3)').tab('show');
+		$('#img-profile').hide();
 		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
 		console.log($(this));
 		});
@@ -318,6 +397,7 @@
 		$('#myTab a:eq(2)').tab('show');
 	
 	});
+	
 </script>	
 <script type="text/javascript">
 	$('#smyTab li').on('click', function(){
@@ -336,7 +416,6 @@
 	$('.full-view').on('click', function(){
 		$('#smyTab a:eq(3)').tab('show');
 		$('#smyTab li:nth-child(1)').attr('class', '#tab1 active');
-		console.log($(this));
 		});
 		
 	});
@@ -344,6 +423,20 @@
 		$('#smyTab a:eq(2)').tab('show');
 	
 	});
+	$('.full-point').on('click', function(){
+		$('#smyTab a:eq(6)').tab('show');
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).click(function(event){
+		if(event.target.id != 'info')
+		{
+			$('.mobile_panel').hide();
+			$('.kakao').hide();
+		}
+	});
+	
 </script>
 
 </html>
