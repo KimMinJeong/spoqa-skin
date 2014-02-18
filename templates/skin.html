@@ -387,14 +387,6 @@
 	<script src="../static/js/bootstrap.js"></script>
 </body>	
 
-<script>
-	$('.#tab1').click(function(){
-		if($(this).attr('class')=='#tab1'){
-			$('.#tab1').off("click");	
-		}
-	});
-</script>
-
 <script type="text/javascript">
 	$(window).resize(function() {
 		$('.img-profile').show();
@@ -407,8 +399,7 @@
 	$('.full-view').on('click', function(){
 		$('#myTab a:eq(3)').tab('show');
 		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
-		});
-		
+		});	
 	});
 	$('.full-image').on('click', function(){
 		$('#myTab a:eq(2)').tab('show');
@@ -418,10 +409,10 @@
 </script>	
 <script type="text/javascript">
 	$('#smyTab li').on('click', function(){
-		if($(this).attr('class') != '#tab1'){
-			$('#img-profile').hide();
-			$('.mobile_panel').hide();
-			$('.kakao').hide();
+		if($(this).attr('class').search('#tab1') != 0) {
+			$('#img-profile').fadeOut();
+			$('.mobile_panel').fadeOut();
+			$('.kakao').fadeOut();
 		}
 		else{
 			$('#img-profile').show();
@@ -470,12 +461,6 @@ $.partlyShow = function(){
 		$('#showMore').show();
 		});
 </script>
-<script type="text/javascript">
-	$('#smyTab li').on('click', function(){
-		if($(this).attr('class') == '#tab1'){
-			$('.gallery_part').hide();
-		}
-	});
-</script>
+
 
 </html>

@@ -475,9 +475,18 @@ div.inline > h6{
 		top:120px;
 		left:10px:
 	}
-	
-	
+	.snav > .nav-tabs > li{
+		margin-right:-5px;
+	}
+	#menu_reward{
+		margin-top:-15px;
+	}
+	.gallery_expansion{
+		margin-top: 10px;
+	}
 }
+
+
 @media only screen 
 and (min-width: 320px)
 and (max-width: 480px)
@@ -602,6 +611,15 @@ and (max-width: 480px)
 		position:absolute;
 		top:120px;
 		left:10px:
+	}
+	.snav > .nav-tabs > li{
+		margin-right:-5px;
+	}
+	#menu_reward{
+		margin-top:-15px;
+	}
+	.gallery_expansion{
+		margin-top:10px;
 	}
 }
 /* 웹페이지 화면 상에서의 query*/
