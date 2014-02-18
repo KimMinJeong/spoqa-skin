@@ -70,7 +70,6 @@ body{
 .gallery_part{
 	width:340px;
 	margin-top:-10px;
-	padding-right:0px;
 	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
@@ -246,7 +245,6 @@ li > a{
 }
 .gallery{
 	width:120px;
-	width:120px;
 }
 .media{
 	float:left;
@@ -323,14 +321,6 @@ li > a{
 	#inGallery img{
 		float:none;
 		vertical-align:middle;
-	}
-	.gallery_part{
-		width:280px;
-		margin-top:-10px;
-		/*margin-left:-15px;*/
-		padding-right:0px;
-		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
-		opacity:0.85;
 	}
 	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .gallery_part, .point_part, .point_panel{
 		width:280px;
@@ -445,14 +435,6 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
-	.gallery_part{
-		width:380px;
-		margin-top:-5px;
-		/*margin-left:-15px;*/
-		padding-right:0px;
-		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
-		opacity:0.85;
-	}
 	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .gallery_part, .point_part, .point_panel{
 		width:350px;
 		margin:0 auto;
@@ -470,10 +452,6 @@ and (max-width: 480px)
 		margin: 10px;
 		height:40px;
 		width:40px;
-	}
-	.gallery{
-		height:70px;
-		width:70px;
 	}
 	.reward_part{
 		margin-top:-10px;
