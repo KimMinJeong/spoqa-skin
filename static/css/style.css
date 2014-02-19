@@ -47,6 +47,19 @@ body{
 #count, #footer, #point_expansion, .text{
 	display:none;
 }
+.text-group{
+	position:relative;
+}
+.text-group span{
+	position:fixed;
+	top:0;
+	left:0;
+}
+.write{
+	height:100px;
+	overflow:auto;
+	margin-top:10px;
+}
 
 .notice{
 	max-width:700px;
@@ -477,6 +490,7 @@ div.inline > h6{
 		cursor:pointer;
 		color:#e66125;
 		font-weight:bolder;
+		border-bottom:1px solid #C9CED6;
 	}
 	.reward_part hr{
 		margin:0 auto;
