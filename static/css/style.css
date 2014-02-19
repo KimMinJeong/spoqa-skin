@@ -446,6 +446,7 @@ div.inline > h6{
   	}
 	.notice{
 		margin-top:10px;
+		margin-right:10px;
 	}
 	.reward_part > .panel >.panel-heading > small{
 		display: none;
@@ -574,6 +575,7 @@ and (max-width: 480px)
 	}
 	.notice{
 		margin-top:10px;
+		margin-right:10px;
 	}
 	.reward_part > .panel >.panel-heading > small{
 		display: none;
