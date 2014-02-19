@@ -336,7 +336,6 @@ div.inline > h6{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
-
 	}
 	.reward_part .panel-body {
 		display:inline-block;
@@ -394,7 +393,7 @@ div.inline > h6{
 		cursor:pointer;	
 		font-weight:normal;
 	}	
-	#showMore, #count, .full-menu{
+	#showMore, #count, .show-menu{
 		display:block;
 	}
 	.reward_part hr{
@@ -463,9 +462,9 @@ div.inline > h6{
 	}
 	.phone_part{
 		position:absolute;
+		width:100%;
 		top:120px;
 		left:10px:
-		display:inline-block;
 	}
 	.snav > .nav-tabs > li{
 		margin-right:-5px;
@@ -591,9 +590,9 @@ and (max-width: 480px)
 	}
 	.phone_part{
 		position:absolute;
+		width:100%;
 		top:120px;
-		left:10px:
-		display:inline-block;
+		left:10px:	
 	}
 	.snav > .nav-tabs > li{
 		margin-right:-5px;
@@ -632,7 +631,7 @@ and (max-width: 480px)
 /* 웹페이지 화면 상에서의 query*/
 @media only screen and (min-width: 480px)
 {
-	.mobile_panel, .kakao, .point_part,.point_panel, .calling{
+	.mobile_panel, .kakao, .point_part, .point_panel, .calling{
 		display:none;
 	}
 }
