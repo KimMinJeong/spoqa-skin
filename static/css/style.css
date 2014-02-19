@@ -148,6 +148,7 @@ IMG.point{
 }
 .reward_part{
  	max-width:700px;
+ 	margin-top:-10px;
 }
 .reward_part .panel_body{
 	display:inline-block;
