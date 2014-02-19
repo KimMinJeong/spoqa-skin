@@ -68,29 +68,29 @@
 								<ul class="nav nav-tabs">
 									<li id="count"><a href="" data-toggle="tab" a class="grey_text" style="font-size: 30px;">1/3</a></li>
 									<li class="active">
-									<a href="#sample1" data-toggle="tab" class="thumbnail">
-									<img src="../static/img/reward_sample.jpg" class="sample1">
+									<a href="#img1" data-toggle="tab" class="thumbnail">
+									<img src="../static/img/reward_sample.jpg" class="img1">
 									</a></li>									
-									<li><a href="#sample2" data-toggle="tab" class="thumbnail">
+									<li><a href="#img2" data-toggle="tab" class="thumbnail">
 									<img src="../static/img/reward_sample2.jpg">
 									</a></li>
-									<li><a href="#sample3" data-toggle="tab" class="thumbnail">
+									<li><a href="#img3" data-toggle="tab" class="thumbnail">
 									<img src="../static/img/dodo.jpg">
 									</a></li>
 								</ul>
 							</div>
 							<div class="tab-content" id="inGallery">
-								<div class="tab-pane active" id="sample1"> 
+								<div class="tab-pane active" id="img1"> 
 									<div class="panel-body">
 										<img src="../static/img/reward_sample.jpg" class="img-responsive">
 									</div>
 								</div>
-							<div class="tab-pane" id="sample2"> 
+							<div class="tab-pane" id="img2"> 
 							<div class="panel-body">
 								<img src="../static/img/reward_sample2.jpg" class="img-responsive">
 							</div>
 							</div>
-							<div class="tab-pane" id="sample3">
+							<div class="tab-pane" id="img3">
 								<div class="panel-body">
 									<img src="../static/img/dodo.jpg" class="img-responsive">
 								</div>
@@ -390,6 +390,10 @@
 	
 	$('.show-view').on('click', function(){
 		$('#mainTab a:eq(3)').tab('show');
+		$('#img-profile').hide();
+		if(($(window).width() >= 400)){
+            $('#img-profile').fadeIn();
+        }
 		$('#mainTab li:nth-child(2)').attr('class', '#tab1 active');
 		});
 	});
@@ -400,13 +404,13 @@
 <script type="text/javascript">
 	
    $('#mobileTab li').on('click', function(){
-   	console.log($(this).attr('class').search('#tab1'));
       if($(this).attr('class').search('#tab1') != 0) {
          $('#img-profile').hide();
          $('.mobile_panel').hide();
          $('.kakao').hide();
       }
-      else{
+      else
+      {
          $('#img-profile').show();
          $('.mobile_panel').show();
          $('.kakao').show();

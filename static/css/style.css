@@ -194,7 +194,7 @@ a{
 .gallery_expansion > .panel{
 	max-width:700px;
 	margin-left:-15px;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 .gallery_expansion >.panel > .panel-body img{
 	display:inline-block;
@@ -631,7 +631,7 @@ and (max-width: 480px)
 /* 웹페이지 화면 상에서의 query*/
 @media only screen and (min-width: 480px)
 {
-	.mobile_panel, .kakao, .point_part, .point_panel, .calling{
+	.mobile_panel, .kakao, .point_part, .point_panel, .calling ,.show-menu{
 		display:none;
 	}
 }
