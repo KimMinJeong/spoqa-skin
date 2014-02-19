@@ -55,7 +55,7 @@ body{
 	top:0;
 	left:0;
 }
-.write{
+#write{
 	height:100px;
 	overflow:auto;
 	margin-top:10px;
