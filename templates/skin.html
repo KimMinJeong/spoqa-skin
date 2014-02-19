@@ -21,7 +21,7 @@
 						<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
 						<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"> </a></li>
-						<li class="#tab5"><a href="#chatting" data-toggle="tab">매장과 대화</a></li>
+						<li class="#tab5"><a href="#chat" data-toggle="tab">매장과 대화</a></li>
 						<li class="#tab6 hidden"><a href="#point" data-toggle="tab"> </a></li>
 					</ul>
 			</div>
@@ -311,6 +311,50 @@
 						</div>
 					</div>
 				</div>
+				<div class="tab-pane" id="chat">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12 col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <img src="../static/img/icn_message_orangep5.png" class="reply_icn"> 1:1 문의하기
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+								<div class="panel-body">
+									<img src="../static/img/icn_q_grey.png" class="reply_icn">
+									안녕하세요, 스포카 패밀리 레스토랑 저번에 방문 했던 사람입니다.
+									오늘의 쉐프 추천요리가 매일 50%할인이라던데, 이번 목요일 메뉴는 
+									뭔지 알려주실 수 있나요?
+								</div>
+								<div class="panel-body" id="reply">
+									<img src="../static/img/icn_reply_dodoblue.png" class="reply_icn">
+									안녕하세요, 고객님^^ 그건 쉐프님 마음이라 안알랴줌.
+								</div>
+								<div class="panel-body" id="reply_head">
+									<a><img src="../static/img/icn_message_orangep5.png" class="reply_icn">답변하기</a>
+								</div>
+								<div class="panel-body" id="reply_body">
+									<img src="../static/img/icn_message_orangep5.png" class="reply_icn">
+									<textarea > </textarea>
+								</div>
+								<div class="panel-body" id="reply_button">
+									<div class="col-xs-6 col-md-6 col-sm-6">
+										<button type="button" class="btn btn-default" id="cancle_btn">
+											<img src="../static/img/icn_x_grey.png" height="30px" width="30px">
+											<span>취소</span>
+										</button>
+									</div>
+									<div class="col-xs-6 col-md-6 col-sm-6">
+										<button type="button" class="btn btn-default" id="send_btn">
+											<img src="../static/img/icn_check_dodoblue.png" height="30px" width="30px">
+											<span>보내기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+               </div>
 				<!-- Card UI 
 				=======================================-->
 				<div class="tab-pane active" id="cardUI">
@@ -486,6 +530,38 @@ $.partlyShow = function(){
 	$('tab1').click(function(){
 		$('#cardUI').show();
 	});
+</script>
+
+<script>
+	$('#reply_body').hide();
+	$('#reply_button').hide();
+	
+	$(document).ready(function() {
+        var expanded = false;
+        // 클릭했을 때 보여진다.
+        $("#reply_head").click(function(event) {
+            if (!expanded) {
+                event.stopPropagation();
+                $("#reply_body").slideDown();
+                $("#reply_button").slideDown();
+                expanded = true;
+                $("#reply_head").slideUp();
+            }
+        });
+        $('#cancle_btn').click(function () {
+            if (expanded) {
+                $("#reply_body").slideUp();
+                $("#reply_button").slideUp();
+                expanded = false;
+                $("#reply_head").slideDown();
+            }
+        });
+        
+        //보내기 버튼 금지 시켜 놓음
+        $("#send_btn").click(function(event) {
+                event.stopPropagation();
+            });
+    });
 </script>
 
 </html>

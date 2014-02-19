@@ -308,7 +308,10 @@ div.inline > h6{
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
-
+.reply_icn{
+	height:20px;
+	width:20px;
+}
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -512,10 +515,6 @@ div.inline > h6{
 		position:relative;
 		margin-top:-8px;
 	}
-	.phone_part{
-		
-		
-	}
 	.mobile_nav > .nav-tabs > li{
 		margin-right:-5px;
 	}
@@ -527,6 +526,9 @@ div.inline > h6{
 	}
 	.gallery_part{
 		display:none;
+	}
+	.panel-body .reply{
+		background-color: #edeff2;
 	}
 }
 
@@ -681,7 +683,10 @@ and (max-width: 480px)
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
-	}	
+	}
+	#reply{
+		background-color: #edeff2;
+	}
 }
 /* 웹페이지 화면 상에서의 query*/
 @media only screen and (min-width: 480px)
