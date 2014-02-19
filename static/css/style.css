@@ -332,16 +332,18 @@ div.inline > h6{
 		vertical-align:middle;
 		height:250px;
 	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .gallery_part, .point_part,.gallery_part,.point_panel{
+	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part,.point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
+
 	}
 	.reward_part .panel-body {
 		display:inline-block;
 	}
 	.gallery_expansion{
 		position:fixed;
+			margin-top: 10px;
 		left:0;
 		top:30px;
 		height:100%;
@@ -409,7 +411,7 @@ div.inline > h6{
 	div.inline > h6{
 	width:65px;
 	}
-	div.gallery_part, div.reward_part, div.point_panel{
+		div.reward_part, div.point_panel{
   		display: inline-block;
   	}
 	#image{
@@ -463,6 +465,7 @@ div.inline > h6{
 		position:absolute;
 		top:120px;
 		left:10px:
+		display:inline-block;
 	}
 	.snav > .nav-tabs > li{
 		margin-right:-5px;
@@ -470,11 +473,11 @@ div.inline > h6{
 	#menu_reward{
 		margin-top:-15px;
 	}
-	.gallery_expansion{
-		margin-top: 10px;
-	}
 	.wrapper{
 		margin-top:20px;
+	}
+	.gallery_part{
+		display:none;
 	}
 }
 
@@ -543,9 +546,6 @@ and (max-width: 480px)
 		height:40px;
 		width:40px;
 	}
-	.reward_part{
-		margin-top:-10px;
-	}
 	.notice_part{
 		margin-top:-5px;
 	}
@@ -570,9 +570,6 @@ and (max-width: 480px)
 		opacity:0.7;
 		color:#FFFFFF;
 	}
-	.point_part{
-		margin-bottom:-22px;
-	}
 	.point_panel{
 		display:none;
 	}
@@ -596,6 +593,7 @@ and (max-width: 480px)
 		position:absolute;
 		top:120px;
 		left:10px:
+		display:inline-block;
 	}
 	.snav > .nav-tabs > li{
 		margin-right:-5px;
@@ -615,7 +613,8 @@ and (max-width: 480px)
 		width:100%
 	}
 	.point_part{
-		width:100%
+		width:100%;
+		margin-bottom:-22px;
 	}
 	.menu_part{
  		padding-top:0px;
