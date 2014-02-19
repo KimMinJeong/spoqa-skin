@@ -508,7 +508,7 @@ $.partlyShow = function(){
     $('#write').html(function () {  
     	console.log($.trim($(this).html()));      
         if ($.trim($(this).length) < 2) {
-            placehold('write', "<span><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;></span>" + '문의하실글 있음 작성해주셔요호');
+            placehold('write', "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>문의하실글 있음 작성해주셔요호</span>");
             originaltext = $.trim($('#write').html());
         }
     });
