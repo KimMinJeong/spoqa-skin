@@ -646,11 +646,6 @@ and (max-width: 480px)
 		position:relative;
 		margin-top:-8px;
 	}
-	.phone_part{
-		position:absolute;
-		width:100%;
-		top:120px;
-	}
 	.mobile_nav > .nav-tabs > li{
 		margin-right:-5px;
 	}
@@ -692,6 +687,9 @@ and (max-width: 480px)
 @media only screen and (min-width: 480px)
 {
 	.mobile_panel, .kakao, .point_part, .point_panel, .calling ,.show-menu{
+		display:none;
+	}
+	#chat{
 		display:none;
 	}
 }
