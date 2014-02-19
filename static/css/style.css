@@ -44,7 +44,7 @@ body{
    margin-bottom:0px;
    margin-right:5px;
 }
-#count{
+#count, #footer{
 	display:none;
 }
 .notice{
@@ -239,12 +239,18 @@ li > a{
 	display:none;
 }
 .gallery{
-	max-width:120px;
+	width:120px;
+	height:120px;
+	
 }
 .media{
 	float:left;
 	max-width:300px;
 	max-height:100px;
+}
+.media > a{
+		vertical-align:middle!important;
+
 }
 .media-body{
 	max-width:200px;
@@ -312,12 +318,19 @@ div.inline > h6{
 		margin:0 auto;
 		background-color:#EDEFF2;
 	}
-	.bgImage{
+	.bgImage, .gallery_part, .address_part .panel-body > img{
 		display:none;
 		}
+	.address_part .panel-body{
+		font-size:0.9em;
+	}
 	#cover_photo{
 		float:none;
 		margin:0 auto;
+	}
+	#footer{
+		font-size:0.7em;
+		background-color:#888888;
 	}
 	#image{
 		margin-left:-20px;
@@ -344,24 +357,19 @@ div.inline > h6{
 		vertical-align:middle;
 		height:250px;
 	}
+	#img-profile{
+		margin-right:-20px;
+	}
 	.media{
-		border-bottom:1px solid #b2b2b2;
+		border-bottom:1px solid #c9ced6;
 		margin-bottom: 5px;
 	}
-	.gallery_part{
-		display:inline-block;
-		margin-top:-5px;
-		margin-top:-10px;
-		/*margin-left:-15px;*/
-		padding-right:0px;
-		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
-		opacity:0.85;
-	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .gallery_part, .point_part{
+	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
 	}
+	
 	.reward_part .panel-body {
 		display:inline-block;
 	}
@@ -442,7 +450,7 @@ div.inline > h6{
 	div.inline > h6{
 		width:65px;
 	}
-	div.gallery_part, div.reward_part, div.point_panel{
+	div.reward_part, div.point_panel{
 		display: inline-block;
 	}
 	#image{
@@ -561,8 +569,8 @@ and (max-width: 480px)
 		width:40px;
 	}
 	.gallery{
-		height:70px;
-		width:70px;
+		height:64px;
+		width:64px;
 	}
 	.notice_part{
 		margin-top:-5px;
@@ -573,6 +581,7 @@ and (max-width: 480px)
 	div.reward_part{
 		display: inline-block;
 	}
+	
 	#image >.mobile_panel{
 		position:absolute;
 		top:10px;
