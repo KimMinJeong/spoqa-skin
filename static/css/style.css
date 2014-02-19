@@ -24,7 +24,7 @@ body{
 	z-index:10;
 	position:relative;
 }
-.full-menu{
+.show-menu{
 	cursor:pointer;
 	color: #b2b2b2;
 	display:none;
@@ -34,7 +34,7 @@ body{
 	height:23px;
 	width:23px;
 }
-#image{
+#profile{
    margin-top:20px;
    margin-bottom:0px;
    margin-right:-20px;
@@ -44,7 +44,7 @@ body{
    margin-bottom:0px;
    margin-right:5px;
 }
-#count, #footer{
+#count, #footer, #point_expansion{
 	display:none;
 }
 .notice{
@@ -112,6 +112,7 @@ body{
 .notice_part > .panel > .panel-body > .orange_font{
 	color : #e66125;
 }
+
 IMG.pic{
 	height:70px;
 	width:70px;
@@ -238,6 +239,9 @@ li > a{
 	max-width:700px;
 	display:none;
 }
+.point_part #point_expansion{
+	margin-top:-15px;
+}
 .gallery{
 	width:120px;
 	height:120px;
@@ -269,11 +273,11 @@ li > a{
 .grey_text{
 	color:#b2b2b2;
 }
-.snav{
+.mobile_nav{
 	display:none;
 	margin:0 auto;
 }
-.snav li{
+.mobile_nav li{
 	margin-left:-7px;
 	margin-right:-13px;
 }
@@ -294,6 +298,7 @@ div.inline > h6{
 }
 #showMore{
 	display:none;
+	color:#b2b2b2;
 }
 .reward_part > .panel > .panel-body > img {
 	display:block;
@@ -331,25 +336,26 @@ div.inline > h6{
 	#footer{
 		font-size:0.7em;
 		background-color:#888888;
+		display:block;
 	}
-	#image{
+	#profile{
 		margin-left:-20px;
 		margin-top:0px;
 	}
-	#image > img{
+	#profile > img{
 		width:100%;
 		height:250px;
 		margin-bottom:20px;
 	}
-	#cover, #myTab, #image > .navbar{
+	#cover, #mainTab, #profile > .navbar{
 		display:none;
 	}
-	.snav{
+	.mobile_nav{
 		background-color:#FFFFFF;
 		vertical-align:middle!important;
 		width:100%;
 	}
-	.snav, .menu_part, .reward_part, .point_part, .point_panel{
+	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
 	#inGallery img{
@@ -422,13 +428,14 @@ div.inline > h6{
    		top: 100%;
    		width:90%;
 	}
-	.reward_part span{
+	.reward_part span, .menu_part span{
 		vertical-align:middle!important;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
+		color:#B2B2B2;
 	}	
-	#showMore, #count, .full-menu{
+	#showMore, #count, .show-menu{
 		display:block;
 	}
 	.media hr{
@@ -453,20 +460,20 @@ div.inline > h6{
 	div.reward_part, div.point_panel{
 		display: inline-block;
 	}
-	#image{
+	#profile{
 		position:relative;
 	}
-	#image >.mobile_panel{
+	#profile >.mobile_panel{
 		position:absolute;
 		top:10px;
 		left:30px;
 		color:#FFFFFF;
 		opacity: 0.7;
 	}
-	#image >.mobile_panel > h6,h3{
+	#profile >.mobile_panel > h6,h3{
 		background-color: #080808;
 	}
-	#image > .kakao{
+	#profile > .kakao{
 		position:absolute;
 		top:65%;
 		left:75%;
@@ -483,7 +490,7 @@ div.inline > h6{
 		width:100%;	
 		margin-bottom:-22px;	
 	}
-	#p_r{
+	#point_reward{
 		margin-top:10px;
 	}
 	.point_panel{
@@ -515,24 +522,24 @@ and (max-width: 480px)
 		float:none;
 		margin:0 auto;
 	}
-	#image{
+	#profile{
 		margin-left:-20px;
 		margin-top:0px;
 	}
-	#image > img{
+	#profile > img{
 		width:100%;
 		height:250px;
 		margin-bottom:20px;
 	}
-	#cover, #myTab, #image > .navbar{
+	#cover, #mainTab, #profile > .navbar{
 		display:none;
 	}
-	.snav{
+	.mobile_nav{
 		background-color:#FFFFFF;
 		vertical-align:middle!important;
 		width:100%;
 	}
-	.snav, .menu_part, .reward_part, .point_part, .point_panel{
+	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
 	#gallery .nav-tabs{
@@ -582,17 +589,17 @@ and (max-width: 480px)
 		display: inline-block;
 	}
 	
-	#image >.mobile_panel{
+	#profile >.mobile_panel{
 		position:absolute;
 		top:10px;
 		left:30px;
 		color:#FFFFFF;
 		opacity: 0.7;
 	}
-	#image >.mobile_panel > h6,h3{
+	#profile >.mobile_panel > h6,h3{
 		background-color: #080808;
 	}
-	#image > .kakao{
+	#profile > .kakao{
 		position:absolute;
 		top:65%;
 		left:80%;

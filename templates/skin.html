@@ -13,9 +13,9 @@
 	<div class="bgImage"> </div>
 	<div class="container">
 		<div class="row">
-			<div class="snav">
-					<ul class="nav nav-tabs" id="smyTab">
-						<li class="#tab1 active"><a href="#cardUI" id="info" data-toggle="tab">매장정보</a></li>
+			<div class="mobile_nav">
+					<ul class="nav nav-tabs" id="mobileTab">
+						<li class="#tab1 active"><a href="#cardUI" id="store_info" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
 						<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"> </a></li>
@@ -25,8 +25,8 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="image">
-				<img src="../static/img/taco_2.png" class="img-responsive" id="img-profile">
+			<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="profile">
+				<img src="../static/img/taco_2.png" id="img-profile">
 				<div class="mobile_panel">
 					<h6>역삼,논현 > 레스토랑</h6>
 					<h3>타코드부로</h3>
@@ -37,7 +37,7 @@
 					<p>카톡문의</p>
 				</div>
 				<div class="navbar navbar-default">
-				    <ul class="nav nav-tabs nav-stacked" id="myTab">
+				    <ul class="nav nav-tabs nav-stacked" id="mainTab">
 						<li><h6>역삼,논현 > 레스토랑</h6>
 						<h3>타코드부로</h3>
 						<p><img src="../static/img/icn_users.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
@@ -68,29 +68,29 @@
 								<ul class="nav nav-tabs">
 									<li id="count"><a href="" data-toggle="tab" a class="grey_text" style="font-size: 30px;">1/3</a></li>
 									<li class="active">
-									<a href="#sample1" data-toggle="tab" class="thumbnail">
-									<img src="../static/img/reward_sample.jpg" class="sample1">
+									<a href="#img1" data-toggle="tab" class="thumbnail">
+									<img src="../static/img/reward_sample.jpg">
 									</a></li>									
-									<li><a href="#sample2" data-toggle="tab" class="thumbnail">
+									<li><a href="#img2" data-toggle="tab" class="thumbnail">
 									<img src="../static/img/reward_sample2.jpg">
 									</a></li>
-									<li><a href="#sample3" data-toggle="tab" class="thumbnail">
+									<li><a href="#img3" data-toggle="tab" class="thumbnail">
 									<img src="../static/img/dodo.jpg">
 									</a></li>
 								</ul>
 							</div>
 							<div class="tab-content" id="inGallery">
-								<div class="tab-pane active" id="sample1"> 
+								<div class="tab-pane active" id="img1"> 
 									<div class="panel-body">
 										<img src="../static/img/reward_sample.jpg" class="img-responsive">
 									</div>
 								</div>
-							<div class="tab-pane" id="sample2"> 
+							<div class="tab-pane" id="img2"> 
 							<div class="panel-body">
 								<img src="../static/img/reward_sample2.jpg" class="img-responsive">
 							</div>
 							</div>
-							<div class="tab-pane" id="sample3">
+							<div class="tab-pane" id="img3">
 								<div class="panel-body">
 									<img src="../static/img/dodo.jpg" class="img-responsive">
 								</div>
@@ -146,7 +146,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<img src="../static/img/icn_book_black.png" class="icn">메뉴
-								<span class="full-menu pull-right"> 전체보기 > </span>
+								<span class="show-menu pull-right"> 전체보기 > </span>
 							</div>
 							<div class="panel-body">
 							<div class="row">
@@ -204,26 +204,20 @@
 							</div>
 						</div>
 					</div>
+				<!--포인트&리워드-->
+				<div id="point_reward">
 					<!--포인트-->
-				<div id="p_r">
 					<div class="point_part">
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-								<a class="full-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20"></a>
+								<a class="show-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20"></a>
 							</div>
-						</div>
-					</div>
-					<!--포인트 상세보기
-					<div class="tab-pane" id="point">
-						<div class="point_panel">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-									<p style="float:right">156<img src="../static/img/point.png" height="20" width="20"></p>
-								</div>
+							<!--포인트 상세보기-->
+					
+							<div id="point_expansion">
 								<div class="panel-body">
-									<table align="center">
+									<table class="table" align="center">
 										<tr>
 											<td>2012.02.16</td>
 											<td>22:02</td>
@@ -251,8 +245,12 @@
 									</table>
 								</div>
 							</div>
+						
+							
 						</div>
-					</div>-->
+					</div>
+					
+					
 					<!--리워드상세panel-->
 					<div class="reward_part">
 						<div class="panel panel-default">
@@ -286,7 +284,6 @@
 											<h6>모든 음료 한잔 무료</h6>
 											<h6>5<img src="../static/img/point.png" class="point"></h6>
 									</div>
-									
 							</div>
 							<span id="showMore"><hr><p>리워드 전체보기 >></p></span>
 						</div>
@@ -320,7 +317,7 @@
 						<div class="notice_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a class="full-view pull-right">전체보기</a>
+									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a class="show-view pull-right">전체보기</a>
 								</div>
 							  	<div class="panel-body">
 							    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
@@ -334,7 +331,7 @@
 						<div class="gallery_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_gallery_black.png"class="icn">갤러리<a style="float:right" class="full-image">전체보기</a><br>
+									<img src="../static/img/icn_gallery_black.png"class="icn">갤러리<a style="float:right" class="show-image">전체보기</a><br>
 								</div>
 							  	<div class="panel-body">
 							  		<img src="../static/img/dodo.jpg" class="pic">
@@ -394,19 +391,19 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 	
-	$('.full-view').on('click', function(){
-		$('#myTab a:eq(3)').tab('show');
+	$('.show-view').on('click', function(){
+		$('#mainTab a:eq(3)').tab('show');
 		$('#img-profile').hide();
-		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
+		$('#mainTab li:nth-child(2)').attr('class', '#tab1 active');
 		});
 	});
-	$('.full-image').on('click', function(){
-		$('#myTab a:eq(2)').tab('show');
+	$('.show-image').on('click', function(){
+		$('#mainTab a:eq(2)').tab('show');
 	});
 </script>	
 <script type="text/javascript">
 	
-   $('#smyTab li').on('click', function(){
+   $('#mobileTab li').on('click', function(){
       if($(this).attr('class').search('#tab1') != 0) {
          $('#img-profile').fadeOut();
          $('.mobile_panel').fadeOut();
@@ -422,25 +419,19 @@
 </script>
 <script type="text/javascript">
 	$(document).ready(function(){
-	$('.full-view').on('click', function(){
-		$('#smyTab a:eq(3)').tab('show');
-		$('#smyTab li:nth-child(1)').attr('class', '#tab1 active');
+	$('.show-view').on('click', function(){
+		$('#mobileTab a:eq(3)').tab('show');
+		$('#mobileTab li:nth-child(1)').attr('class', '#tab1 active');
 		});
 	});
-	$('.full-image').on('click', function(){
-		$('#smyTab a:eq(2)').tab('show');
+	$('.show-image').on('click', function(){
+		$('#mobileTab a:eq(2)').tab('show');
 	});
-	$('.full-point').on('click', function(){
-		$('#smyTab a:eq(6)').tab('show');
-	});
-	$('.full-point').on('click', function(){
-		$('#smyTab a:eq(6)').tab('show');
-	});
-	$('.full-menu').on('click', function(){
-		console.log($(this));
+	$('.show-menu').on('click', function(){
 		$('.reward_part').hide();
 		$('.media').show();
-		$('.full-menu').hide();
+		$('.show-menu').hide();
+		$('.point_part').hide();
 	});
 </script>
 <script type="text/javascript">
@@ -466,15 +457,23 @@ $.partlyShow = function(){
 		$('.menu_part').fadeOut();
 		$('.inline').show();
 		$('#showMore').fadeOut();
+		$('.point_part').fadeOut();
 		});
-	$('#smyTab a[href="#menu_reward"]').on('click', function(){
+	$('#mobileTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
 		$('#showMore').show();
 		$('.reward_part').show();
-		$('.full-menu').show();
+		$('.show-menu').show();
+		$('.point_part').show();
 		});
 </script>
-
+<script>
+	$('.show-point').on('click', function(){
+		$('#point_expansion').slideToggle('slow');
+		$('.reward_part').hide();
+		$('.menu_part').hide();
+	});
+</script>
 
 </html>
