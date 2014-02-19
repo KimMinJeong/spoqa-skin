@@ -62,6 +62,7 @@ body{
 	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
+
 }
 .phone_part{
 	max-width:340px;
@@ -74,7 +75,6 @@ body{
 .gallery_part{
 	max-width:340px;
 	margin-top:-5px;
-	padding-right:0px;
 	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
@@ -176,12 +176,13 @@ IMG.point{
 .gallery_expansion li {
   	margin-left:-10px;
   	margin-right:-10px;
+  	
 }
 .panel-heading > a{
 	color:#b2b2b2;
 }
 .panel > .panel-heading{
-	margin-bottom:-15px;
+	margin-bottom:-10px;
 }
 /*cardUI에 들어가는 css*/
 .panel-body{
@@ -194,12 +195,13 @@ a{
 	color: #888888;
 }
 .gallery_expansion{
+	
 	margin-top:5px;
 }
 .gallery_expansion > .panel{
 	max-width:700px;
 	margin-left:-15px;
-	margin-top: 15px;
+	margin-top: 10px;
 }
 .gallery_expansion >.panel > .panel-body img{
 	display:inline-block;
@@ -252,17 +254,9 @@ li > a{
 	max-width:300px;
 	max-height:100px;
 }
-.media > a{
-		vertical-align:middle!important;
-
-}
 .media-body{
 	max-width:200px;
 	height:100px;
-}
-.media-object{
-	max-height:100px;
-	max-width:80px;
 }
 .media-heading{
 	color:#333333;
@@ -273,13 +267,18 @@ li > a{
 .grey_text{
 	color:#b2b2b2;
 }
+.media-object{
+	height:80px;
+	width:80px;
+}
 .mobile_nav{
 	display:none;
 	margin:0 auto;
 }
 .mobile_nav li{
-	margin-left:-7px;
-	margin-right:-13px;
+	margin-left:-10px;
+	margin-right:-50px;
+
 }
 .black_text{
 	color:#333333;
@@ -296,22 +295,19 @@ div.inline > img{
 div.inline > h6{
 	text-align:center;
 }
-#showMore{
+.show-reward{
 	display:none;
 	color:#b2b2b2;
 }
+
 .reward_part > .panel > .panel-body > img {
 	display:block;
-}
-.panel-heading{
-	margin-bottom:1px;
 }
 .point_panel{
 	max-width:700px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
-
 
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
@@ -355,6 +351,10 @@ div.inline > h6{
 		vertical-align:middle!important;
 		width:100%;
 	}
+	.mobile_nav li{
+		margin-left:-15px;
+		margin-right:-30px;
+	}
 	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
@@ -363,6 +363,7 @@ div.inline > h6{
 		vertical-align:middle;
 		height:250px;
 	}
+
 	#img-profile{
 		margin-right:-20px;
 	}
@@ -370,7 +371,7 @@ div.inline > h6{
 		border-bottom:1px solid #c9ced6;
 		margin-bottom: 5px;
 	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part{
+	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part,.point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -381,6 +382,7 @@ div.inline > h6{
 	}
 	.gallery_expansion{
 		position:fixed;
+			margin-top: 10px;
 		left:0;
 		top:30px;
 		height:100%;
@@ -411,22 +413,19 @@ div.inline > h6{
 		width:60px;
 	}
 	.gallery{
-		height:90px;
+		height:70px;
 		width:70px;
 	}
 	.reward_part{
-		margin-top:-10px;
 		position:relative;
-		width:100%;
-	}
-	.point_part{
-		width:100%;		
+		margin-top:-10px;
+		width:100%
 	}
 	.menu_part{
-		padding-top:0px;
-		position: absolute;
-   		top: 100%;
-   		width:90%;
+ 		padding-top:0px;
+  		position: absolute;
+     	top: 100%;
+    	width:90%;
 	}
 	.reward_part span, .menu_part span{
 		vertical-align:middle!important;
@@ -451,13 +450,11 @@ div.inline > h6{
 	.reward_part .panel{
 		margin-top:10px;
 	}
-	
 	div.inline{
 		width:70px;
-		
 	}
 	div.inline > h6{
-		width:65px;
+	width:65px;
 	}
 	div.reward_part, div.point_panel{
 		display: inline-block;
@@ -500,11 +497,39 @@ div.inline > h6{
 	}
 	.notice{
 		margin-top:10px;
+		margin-right:10px;
 	}
 	.reward_part > .panel >.panel-heading > small{
 		display: none;
 	}
+	.gallery_part{
+		display:none;
+	}
+	IMG.displayed{
+		display:none;
+	}
+	.address_part{
+		position:relative;
+		margin-top:-8px;
+	}
+	.phone_part{
+		
+		
+	}
+	.mobile_nav > .nav-tabs > li{
+		margin-right:-5px;
+	}
+	#menu_reward{
+		margin-top:-15px;
+	}
+	.wrapper{
+		margin-top:20px;
+	}
+	.gallery_part{
+		display:none;
+	}
 }
+
 @media only screen 
 and (min-width: 320px)
 and (max-width: 480px)
@@ -544,6 +569,10 @@ and (max-width: 480px)
 	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
+	.mobile_nav li{
+		margin-left:-15px;
+		margin-right:-30px;
+	}
 	#gallery .nav-tabs{
 		margin-left:0 auto;
 		margin-right:0 auto;
@@ -553,14 +582,7 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
-	.gallery_part{
-		margin-top:-5px;
-		padding-right:0px;
-		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
-		opacity:0.85;
-	}
-
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .gallery_part, .point_part, .point_panel{
+	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .point_part, .point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -584,13 +606,9 @@ and (max-width: 480px)
 	.notice_part{
 		margin-top:-5px;
 	}
-	div.gallery_part{
-		display: inline-block;
-	}
 	div.reward_part{
 		display: inline-block;
 	}
-	
 	#profile >.mobile_panel{
 		position:absolute;
 		top:10px;
@@ -609,31 +627,66 @@ and (max-width: 480px)
 		opacity:0.7;
 		color:#FFFFFF;
 	}
-	.point_part{
-		margin-bottom:-22px;
-	}
 	.point_panel{
 		display:none;
 	}
 	.notice{
 		margin-top:10px;
+		margin-right:10px;
 	}
 	.reward_part > .panel >.panel-heading > small{
 		display: none;
 	}
-}
-@media screen and (min-width: 480px)
-{
-	.mobile_panel{
+	.gallery_part, IMG.displayed{
 		display:none;
 	}
-	.kakao{
-		display:none;
+	.address_part{
+		position:relative;
+		margin-top:-8px;
+	}
+	.phone_part{
+		position:absolute;
+		width:100%;
+		top:120px;
+	}
+	.mobile_nav > .nav-tabs > li{
+		margin-right:-5px;
+	}
+	#menu_reward{
+		margin-top:-15px;
+	}
+	.gallery_expansion{
+		margin-top:10px;
+	}
+	.wrapper{
+		margin-top:20px;
+	}
+	.reward_part{
+		position:relative;
+		margin-top:-10px;
+		width:100%
 	}
 	.point_part{
-		display:none;
+		width:100%;
+		margin-bottom:-22px;
 	}
-	.point_panel{
+	.menu_part{
+ 		padding-top:0px;
+  		position: absolute;
+     	top: 100%;
+    	width:90%;
+	}
+	.reward_part span{
+		vertical-align:middle!important;
+		text-align: center;
+		cursor:pointer;	
+		font-weight:normal;
+	}	
+}
+/* 웹페이지 화면 상에서의 query*/
+@media only screen and (min-width: 480px)
+{
+	.mobile_panel, .kakao, .point_part, .point_panel, .calling ,.show-menu{
 		display:none;
 	}
 }

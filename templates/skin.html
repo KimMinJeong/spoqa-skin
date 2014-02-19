@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/jquery-1.10.2.js"></script>
+	<script src="../static/js/bootstrap.js"></script>
 	<link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/style.css" rel="stylesheet">
 </head>
@@ -15,7 +17,7 @@
 		<div class="row">
 			<div class="mobile_nav">
 					<ul class="nav nav-tabs" id="mobileTab">
-						<li class="#tab1 active"><a href="#cardUI" id="store_info" data-toggle="tab">매장정보</a></li>
+						<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
 						<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"> </a></li>
@@ -216,7 +218,6 @@
 								</span>
 							</div>
 							<!--포인트 상세보기-->
-					
 							<div id="point_expansion">
 								<div class="panel-body">
 									<table class="table" align="center">
@@ -252,7 +253,6 @@
 						</div>
 					</div>
 					
-					
 					<!--리워드상세panel-->
 					<div class="reward_part">
 						<div class="panel panel-default">
@@ -287,7 +287,7 @@
 											<h6>5<img src="../static/img/point.png" class="point"></h6>
 									</div>
 							</div>
-							<span id="showMore"><hr><p>리워드 전체보기 >></p></span>
+							<span class="show-reward"><hr><p>리워드 전체보기 >></p></span>
 						</div>
 					</div>
 				</div>
@@ -319,7 +319,7 @@
 						<div class="notice_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a class="show-view pull-right">전체보기</a>
+									<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항<a class="show-notice pull-right">전체보기</a>
 								</div>
 							  	<div class="panel-body">
 							    	<h5>도도 제휴 기념이벤트 오후 1~3시 방문 손님께 무조건 아메리카노 무한 리필해드립니다.
@@ -335,7 +335,7 @@
 								<div class="panel-heading">
 									<img src="../static/img/icn_gallery_black.png"class="icn">갤러리<a style="float:right" class="show-image">전체보기</a><br>
 								</div>
-							  	<div class="panel-body">
+							  	<div class="panel-body" align="center">
 							  		<img src="../static/img/dodo.jpg" class="pic">
 						 			<img src="../static/img/dodo.jpg" class="pic">
 						 			<img src="../static/img/dodo.jpg" class="pic">	
@@ -354,6 +354,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<img src="../static/img/icn_phone_black.png"class="icn">전화번호
+									<a class="calling" style="float:right">전화하기 ></a>
 								</div>
 							  	<div class="panel-body">
 							 		<p>02-1234-5678</p>
@@ -384,19 +385,21 @@
 			</div>
 		</div>
 	</div>
-	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="../static/js/bootstrap.js"></script>
 </body>	
 
 
 <script type="text/javascript">
 	$(document).ready(function(){
 	
-	$('.show-view').on('click', function(){
+	$('.show-notice').on('click', function(){
 		$('#mainTab a:eq(3)').tab('show');
 		$('#img-profile').hide();
-		$('#mainTab li:nth-child(2)').attr('class', '#tab1 active');
+		$('.mobile_panel').hide();
+		$('.kakao').hide();
+		if(($(window).width() >= 400)){
+            $('#img-profile').fadeIn();
+        }
+		$('#mainTab li:nth-child(2)').attr('class', '#tab1');
 		});
 	});
 	$('.show-image').on('click', function(){
@@ -421,9 +424,9 @@
 </script>
 <script type="text/javascript">
 	$(document).ready(function(){
-	$('.show-view').on('click', function(){
+	$('.show-notice').on('click', function(){
 		$('#mobileTab a:eq(3)').tab('show');
-		$('#mobileTab li:nth-child(1)').attr('class', '#tab1 active');
+		$('#mobileTab li:nth-child(1)').attr('class', '#tab1');
 		});
 	});
 	$('.show-image').on('click', function(){
@@ -442,11 +445,13 @@ $.partlyShow = function(){
 		$('.inline:lt(3)').show();	
 		$('.media').hide();
 		$('.media:lt(3)').show();
+		$('.point_part').show();
 		return true;
 	};
 	if(($(window).width() <= 400)){
 		$.partlyShow();
 	}
+
 	$(window).resize(function(){
 		if(($(window).width() <= 400)){
 			$.partlyShow();
@@ -455,19 +460,18 @@ $.partlyShow = function(){
 			$('#img-profile').fadeIn();
 		}
 	});
-		$('#showMore').click( function(){
-		$('.menu_part').fadeOut();
-		$('.inline').show();
-		$('#showMore').fadeOut();
-		$('.point_part').fadeOut();
+		$('.show-reward').click( function(){
+			$('.menu_part').fadeOut();
+			$('.inline').show();
+			$('.show-reward').fadeOut();
+			$('.point_part').fadeOut();
 		});
 	$('#mobileTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
-		$('#showMore').show();
+		$('.show-reward').show();
 		$('.reward_part').show();
 		$('.show-menu').show();
-		
 		});
 </script>
 <script>
@@ -476,6 +480,12 @@ $.partlyShow = function(){
 		$('.glyphicon').toggle('hide');
 		$('.reward_part').toggle('hide');
 		$('.menu_part').toggle('hide');
+	});
+</script>
+
+<script type="text/javascript">
+	$('tab1').click(function(){
+		$('#cardUI').show();
 	});
 </script>
 
