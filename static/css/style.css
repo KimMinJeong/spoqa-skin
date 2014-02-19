@@ -438,8 +438,10 @@ div.inline > h6{
 	#showMore, #count, .show-menu{
 		display:block;
 	}
-	.media hr{
-		
+	.show-point{
+		cursor:pointer;
+		color:#e66125;
+		font-weight:bolder;
 	}
 	.reward_part hr{
 		margin:0 auto;

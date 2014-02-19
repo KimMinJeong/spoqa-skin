@@ -146,7 +146,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<img src="../static/img/icn_book_black.png" class="icn">메뉴
-								<span class="show-menu pull-right"> 전체보기 > </span>
+								<span class="show-menu pull-right"> 전체보기 <span class="glyphicon glyphicon-chevron-right" style="opacity: 0.85"> </span> </span>
 							</div>
 							<div class="panel-body">
 							<div class="row">
@@ -211,7 +211,9 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-								<a class="show-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20"></a>
+								<span class="show-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20">
+									<span class="glyphicon glyphicon-chevron-right grey_text"></span>
+								</span>
 							</div>
 							<!--포인트 상세보기-->
 					
@@ -465,14 +467,15 @@ $.partlyShow = function(){
 		$('#showMore').show();
 		$('.reward_part').show();
 		$('.show-menu').show();
-		$('.point_part').show();
+		
 		});
 </script>
 <script>
 	$('.show-point').on('click', function(){
 		$('#point_expansion').slideToggle('slow');
-		$('.reward_part').hide();
-		$('.menu_part').hide();
+		$('.glyphicon').toggle('hide');
+		$('.reward_part').toggle('hide');
+		$('.menu_part').toggle('hide');
 	});
 </script>
 
