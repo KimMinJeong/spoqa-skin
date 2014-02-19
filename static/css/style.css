@@ -287,9 +287,6 @@ div.inline > h6{
 .reward_part > .panel > .panel-body > img {
 	display:block;
 }
-.panel-heading{
-	margin-bottom:1px;
-}
 .point_panel{
 	max-width:700px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
@@ -388,9 +385,6 @@ div.inline > h6{
 		margin-top:-10px;
 		width:100%
 	}
-	.point_part{
-		width:100%
-	}
 	.menu_part{
  		padding-top:0px;
   		position: absolute;
@@ -406,7 +400,7 @@ div.inline > h6{
 	#showMore, #count, .full-menu{
 		display:block;
 	}
-	.reward_part hr{
+	.reward_part hr{ㅌ
 		margin:0 auto;
 		border-color:#c9ced6;
 		width:90%;
@@ -452,11 +446,6 @@ div.inline > h6{
  		width:100%;	
  		margin-bottom:-22px;	
   	}
-	.reward_part{
- 		margin-top:-10px;
-		position:relative;
-		width:100%;
-  	}
   	#p_r{
  		margin-top:10px;
   	}
@@ -489,6 +478,9 @@ div.inline > h6{
 	}
 	.gallery_expansion{
 		margin-top: 10px;
+	}
+	.wrapper{
+		margin-top:20px;
 	}
 	
 }
@@ -627,6 +619,9 @@ and (max-width: 480px)
 	.gallery_expansion{
 		margin-top:10px;
 	}
+	.wrapper{
+		margin-top:20px;
+	}
 }
 /* 웹페이지 화면 상에서의 query*/
 @media only screen and (min-width: 480px)
@@ -646,6 +641,26 @@ and (max-width: 480px)
 	.calling{
 		display:none;
 	}
+	.reward_part{
+		position:relative;
+		margin-top:-10px;
+		width:100%
+	}
+	.point_part{
+		width:100%
+	}
+	.menu_part{
+ 		padding-top:0px;
+  		position: absolute;
+     	top: 100%;
+    	width:90%;
+	}
+	.reward_part span{
+		vertical-align:middle!important;
+		text-align: center;
+		cursor:pointer;	
+		font-weight:normal;
+	}	
 }
 @media screen and (max-width: 800px) { 
 	
