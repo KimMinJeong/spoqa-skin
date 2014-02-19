@@ -162,6 +162,7 @@
 		            							최대 2줄로 작성 가능합니다. </small>
 						        		</div>
 					    			</div>
+		
 								</div>
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
@@ -400,16 +401,15 @@
 <script type="text/javascript">
 	
    $('#smyTab li').on('click', function(){
-   	console.log($(this).attr('class').search('#tab1'));
       if($(this).attr('class').search('#tab1') != 0) {
-         $('#img-profile').hide();
-         $('.mobile_panel').hide();
-         $('.kakao').hide();
+         $('#img-profile').fadeOut();
+         $('.mobile_panel').fadeOut();
+         $('.kakao').fadeOut();
       }
       else{
-         $('#img-profile').show();
-         $('.mobile_panel').show();
-         $('.kakao').show();
+         $('#img-profile').fadeIn();
+         $('.mobile_panel').fadeIn();
+         $('.kakao').fadeIn();
       }
    });
 
@@ -435,15 +435,6 @@
 		$('.reward_part').hide();
 		$('.media').show();
 		$('.full-menu').hide();
-	});
-</script>
-<script type="text/javascript">
-	$(document).click(function(event){
-		if(event.target.id != 'info')
-		{
-			$('.mobile_panel').hide();
-			$('.kakao').hide();
-		}
 	});
 </script>
 <script type="text/javascript">
