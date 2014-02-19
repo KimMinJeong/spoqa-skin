@@ -322,7 +322,10 @@ div.inline > h6{
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
-
+.reply_icn{
+	height:20px;
+	width:20px;
+}
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -524,7 +527,7 @@ div.inline > h6{
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:65%;
+		top:63%;
 		left:75%;
 		background-color: #080808;
 		opacity:0.7;
@@ -562,10 +565,6 @@ div.inline > h6{
 		position:relative;
 		margin-top:-8px;
 	}
-	.phone_part{
-		
-		
-	}
 	.mobile_nav > .nav-tabs > li{
 		margin-right:-5px;
 	}
@@ -577,6 +576,9 @@ div.inline > h6{
 	}
 	.gallery_part{
 		display:none;
+	}
+	.panel-body .reply{
+		background-color: #edeff2;
 	}
 }
 
@@ -671,8 +673,8 @@ and (max-width: 480px)
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:65%;
-		left:80%;
+		top:63%;
+		left:78%;
 		background-color: #080808;
 		opacity:0.7;
 		color:#FFFFFF;
@@ -693,11 +695,6 @@ and (max-width: 480px)
 	.address_part{
 		position:relative;
 		margin-top:-8px;
-	}
-	.phone_part{
-		position:absolute;
-		width:100%;
-		top:100px;
 	}
 	.mobile_nav > .nav-tabs > li{
 		margin-right:-5px;
@@ -731,12 +728,18 @@ and (max-width: 480px)
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
-	}	
+	}
+	#reply{
+		background-color: #edeff2;
+	}
 }
 /* 웹페이지 화면 상에서의 query*/
 @media only screen and (min-width: 480px)
 {
 	.mobile_panel, .kakao, .point_part, .point_panel, .calling ,.show-menu{
+		display:none;
+	}
+	#chat{
 		display:none;
 	}
 }
