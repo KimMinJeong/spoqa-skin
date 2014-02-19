@@ -178,7 +178,7 @@ IMG.point{
 	color:#b2b2b2;
 }
 .panel > .panel-heading{
-	margin-bottom:-15px;
+	margin-bottom:-10px;
 }
 /*cardUI에 들어가는 css*/
 .panel-body{
@@ -410,7 +410,6 @@ div.inline > h6{
 	}
 	div.inline{
 		width:70px;
-		
 	}
 	div.inline > h6{
 	width:65px;
