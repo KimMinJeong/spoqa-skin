@@ -28,7 +28,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="profile">
-				<img src="../static/img/taco_2.png" class="img-responsive" id="img-profile">
+				<img src="../static/img/taco_2.png" id="img-profile">
 				<div class="mobile_panel">
 					<h6>역삼,논현 > 레스토랑</h6>
 					<h3>타코드부로</h3>
@@ -71,7 +71,7 @@
 									<li id="count"><a href="" data-toggle="tab" a class="grey_text" style="font-size: 30px;">1/3</a></li>
 									<li class="active">
 									<a href="#img1" data-toggle="tab" class="thumbnail">
-									<img src="../static/img/reward_sample.jpg" class="img1">
+									<img src="../static/img/reward_sample.jpg">
 									</a></li>									
 									<li><a href="#img2" data-toggle="tab" class="thumbnail">
 									<img src="../static/img/reward_sample2.jpg">
@@ -148,14 +148,14 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<img src="../static/img/icn_book_black.png" class="icn">메뉴
-								<span class="show-menu pull-right"> 전체보기 > </span>
+								<span class="show-menu pull-right"> 전체보기 <span class="glyphicon glyphicon-chevron-right" style="opacity: 0.85"> </span> </span>
 							</div>
 							<div class="panel-body">
 							<div class="row">
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
-	        							<a href="#" class="pull-left">
-		            						<img src="../static/img/dodo.jpg" class="media-object img-responsive gallery">
+	        							<a href="#" class="pull-left" style="vertical-align: middle">
+		            						<img src="../static/img/dodo.jpg" class="media-object displayed gallery">
 		        						</a>
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
@@ -164,6 +164,7 @@
 		            							최대 2줄로 작성 가능합니다. </small>
 						        		</div>
 					    			</div>
+		
 								</div>
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
@@ -205,26 +206,21 @@
 							</div>
 						</div>
 					</div>
-					<!--포인트-->
+				<!--포인트&리워드-->
 				<div id="point_reward">
+					<!--포인트-->
 					<div class="point_part">
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-								<a class="show-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20"></a>
+								<span class="show-point pull-right" >156 <img src="../static/img/point.png" height="20" width="20">
+									<span class="glyphicon glyphicon-chevron-right grey_text"></span>
+								</span>
 							</div>
-						</div>
-					</div>
-					<!--포인트 상세보기
-					<div class="tab-pane" id="point">
-						<div class="point_panel">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-									<p style="float:right">156<img src="../static/img/point.png" height="20" width="20"></p>
-								</div>
+							<!--포인트 상세보기-->
+							<div id="point_expansion">
 								<div class="panel-body">
-									<table align="center">
+									<table class="table" align="center">
 										<tr>
 											<td>2012.02.16</td>
 											<td>22:02</td>
@@ -252,8 +248,11 @@
 									</table>
 								</div>
 							</div>
+						
+							
 						</div>
-					</div>-->
+					</div>
+					
 					<!--리워드상세panel-->
 					<div class="reward_part">
 						<div class="panel panel-default">
@@ -287,7 +286,6 @@
 											<h6>모든 음료 한잔 무료</h6>
 											<h6>5<img src="../static/img/point.png" class="point"></h6>
 									</div>
-									
 							</div>
 							<span class="show-reward"><hr><p>리워드 전체보기 >></p></span>
 						</div>
@@ -374,6 +372,12 @@
 		                   		</div>
 	                		</div>
 	            	 	</div>
+	            	 </div>
+	            	 <div id="footer">
+	            	 	<div class="container">
+	            	 		<p class="text-muted">Copyrightⓒ2013 스포카 패밀리 레스토랑 All Rights Reserved.<br>
+	            	 							  Copyrightⓒ2013 Spoqa Inc. All Rights Reserved.	</p>
+	            	 	</div>
 	            	 </div>	
 				</div>		
 			</div>
@@ -406,16 +410,14 @@
 	
    $('#mobileTab li').on('click', function(){
       if($(this).attr('class').search('#tab1') != 0) {
-         $('#img-profile').hide();
-         $('.mobile_panel').hide();
-         $('.kakao').hide();
+         $('#img-profile').fadeOut();
+         $('.mobile_panel').fadeOut();
+         $('.kakao').fadeOut();
       }
-      else
-      {
-         $('#img-profile').show();
-         $('.mobile_panel').show();
-         $('.kakao').show();
-         
+      else{
+         $('#img-profile').fadeIn();
+         $('.mobile_panel').fadeIn();
+         $('.kakao').fadeIn();
       }
    });
 
@@ -430,13 +432,11 @@
 	$('.show-image').on('click', function(){
 		$('#mobileTab a:eq(2)').tab('show');
 	});
-	$('.show-point').on('click', function(){
-		$('#mobileTab a:eq(6)').tab('show');
-	});
 	$('.show-menu').on('click', function(){
 		$('.reward_part').hide();
 		$('.media').show();
 		$('.show-menu').hide();
+		$('.point_part').hide();
 	});
 </script>
 <script type="text/javascript">
@@ -445,15 +445,26 @@ $.partlyShow = function(){
 		$('.inline:lt(3)').show();	
 		$('.media').hide();
 		$('.media:lt(3)').show();
+		$('.point_part').show();
 		return true;
 	};
 	if(($(window).width() <= 400)){
 		$.partlyShow();
 	}
+
+	$(window).resize(function(){
+		if(($(window).width() <= 400)){
+			$.partlyShow();
+		}
+		if(($(window).width() >= 400)){
+			$('#img-profile').fadeIn();
+		}
+	});
 		$('.show-reward').click( function(){
-		$('.menu_part').fadeOut();
-		$('.inline').show();
-		$('.show-reward').fadeOut();
+			$('.menu_part').fadeOut();
+			$('.inline').show();
+			$('.show-reward').fadeOut();
+			$('.point_part').fadeOut();
 		});
 	$('#mobileTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
@@ -462,6 +473,14 @@ $.partlyShow = function(){
 		$('.reward_part').show();
 		$('.show-menu').show();
 		});
+</script>
+<script>
+	$('.show-point').on('click', function(){
+		$('#point_expansion').slideToggle('slow');
+		$('.glyphicon').toggle('hide');
+		$('.reward_part').toggle('hide');
+		$('.menu_part').toggle('hide');
+	});
 </script>
 
 <script type="text/javascript">
