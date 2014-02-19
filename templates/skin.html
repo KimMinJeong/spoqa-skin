@@ -14,8 +14,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="snav">
-					<ul class="nav nav-tabs" id="smyTab">
-						<li class="#tab1 active"><a href="#cardUI" id="info" data-toggle="tab">매장정보</a></li>
+					<ul class="nav nav-tabs" id="mobileTab">
+						<li class="#tab1 active"><a href="#cardUI" id="store_info" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
 						<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"> </a></li>
@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="image">
+			<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="profile">
 				<img src="../static/img/taco_2.png" class="img-responsive" id="img-profile">
 				<div class="mobile_panel">
 					<h6>역삼,논현 > 레스토랑</h6>
@@ -37,7 +37,7 @@
 					<p>카톡문의</p>
 				</div>
 				<div class="navbar navbar-default">
-				    <ul class="nav nav-tabs nav-stacked" id="myTab">
+				    <ul class="nav nav-tabs nav-stacked" id="mainTab">
 						<li><h6>역삼,논현 > 레스토랑</h6>
 						<h3>타코드부로</h3>
 						<p><img src="../static/img/icn_users.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
@@ -389,17 +389,17 @@
 	$(document).ready(function(){
 	
 	$('.show-view').on('click', function(){
-		$('#myTab a:eq(3)').tab('show');
-		$('#myTab li:nth-child(2)').attr('class', '#tab1 active');
+		$('#mainTab a:eq(3)').tab('show');
+		$('#mainTab li:nth-child(2)').attr('class', '#tab1 active');
 		});
 	});
 	$('.show-image').on('click', function(){
-		$('#myTab a:eq(2)').tab('show');
+		$('#mainTab a:eq(2)').tab('show');
 	});
 </script>	
 <script type="text/javascript">
 	
-   $('#smyTab li').on('click', function(){
+   $('#mobileTab li').on('click', function(){
    	console.log($(this).attr('class').search('#tab1'));
       if($(this).attr('class').search('#tab1') != 0) {
          $('#img-profile').hide();
@@ -417,15 +417,15 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 	$('.show-view').on('click', function(){
-		$('#smyTab a:eq(3)').tab('show');
-		$('#smyTab li:nth-child(1)').attr('class', '#tab1 active');
+		$('#mobileTab a:eq(3)').tab('show');
+		$('#mobileTab li:nth-child(1)').attr('class', '#tab1 active');
 		});
 	});
 	$('.show-image').on('click', function(){
-		$('#smyTab a:eq(2)').tab('show');
+		$('#mobileTab a:eq(2)').tab('show');
 	});
 	$('.show-point').on('click', function(){
-		$('#smyTab a:eq(6)').tab('show');
+		$('#mobileTab a:eq(6)').tab('show');
 	});
 	$('.show-menu').on('click', function(){
 		console.log($(this));
@@ -450,7 +450,7 @@ $.partlyShow = function(){
 		$('.inline').show();
 		$('#showMore').fadeOut();
 		});
-	$('#smyTab a[href="#menu_reward"]').on('click', function(){
+	$('#mobileTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
 		$('#showMore').show();
