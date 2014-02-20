@@ -44,7 +44,7 @@ body{
    margin-bottom:0px;
    margin-right:5px;
 }
-#count, #footer, #point_expansion, .text{
+#count, #footer, #point_expansion, #question_box{
 	display:none;
 }
 .text-group{
@@ -494,6 +494,9 @@ div.inline > h6{
 		color:#e66125;
 		font-weight:bolder;
 		border-bottom:1px solid #C9CED6;
+	}
+	#question_box{
+		margin-top:-10px;
 	}
 	.reward_part hr{
 		margin:0 auto;
