@@ -45,10 +45,11 @@ body{
 #count, .point_expansion,.question_editor{
 	display:none;
 }
-#write{
+.question_box{
 	height:100px;
 	overflow:auto;
 	margin-top:10px;
+	background-color:#FFFFFF;
 }
 #footer{
 	font-size:0.5em;
@@ -110,7 +111,6 @@ body{
 	height:12px;
 	width:12px;
 }
-
 .displayed {
     display:block;
     margin-left:auto;
@@ -306,7 +306,7 @@ li > a{
 		margin-top:0px;
 	}
 	#profile > img{
-		width:100%;
+		width:90%;
 		height:250px;
 		margin-bottom:20px;
 	}
@@ -465,8 +465,8 @@ li > a{
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:63%;
-		left:75%;
+		top:65%;
+		left:72%;
 		background-color: #080808;
 		opacity:0.7;
 		color:#FFFFFF;

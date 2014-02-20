@@ -11,11 +11,7 @@
     <link href="../static/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<svg version="1.1" height="0" width="0">
-     <filter id="blur" x="0" y="0">
-       <feGaussianBlur stdDeviation="3"></feGaussianBlur>
-     </filter>
-</svg>   
+	
 	<div class="bgImage"> </div>
 	<div class="container">
 		<div class="row">
@@ -299,11 +295,11 @@
 					<div class="row">
 						<div class="col-xs-12 col-md-12 col-sm-12">
 							<div class="panel panel-default">
-								<div class="panel-heading ">
+								<div class="panel-heading question-heading">
 									<img src="../static/img/icn_message_orangep5.png" style="height:30px;width:30px;">1:1 문의하기
 								</div>
 								<div class="question_editor">
-									<div id="write" contenteditable="true" data-ph="매장에 궁금한 점을 작성해주세요."> 
+									<div id="question" class="question_box" contenteditable="true"> 
 										<span><img src="../static/img/icn_message_orangep5.png" class="icn"></span>							
 									</div>
 									<div class="question_button">
@@ -324,29 +320,23 @@
 									오늘의 쉐프 추천요리가 매일 50%할인이라던데, 이번 목요일 메뉴는 
 									뭔지 알려주실 수 있나요?
 								</div>
-								<div class="panel-body" id="reply">
+								<div class="panel-body">
 									<img src="../static/img/icn_reply_dodoblue.png" class="reply_icn">
 									안녕하세요, 고객님^^ 그건 쉐프님 마음이라 안알랴줌.
 								</div>
-								<div class="panel-body" id="reply_head">
-									<a><img src="../static/img/icn_message_orangep5.png" class="reply_icn">답변하기</a>
+								<div class="panel-heading question-heading">
+									<img src="../static/img/icn_message_orangep5.png" style="height:30px;width:30px;">답변하기
 								</div>
-								<div class="panel-body" id="reply_body">
-									<div id="reply_write" contenteditable="true">
-										<span><img src="../static/img/icn_message_orangep5.png" class="reply_icn"></span>
+								<div class="question_editor">
+									<div class="question_box" id="reply" contenteditable="true"> 
+										<span><img src="../static/img/icn_message_orangep5.png" class="icn"></span>							
 									</div>
-								</div>
-								<div class="panel-body" id="reply_button">
-									<div class="col-xs-6 col-md-6 col-sm-6">
-										<button type="button" class="btn btn-default" id="cancle_btn">
-											<img src="../static/img/icn_x_grey.png" height="30px" width="30px">
-											<span>취소</span>
+									<div class="question_button">
+										<button type="button" class="btn btn-default">
+										  <span><img src="../static/img/icn_x_grey.png" class="icn" id="cancle"></span> 취소
 										</button>
-									</div>
-									<div class="col-xs-6 col-md-6 col-sm-6">
-										<button type="button" class="btn btn-default" id="send_btn">
-											<img src="../static/img/icn_check_dodoblue.png" height="30px" width="30px">
-											<span>보내기</span>
+										<button type="button" class="btn btn-default">
+										  <span><img src="../static/img/icn_check_dodoblue.png" id="send" class="icn"></span> 보내기
 										</button>
 									</div>
 								</div>
@@ -427,7 +417,11 @@
 			 </div>
 			</div>
 		</div>
-
+<svg version="1.1" height="0" width="0">
+     <filter id="blur">
+       <feGaussianBlur stdDeviation="3"/>
+     </filter>
+</svg>   
 </body>	
 
 
@@ -536,30 +530,33 @@ $.partlyShow = function(){
 </script>
 
 <script>
-	$('#chat .panel-heading').on('click', function(){
-        $('.question_editor').slideToggle('slow');
-        $('#chat .panel-heading').fadeOut();
-    });
-    
-	$(document).ready(function () {    
-   	var newText, text = "";
-
-   	$('#write').html(function () {  
-       console.log($.trim($(this).html()));      
+	$('.question-heading').on('click', function(){
+		$(this).siblings('.question_editor').slideToggle('slow');
+        /*$('.question_editor').slideToggle('slow');*/
+        $(this).fadeOut();
+        var newText, text = "";
+        child=$(this).siblings('.question_editor').children('.question_box').attr('id');
+   	$('#'+child).html(function () {  
        if ($.trim($(this).length) < 2) {
-           placehold('write', "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>매장에 궁금한 점을 작성해주세요.</span>");
-           text = $.trim($('#write').html());
+       	if(child=='reply'){
+       		placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>답변을 작성해주세요.</span>");
+       	}
+       	else{
+           placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>매장에 궁금한 점을 작성해주세요.</span>");
+          }
+           text = $.trim($('#'+child).html());
        }
    	});
-   	$('#write').keydown(function () {        
+   	$('#'+child).keydown(function () {        
        if ($.trim($(this).html()) == text) {
-           placehold('write', '<span style=color:#333333;></span> ');
+           placehold(child, '<span style=color:#333333;></span> ');
        } else {
-           placehold('write', newText);
+           placehold(child, newText);
        }
    	});
-
-});
+        
+        
+    });
 function placehold(id, placeholder) {
     $("#" + id).html(placeholder);
 }
