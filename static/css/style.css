@@ -26,7 +26,7 @@ body{
 	height:23px;
 	width:23px;
 }
-.pointIcon{
+.point_icn, .reply_icn{
 	height:20px;
 	width:20px;
 }
@@ -40,7 +40,7 @@ body{
    margin-bottom:0px;
    margin-right:5px;
 }
-#count, #footer, .point_expansion, #question_box{
+#count, #footer, #question_editor, .point_expansion{
 	display:none;
 }
 #write{
@@ -48,7 +48,7 @@ body{
 	overflow:auto;
 	margin-top:10px;
 }
-.notice{
+.notice_expansion{
 	max-width:700px;
 	margin-top:10px;
 	margin-right:20px;
@@ -94,7 +94,7 @@ body{
 .notice_part h5, .orange_font{
 	color : #e66125;	
 }
-IMG.pic{
+.small_img{
 	height:70px;
 	width:70px;
 	display:inline-block;
@@ -106,7 +106,7 @@ IMG.displayed {
     margin-left: auto;
     margin-right: auto;
     }
-IMG.point{
+.point_sicn{
 	height:12px;
 	width:12px;
 }
@@ -184,7 +184,6 @@ IMG.point{
 #inGallery .panel-body{
 	padding:0px;
 	margin-top:-20px;
-	
 }
 a.thumbnail:hover,
 a.thumbnail.active,
@@ -253,10 +252,6 @@ li > a{
 	max-width:700px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
-}
-.reply_icn, .pointIcon{
-	height:20px;
-	width:20px;
 }
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
@@ -343,7 +338,7 @@ li > a{
 		border-bottom:1px solid #c9ced6;
 		margin-bottom: 5px;
 	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part,.point_panel{
+	.phone_part, .address_part, .notice_part, .notice_expansion, .menu_part, .reward_part, .point_part,.point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -383,10 +378,6 @@ li > a{
 		height:60px;
 		width:60px;
 	}
-	.gallery{
-		height:70px;
-		width:70px;
-	}
 	.reward_part{
 		position:relative;
 		margin-top:-10px;
@@ -417,7 +408,7 @@ li > a{
 	#point{
 		opacity:0.5;
 	}
-	#question_box{
+	#question_editor{
 		margin-top:-10px;
 	}
 	.reward_part hr{
@@ -432,7 +423,7 @@ li > a{
 		width:70px;
 	}
 	.inline > h6{
-	width:65px;
+		width:65px;
 	}
 	.reward_part, .point_panel{
 		display: inline-block;
@@ -442,8 +433,8 @@ li > a{
 	}
 	#profile >.mobile_panel{
 		position:absolute;
-		top:10px;
-		left:30px;
+		top:5%;
+		left:8%;
 		color:#FFFFFF;
 		opacity: 0.7;
 	}
@@ -470,20 +461,11 @@ li > a{
 	#point_reward{
 		margin-top:10px;
 	}
-	.point_panel{
-		display:none;
-	}
-	.notice{
+	.notice_expansion{
 		margin-top:10px;
 		margin-right:10px;
 	}
-	.reward_part > .panel >.panel-heading > small{
-		display: none;
-	}
-	.gallery_part{
-		display:none;
-	}
-	IMG.displayed{
+	.gallery_part, .point_panel, IMG.displayed, .reward_part small{
 		display:none;
 	}
 	.address_part{
@@ -498,9 +480,6 @@ li > a{
 	}
 	.wrapper{
 		margin-top:20px;
-	}
-	.gallery_part{
-		display:none;
 	}
 	.panel-body .reply{
 		background-color: #edeff2;
@@ -559,13 +538,25 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .point_part, .point_panel{
+	button{
+	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.phone_part, .address_part, .notice_part, .notice_expansion .menu_part, .reward_part , .point_part, .point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
 	}
 	.reward_part > .panel > .panel-body > div {
 		display:inline-block;
+	}
+	.gallery_expansion{
+		position:fixed;
+		left:0;
+		top:2%;
+		height:100%;
+		float:inherit;
 	}
 	.gallery_expansion > .panel{
 		margin-top: 15px;
@@ -607,7 +598,7 @@ and (max-width: 480px)
 	.point_panel{
 		display:none;
 	}
-	.notice{
+	.notice_expansion{
 		margin-top:10px;
 		margin-right:10px;
 	}

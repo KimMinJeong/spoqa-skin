@@ -105,7 +105,7 @@
 				<div class="tab-pane fade" id="notice">
 					<div class="row">
 						<div class="col-sm-12 col-md-12">
-						<div class="notice">
+						<div class="notice_expansion">
 							<div class="panel panel-default">
 							  	<div class="panel-heading">
 							  		<img src="../static/img/icn_noti_orangep5.png" class="icn">공지사항
@@ -152,8 +152,8 @@
 							<div class="row">
 								<div class="col-sm-6 col-md-6">
 									<div class="media">
-	        							<a href="#" class="pull-left" style="vertical-align: middle">
-		            						<img src="../static/img/dodo.jpg" class="media-object displayed">
+	        							<a href="#" class="pull-left">
+		            						<img src="../static/img/dodo.jpg" class="media-object">
 		        						</a>
 	        							<div class="media-body">
 		            						<p class="media-heading">바질프라운크림파스타</p>
@@ -211,7 +211,7 @@
 						<div class="panel panel-default">
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
-								<span class="show-point pull-right" >156 <img src="../static/img/point.png" class="pointIcon">
+								<span class="show-point pull-right" >156 <img src="../static/img/point.png" class="point_icn">
 									<span class="glyphicon glyphicon-chevron-right grey_text"></span>
 								</span>
 							</div>
@@ -222,7 +222,7 @@
 										<tr>
 											<td>2012.02.16</td>
 											<td>22:02</td>
-											<td class="text-muted">+8<img src="../static/img/point.png" style="opacity:0.5;" class="pointIcon"></td>
+											<td class="text-muted">+8<img src="../static/img/point.png" style="opacity:0.5;" class="point_icn"></td>
 											<td class="orange_font">125<img src="../static/img/point.png" height="20" width="20"></td>
 										</tr>
 										<tr>
@@ -245,9 +245,7 @@
 										</tr>
 									</table>
 								</div>
-							</div>
-						
-							
+							</div>	
 						</div>
 					</div>
 					
@@ -262,27 +260,27 @@
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6 class="black_text">5<img src="../static/img/point.png" class="point"></h6>
+										<h6 class="black_text">5<img src="../static/img/point.png" class="point_sicn"></h6>
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6 class="black_text">5<img src="../static/img/point.png" class="point"></h6>
+										<h6 class="black_text">5<img src="../static/img/point.png" class="point_sicn"></h6>
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6 class="black_text">5<img src="../static/img/point.png" class="point"></h6>
+										<h6 class="black_text">5<img src="../static/img/point.png" class="point_sicn"></h6>
 									</div>
 									<div class="inline">
 										<img src="../static/img/dodo.jpg" class="img-responsive">
 										<h6 class="black_text">모든 음료 한잔 무료</h6>
-										<h6>5<img src="../static/img/point.png" class="point"></h6>
+										<h6>5<img src="../static/img/point.png" class="point_sicn"></h6>
 									</div>
 									<div class="inline">
 											<img src="../static/img/dodo.jpg" class="img-responsive">
 											<h6>모든 음료 한잔 무료</h6>
-											<h6>5<img src="../static/img/point.png" class="point"></h6>
+											<h6>5<img src="../static/img/point.png" class="point_sicn"></h6>
 									</div>
 							</div>
 							<span class="show-reward"><hr><p>리워드 전체보기 >></p></span>
@@ -376,19 +374,18 @@
 									<img src="../static/img/icn_gallery_black.png"class="icn">갤러리<a class="show-image pull-right grey_text">전체보기</a><br>
 								</div>
 							  	<div class="panel-body" align="center">
-							  		<img src="../static/img/dodo.jpg" class="pic">
-						 			<img src="../static/img/dodo.jpg" class="pic">
-						 			<img src="../static/img/dodo.jpg" class="pic">	
-						 			<img src="../static/img/dodo.jpg" class="pic">	
-						 			<img src="../static/img/dodo.jpg" class="pic">	
-						 			<img src="../static/img/dodo.jpg" class="pic">	
-						 			<img src="../static/img/dodo.jpg" class="pic">	
-						 			<img src="../static/img/dodo.jpg" class="pic">	
+							  		<img src="../static/img/dodo.jpg" class="small_img">
+						 			<img src="../static/img/dodo.jpg" class="small_img">
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
 							  	</div>
 							</div>
 						</div>
 					</div>
-					
 					<div class="col-sm-6 col-md-6">
 						<div class="phone_part">
 							<div class="panel panel-default">
@@ -534,7 +531,7 @@ $.partlyShow = function(){
 
 <script>
 	$('#chat .panel-heading').on('click', function(){
-        $('#question_box').slideToggle('slow');
+        $('#question_editor').slideToggle('slow');
         $('#chat .panel-heading').fadeOut();
     });
     
