@@ -60,6 +60,9 @@ body{
 	overflow:auto;
 	margin-top:10px;
 }
+#profile{
+	margin-right:-45px;
+}
 
 .notice{
 	max-width:700px;
