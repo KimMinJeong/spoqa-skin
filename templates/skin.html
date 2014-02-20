@@ -330,8 +330,8 @@
 									<a><img src="../static/img/icn_message_orangep5.png" class="reply_icn">답변하기</a>
 								</div>
 								<div class="panel-body" id="reply_body">
-									<div contenteditable="true">
-										<img src="../static/img/icn_message_orangep5.png" class="reply_icn">
+									<div id="reply_write" contenteditable="true">
+										<span><img src="../static/img/icn_message_orangep5.png" class="reply_icn"></span>
 									</div>
 								</div>
 								<div class="panel-body" id="reply_button">
@@ -523,11 +523,7 @@ $.partlyShow = function(){
 		$('.glyphicon').toggle('hide');
 		$('.reward_part').toggle('hide');
 		$('.menu_part').toggle('hide');
-	});
-	$('#chat .panel-heading').on('click', function(){
-		$('.text').slideToggle('slow');
-	});
-	
+	});	
 </script>
 
 <script type="text/javascript">
@@ -537,26 +533,23 @@ $.partlyShow = function(){
 </script>
 
 <script>
-	$('#mobileTab a[href="#chat"]').on('click', function(){
-        $('.text').hide();
-        });
-
 	$('#chat .panel-heading').on('click', function(){
         $('.text').slideToggle('slow');
     });
+    
 	$(document).ready(function () {    
    	var newText, text = "";
 
    	$('#write').html(function () {  
        console.log($.trim($(this).html()));      
        if ($.trim($(this).length) < 2) {
-           placehold('write', "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>문의하실글 있음 작성해주셔요호</span>");
-           originaltext = $.trim($('#write').html());
+           placehold('write', "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>매장에 궁금한 점을 작성해주세요.</span>");
+           text = $.trim($('#write').html());
        }
    	});
    	$('#write').click(function () {        
        if ($.trim($(this).html()) == text) {
-           placehold('write', '');
+           placehold('write', '<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>');
        } else {
            placehold('write', newText);
        }
@@ -570,6 +563,9 @@ $.partlyShow = function(){
        }
    	});
 });
+function placehold(id, placeholder) {
+    $("#" + id).html(placeholder);
+}
 </script>
 
 <script type="text/javascript">
@@ -599,14 +595,7 @@ $.partlyShow = function(){
         
         //보내기 버튼 금지 시켜 놓음
         $("#send_btn").click(function(event) {
-                event.stopPropagation();
-            });
-    });
+        	event.stopPropagation();
+        });
+	});
 </script>
-
-<script>
-function placehold(id, placeholder) {
-    $("#" + id).html(placeholder);
-}
-</script>
-</html>
