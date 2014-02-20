@@ -302,11 +302,11 @@
 								<div class="panel-heading ">
 									<img src="../static/img/icn_message_orangep5.png" style="height:30px;width:30px;">1:1 문의하기
 								</div>
-								<div id="question_editor">
+								<div class="question_editor">
 									<div id="write" contenteditable="true" data-ph="매장에 궁금한 점을 작성해주세요."> 
 										<span><img src="../static/img/icn_message_orangep5.png" class="icn"></span>							
 									</div>
-									<div class="buttons">
+									<div class="question_button">
 										<button type="button" class="btn btn-default">
 										  <span><img src="../static/img/icn_x_grey.png" class="icn" id="cancle_btn_1"></span> 취소
 										</button>
@@ -332,8 +332,8 @@
 									<a><img src="../static/img/icn_message_orangep5.png" class="reply_icn">답변하기</a>
 								</div>
 								<div class="panel-body" id="reply_body">
-									<div contenteditable="true">
-										<img src="../static/img/icn_message_orangep5.png" class="reply_icn">
+									<div id="reply_write" contenteditable="true">
+										<span><img src="../static/img/icn_message_orangep5.png" class="reply_icn"></span>
 									</div>
 								</div>
 								<div class="panel-body" id="reply_button">
@@ -424,10 +424,10 @@
 				</div>		
 			</div>
 			</div>
-			 
+			 </div>
 			</div>
 		</div>
-	</div>
+
 </body>	
 
 
@@ -522,7 +522,7 @@ $.partlyShow = function(){
 
 <script>
 	$('.show-point').on('click', function(){
-		$('#point_expansion').slideToggle('slow');
+		$('.point_expansion').slideToggle('slow');
 		$('.glyphicon').toggle('hide');
 		$('.reward_part').toggle('hide');
 		$('.menu_part').toggle('hide');
@@ -537,7 +537,7 @@ $.partlyShow = function(){
 
 <script>
 	$('#chat .panel-heading').on('click', function(){
-        $('#question_editor').slideToggle('slow');
+        $('.question_editor').slideToggle('slow');
         $('#chat .panel-heading').fadeOut();
     });
     
