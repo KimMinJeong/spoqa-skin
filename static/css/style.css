@@ -7,19 +7,30 @@ body{
 }
 .bgImage{
 	background-image:url('../img/taco.png');
+	position:absolute;
 	width:100%; 
-	background-size:100%; 
 	height:100%;
+	background-size:100%; 
 	background-repeat:no-repeat; 
 	-webkit-filter: blur(30px);
-	position:absolute;
 	-moz-filter: blur(30px); 
-    filter: blur(30px);
+    filter: url(#blur);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
+.show-menu, .show-reward{
+	cursor:pointer;
+	color: #b2b2b2;
+	display:none;
+    filter: blur(30px);
+   }
 .icn{
 	opacity:0.4;
 	height:23px;
 	width:23px;
+}
+.point_icn, .reply_icn{
+	height:20px;
+	width:20px;
 }
 #profile{
    margin-top:20px;
@@ -31,21 +42,18 @@ body{
    margin-bottom:0px;
    margin-right:5px;
 }
-#count, #footer, #point_expansion,.question_editor{
+#count, .point_expansion,.question_editor{
 	display:none;
-}
-.text-group{
-	position:relative;
-}
-.text-group span{
-	position:fixed;
-	top:0;
-	left:0;
 }
 #write{
 	height:100px;
 	overflow:auto;
 	margin-top:10px;
+}
+#footer{
+	font-size:0.5em;
+	position:absolute;
+	top:100%;
 }
 .notice_expansion{
 	max-width:700px;
@@ -62,7 +70,6 @@ body{
 	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
-
 }
 .phone_part{
 	max-width:340px;
@@ -85,14 +92,11 @@ body{
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
-.address_part > .panel > .panel-body > img{
+.address_part .panel-body > img{
 	height:180px;
 	width:300px;
 }
-.orange_font{
-	color:#e66125;
-}
-.notice_part > .panel > .panel-body > h5, .orange_font{
+.notice_part h5, .orange_font{
 	color : #e66125;	
 }
 .small_img{
@@ -102,15 +106,17 @@ body{
 	margin-left:auto;
 	margin-right:auto;
 }
+.point_sicn{
+	height:12px;
+	width:12px;
+}
+
 .displayed {
     display:block;
     margin-left:auto;
     margin-right:auto;
 }
-.point{
-	height:12px;
-	width:12px;
-}
+
 .navbar{
 	width:230px;
 	background-color: #edeff2;
@@ -166,11 +172,8 @@ body{
 	box-shadow: 0px 0px 0px rgba(255,255,255,0.2);
 	filter:blur(1px);
 }
-a{
-	color: #888888;
-}
 .gallery_expansion{
-	margin-top:5px;
+	margin: 0 auto;
 }
 .gallery_expansion > .panel{
 	max-width:700px;
@@ -191,10 +194,11 @@ a{
 #inGallery .panel-body{
 	padding:0px;
 	margin-top:-20px;
-	
 }
-a.thumbnail:hover,a.thumbnail.active, li.active a{
-   opacity:1;
+a.thumbnail:hover,
+a.thumbnail.active,
+li.active a{
+	opacity:1;
 }
 a.thumbnail{
 	opacity:0.3;
@@ -210,7 +214,7 @@ li > a{
 	max-width:700px;
 	display:none;
 }
-#point_expansion{
+.point_expansion{
 	margin-top:-15px;
 }
 .media{
@@ -245,6 +249,7 @@ li > a{
 .mobile_nav li{
 	margin-left:-10px;
 	margin-right:-50px;
+
 }
 .inline{
 	max-width:120px;
@@ -254,14 +259,10 @@ li > a{
 }
 .inline > img{
 	margin-left:10px;
+	
 }
 .inline > h6{
 	text-align:center;
-}
-.show-reward , .show-menu{
-	cursor:pointer;
-	display:none;
-	color:#b2b2b2;
 }
 .reward_part > .panel > .panel-body > img {
 	display:block;
@@ -299,7 +300,6 @@ li > a{
 	#footer{
 		font-size:0.7em;
 		background-color:#888888;
-		display:block;
 	}
 	#profile{
 		margin-left:-20px;
@@ -314,20 +314,16 @@ li > a{
 		padding-top:10px;
 		margin:0 auto;
 	}
-	.fix{
-		position:absolute;
-		top:0;
-		left:0;
-		height:10px;
-		width:10px;
-	}
 	.buttons{
 	    margin-top: 0;
 	    outline:none;
 		display:inline-block;
    	    font-size:0.1em;
    	    width:100%;
-
+	}
+	.buttons img{
+		height:15px;
+		width:15px;
 	}
 	button{
 	    color: #333333;
@@ -336,25 +332,18 @@ li > a{
 	    margin-right:-5px;
 	    border:none;
 	}
-	.buttons img{
-		height:15px;
-		width:15px;
-	}
-	textarea{
-		resize:none;
-		background:url('../static/img/icn_message_orangep5.png');
-	}
 	#cover, #mainTab, #profile > .navbar{
 		display:none;
 	}
-	
 	.mobile_nav{
 		background-color:#FFFFFF;
+		vertical-align:middle;
 		width:100%;
 	}
 	.mobile_nav li{
-		margin-left:-15px;
-		margin-right:-30px;
+		font-size:0.85em;
+		margin-left:-5px;
+		margin-right:-10px;
 	}
 	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
@@ -377,15 +366,13 @@ li > a{
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
 	}
-	
 	.reward_part .panel-body {
 		display:inline-block;
 	}
 	.gallery_expansion{
 		position:fixed;
-			margin-top: 10px;
 		left:0;
-		top:30px;
+		top:6%;
 		height:100%;
 		float:inherit;
 	}
@@ -425,6 +412,7 @@ li > a{
     	width:90%;
 	}
 	.reward_part span, .menu_part span{
+		vertical-align:middle;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
@@ -437,7 +425,13 @@ li > a{
 		cursor:pointer;
 		color:#e66125;
 		font-weight:bolder;
-		border-bottom:1px solid #C9CED6;
+		/*border-bottom:1px solid #C9CED6;*/
+	}
+	#point{
+		opacity:0.5;
+	}
+	#question_editor{
+		margin-top:-10px;
 	}
 	.reward_part hr{
 		margin:0 auto;
@@ -451,7 +445,7 @@ li > a{
 		width:70px;
 	}
 	.inline > h6{
-	width:65px;
+		width:65px;
 	}
 	.reward_part, .point_panel{
 		display: inline-block;
@@ -461,8 +455,8 @@ li > a{
 	}
 	#profile >.mobile_panel{
 		position:absolute;
-		top:10px;
-		left:30px;
+		top:5%;
+		left:8%;
 		color:#FFFFFF;
 		opacity: 0.7;
 	}
@@ -496,13 +490,7 @@ li > a{
 		margin-top:10px;
 		margin-right:10px;
 	}
-	.reward_part > .panel >.panel-heading > small{
-		display: none;
-	}
-	.gallery_part{
-		display:none;
-	}
-	IMG.displayed{
+	.gallery_part, .point_panel, IMG.displayed, .reward_part small{
 		display:none;
 	}
 	.address_part{
@@ -518,9 +506,6 @@ li > a{
 	.wrapper{
 		margin-top:30px;
 	}
-	.gallery_part{
-		display:none;
-	}
 	.panel-body .reply{
 		background-color: #edeff2;
 	}
@@ -528,7 +513,6 @@ li > a{
 		margin-top:-10px;
 	}
 }
-
 @media only screen 
 and (min-width: 320px)
 and (max-width: 480px)
@@ -562,14 +546,15 @@ and (max-width: 480px)
 	}
 	.mobile_nav{
 		background-color:#FFFFFF;
+		vertical-align:middle;
 		width:100%;
 	}
 	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
 	}
 	.mobile_nav li{
-		margin-left:-10px;
-		margin-right:-25px;
+		font-size:0.9em;
+		margin-left:-9px;
 	}
 	#gallery .nav-tabs{
 		margin-left:0 auto;
@@ -580,6 +565,11 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
+	button{
+	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
 	.phone_part, .address_part, .notice_part, .notice_expansion, .menu_part, .reward_part , .point_part, .point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
@@ -588,10 +578,17 @@ and (max-width: 480px)
 	.reward_part > .panel > .panel-body > div {
 		display:inline-block;
 	}
+	.gallery_expansion{
+		position:fixed;
+		left:0;
+		top:2%;
+		height:100%;
+		float:inherit;
+	}
 	.gallery_expansion > .panel{
 		margin-top: 15px;
 	}
-	.gallery_expansion >.panel > .panel-body img{
+	.gallery_expansion > .panel > .panel-body img{
 		display:inline-block;
 		margin: 0 auto;
 		height:40px;
@@ -670,6 +667,7 @@ and (max-width: 480px)
     	width:90%;
 	}
 	.reward_part span{
+		vertical-align:middle;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
