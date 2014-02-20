@@ -5,10 +5,6 @@ body{
 .row > .col-md-3, .col-md-9{
 	vertical-align:middle!important;
 }
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
 .bgImage{
 	background-image:url('../img/taco.png');
 	width:100%; 
@@ -20,15 +16,6 @@ body{
 	-moz-filter: blur(30px); 
     filter: blur(30px);
 }
-.content{
-	z-index:10;
-	position:relative;
-}
-.show-menu{
-	cursor:pointer;
-	color: #b2b2b2;
-	display:none;
-	}
 .icn{
 	opacity:0.4;
 	height:23px;
@@ -37,14 +24,14 @@ body{
 #profile{
    margin-top:20px;
    margin-bottom:0px;
-   margin-right:-20px;
-   }
+   margin-right:-45px;
+}
 #cover_photo{
    margin-top:20px;
    margin-bottom:0px;
    margin-right:5px;
 }
-#count, #footer, #point_expansion, .text{
+#count, #footer, #point_expansion,.question_editor{
 	display:none;
 }
 .text-group{
@@ -60,8 +47,7 @@ body{
 	overflow:auto;
 	margin-top:10px;
 }
-
-.notice{
+.notice_expansion{
 	max-width:700px;
 	margin-top:10px;
 	margin-right:20px;
@@ -88,58 +74,40 @@ body{
 }
 .gallery_part{
 	max-width:340px;
-	margin-top:-5px;
-	/*margin-left:-15px;*/
+	margin-top:-10px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
 .address_part{
 	max-width:340px;
 	margin-top:-10px;
-	/*margin-right:-8px;*/
 	margin-left:-30px;
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
-}
-.address_part > .panel > .panel-body{
-	vertical-align:middle!important;
 }
 .address_part > .panel > .panel-body > img{
 	height:180px;
 	width:300px;
 }
-@media (min-height: 960px) {
-   .panel > .panel-body {
-    min-height: 20px;
-  }
-}
 .orange_font{
 	color:#e66125;
 }
-.notice .panel-body{
-	margin-top:-10px;
-	margin-bottom:-10px;
-}
-.notice_part > .panel > .panel-body > h5{
+.notice_part > .panel > .panel-body > h5, .orange_font{
 	color : #e66125;	
 }
-.notice_part > .panel > .panel-body > .orange_font{
-	color : #e66125;
-}
-
-IMG.pic{
+.small_img{
 	height:70px;
 	width:70px;
 	display:inline-block;
 	margin-left:auto;
 	margin-right:auto;
 }
-IMG.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    }
-IMG.point{
+.displayed {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.point{
 	height:12px;
 	width:12px;
 }
@@ -173,12 +141,6 @@ IMG.point{
 .reward_part .panel_body{
 	display:inline-block;
 }
-.navbar > .nav > li >img  {
-	padding-left:20px;
-	padding-bottom:20px;
-	color:#888888;
-	font-weight:bolder;
-}
 .navbar > .nav > li{
 	border-bottom:1px solid #C9CED6; 
 	border-color:#c9ced6;	
@@ -190,7 +152,6 @@ IMG.point{
 .gallery_expansion li {
   	margin-left:-10px;
   	margin-right:-10px;
-  	
 }
 .panel-heading > a{
 	color:#b2b2b2;
@@ -209,7 +170,6 @@ a{
 	color: #888888;
 }
 .gallery_expansion{
-	
 	margin-top:5px;
 }
 .gallery_expansion > .panel{
@@ -233,12 +193,8 @@ a{
 	margin-top:-20px;
 	
 }
-a.thumbnail:hover,
-a.thumbnail.active{
-	opacity:1;
-}
-li.active a{
-	opacity:1;
+a.thumbnail:hover,a.thumbnail.active, li.active a{
+   opacity:1;
 }
 a.thumbnail{
 	opacity:0.3;
@@ -246,7 +202,6 @@ a.thumbnail{
 li > a{
 	color:#333333;
 }
-
 .menu_part{
 	max-width:700px;
 	padding-top:10px;
@@ -255,13 +210,8 @@ li > a{
 	max-width:700px;
 	display:none;
 }
-.point_part #point_expansion{
+#point_expansion{
 	margin-top:-15px;
-}
-.gallery{
-	width:120px;
-	height:120px;
-	
 }
 .media{
 	float:left;
@@ -281,6 +231,9 @@ li > a{
 .grey_text{
 	color:#b2b2b2;
 }
+.black_text{
+	color:#333333;
+}
 .media-object{
 	height:80px;
 	width:80px;
@@ -292,28 +245,24 @@ li > a{
 .mobile_nav li{
 	margin-left:-10px;
 	margin-right:-50px;
-
 }
-.black_text{
-	color:#333333;
-}
-div.inline{
+.inline{
 	max-width:120px;
 	max-height:120px;
 	display:inline-block;
 	margin:0 auto;
 }
-div.inline > img{
+.inline > img{
 	margin-left:10px;
 }
-div.inline > h6{
+.inline > h6{
 	text-align:center;
 }
-.show-reward{
+.show-reward , .show-menu{
+	cursor:pointer;
 	display:none;
 	color:#b2b2b2;
 }
-
 .reward_part > .panel > .panel-body > img {
 	display:block;
 }
@@ -326,6 +275,7 @@ div.inline > h6{
 	height:20px;
 	width:20px;
 }
+
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -400,7 +350,6 @@ div.inline > h6{
 	
 	.mobile_nav{
 		background-color:#FFFFFF;
-		vertical-align:middle!important;
 		width:100%;
 	}
 	.mobile_nav li{
@@ -423,7 +372,7 @@ div.inline > h6{
 		border-bottom:1px solid #c9ced6;
 		margin-bottom: 5px;
 	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part, .point_part,.point_panel{
+	.phone_part, .address_part, .notice_part, .notice_expansion, .menu_part, .reward_part, .point_part,.point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -464,10 +413,6 @@ div.inline > h6{
 		height:60px;
 		width:60px;
 	}
-	.gallery{
-		height:70px;
-		width:70px;
-	}
 	.reward_part{
 		position:relative;
 		margin-top:-10px;
@@ -480,7 +425,6 @@ div.inline > h6{
     	width:90%;
 	}
 	.reward_part span, .menu_part span{
-		vertical-align:middle!important;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
@@ -503,13 +447,13 @@ div.inline > h6{
 	.reward_part .panel{
 		margin-top:10px;
 	}
-	div.inline{
+	.inline{
 		width:70px;
 	}
-	div.inline > h6{
+	.inline > h6{
 	width:65px;
 	}
-	div.reward_part, div.point_panel{
+	.reward_part, .point_panel{
 		display: inline-block;
 	}
 	#profile{
@@ -548,7 +492,7 @@ div.inline > h6{
 	.point_panel{
 		display:none;
 	}
-	.notice{
+	.notice_expansion{
 		margin-top:10px;
 		margin-right:10px;
 	}
@@ -572,13 +516,16 @@ div.inline > h6{
 		margin-top:-15px;
 	}
 	.wrapper{
-		margin-top:20px;
+		margin-top:30px;
 	}
 	.gallery_part{
 		display:none;
 	}
 	.panel-body .reply{
 		background-color: #edeff2;
+	}
+	.phone_part{
+		margin-top:-10px;
 	}
 }
 
@@ -615,7 +562,6 @@ and (max-width: 480px)
 	}
 	.mobile_nav{
 		background-color:#FFFFFF;
-		vertical-align:middle!important;
 		width:100%;
 	}
 	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
@@ -634,7 +580,7 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
-	.phone_part, .address_part, .notice_part, .notice, .menu_part, .reward_part , .point_part, .point_panel{
+	.phone_part, .address_part, .notice_part, .notice_expansion, .menu_part, .reward_part , .point_part, .point_panel{
 		margin:0 auto;
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
@@ -658,7 +604,7 @@ and (max-width: 480px)
 	.notice_part{
 		margin-top:-5px;
 	}
-	div.reward_part{
+	.reward_part{
 		display: inline-block;
 	}
 	#profile >.mobile_panel{
@@ -682,7 +628,7 @@ and (max-width: 480px)
 	.point_panel{
 		display:none;
 	}
-	.notice{
+	.notice_expansion{
 		margin-top:10px;
 		margin-right:10px;
 	}
@@ -706,7 +652,7 @@ and (max-width: 480px)
 		margin-top:10px;
 	}
 	.wrapper{
-		margin-top:20px;
+		margin-top:30px;
 	}
 	.reward_part{
 		position:relative;
@@ -724,13 +670,15 @@ and (max-width: 480px)
     	width:90%;
 	}
 	.reward_part span{
-		vertical-align:middle!important;
 		text-align: center;
 		cursor:pointer;	
 		font-weight:normal;
 	}
 	#reply{
 		background-color: #edeff2;
+	}
+	.phone_part{
+		margin-top:-10px;
 	}
 }
 /* 웹페이지 화면 상에서의 query*/
