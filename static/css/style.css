@@ -47,14 +47,6 @@ body{
 #count, #footer, #point_expansion, #question_box{
 	display:none;
 }
-.text-group{
-	position:relative;
-}
-.text-group span{
-	position:fixed;
-	top:0;
-	left:0;
-}
 #write{
 	height:100px;
 	overflow:auto;
@@ -289,11 +281,6 @@ li > a{
 	display:none;
 	margin:0 auto;
 }
-.mobile_nav li{
-	margin-left:-10px;
-	margin-right:-50px;
-
-}
 .black_text{
 	color:#333333;
 }
@@ -364,20 +351,16 @@ div.inline > h6{
 		padding-top:10px;
 		margin:0 auto;
 	}
-	.fix{
-		position:absolute;
-		top:0;
-		left:0;
-		height:10px;
-		width:10px;
-	}
 	.buttons{
 	    margin-top: 0;
 	    outline:none;
 		display:inline-block;
    	    font-size:0.1em;
    	    width:100%;
-
+	}
+	.buttons img{
+		height:15px;
+		width:15px;
 	}
 	button{
 	    color: #333333;
@@ -386,10 +369,6 @@ div.inline > h6{
 	    margin-right:-5px;
 	    border:none;
 	}
-	.buttons img{
-		height:15px;
-		width:15px;
-	}
 	textarea{
 		resize:none;
 		background:url('../static/img/icn_message_orangep5.png');
@@ -397,15 +376,15 @@ div.inline > h6{
 	#cover, #mainTab, #profile > .navbar{
 		display:none;
 	}
-	
 	.mobile_nav{
 		background-color:#FFFFFF;
 		vertical-align:middle!important;
 		width:100%;
 	}
 	.mobile_nav li{
-		margin-left:-15px;
-		margin-right:-30px;
+		font-size:0.85em;
+		margin-left:-5px;
+		margin-right:-10px;
 	}
 	.mobile_nav, .menu_part, .reward_part, .point_part, .point_panel{
 		display:inline-block;
@@ -625,8 +604,8 @@ and (max-width: 480px)
 		display:inline-block;
 	}
 	.mobile_nav li{
-		margin-left:-10px;
-		margin-right:-25px;
+		font-size:0.9em;
+		margin-left:-9px;
 	}
 	#gallery .nav-tabs{
 		margin-left:0 auto;
