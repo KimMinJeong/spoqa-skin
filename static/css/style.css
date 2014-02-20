@@ -325,7 +325,14 @@ li > a{
 		height:15px;
 		width:15px;
 	}
-	button{
+	.question_button> button{
+	    color: #333333;
+	    outline:none;
+	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.reply_button> button{
 	    color: #333333;
 	    outline:none;
 	    width:50.5%;
@@ -565,8 +572,13 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
-	button{
+	.question_button > button{
 	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.reply_button > button{
+	    width:50%;
 	    margin-right:-5px;
 	    border:none;
 	}
