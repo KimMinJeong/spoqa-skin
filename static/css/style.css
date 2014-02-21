@@ -2,6 +2,11 @@
 body{
 	font-family:'Nanum Gothic', sans-serif;
 }
+@-moz-document url-prefix() {
+    .bgImage {
+        background-color:#C9CED6;
+    }
+}
 .row > .col-md-3, .col-md-9{
 	vertical-align:middle!important;
 }
@@ -14,21 +19,19 @@ body{
 	background-repeat:no-repeat; 
 	-webkit-filter: blur(30px);
 	-moz-filter: blur(30px); 
-    filter: url(#blur);
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	filter:blur(30px);
 }
 .show-menu, .show-reward{
 	cursor:pointer;
 	color: #b2b2b2;
 	display:none;
     filter: blur(30px);
-   }
+}
 .icn{
-	opacity:0.4;
 	height:23px;
 	width:23px;
 }
-.point_icn, .reply_icn{
+.point_icn{
 	height:20px;
 	width:20px;
 }
@@ -56,6 +59,9 @@ body{
 	position:absolute;
 	top:100%;
 }
+#chat .panel > .panel-body{
+	border-bottom:1px solid #c9ced6; 
+}
 .notice_expansion{
 	max-width:700px;
 	margin-top:10px;
@@ -68,7 +74,6 @@ body{
 	max-width:340px;
 	margin-top:10px;
 	margin-bottom:0px;
-	/*margin-left:-15px;*/
 	box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 	opacity:0.85;
 }
@@ -116,7 +121,6 @@ body{
     margin-left:auto;
     margin-right:auto;
 }
-
 .navbar{
 	width:230px;
 	background-color: #edeff2;
@@ -136,7 +140,7 @@ body{
 	padding-left:20px;
 	color:#333333;
 }
-.navbar > .nav >li > p{
+.navbar > .nav > li > p{
 	padding-left:20px;
 	color:#888888
 }
@@ -188,7 +192,7 @@ body{
 }
 #inGallery img{
 	height:300px;
-	width:700px;
+	width:110%;
 	vertical-align:middle;
 }
 #inGallery .panel-body{
@@ -252,14 +256,15 @@ li > a{
 
 }
 .inline{
-	max-width:120px;
-	max-height:120px;
+	width:120px;
+	height:120px;
 	display:inline-block;
 	margin:0 auto;
 }
 .inline > img{
 	margin-left:10px;
-	
+	max-width:110px;
+	max-height:110px;
 }
 .inline > h6{
 	text-align:center;
@@ -276,7 +281,6 @@ li > a{
 	height:20px;
 	width:20px;
 }
-
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -299,7 +303,7 @@ li > a{
 	}
 	#footer{
 		font-size:0.7em;
-		background-color:#888888;
+		background-color:#C9CED6;
 	}
 	#profile{
 		margin-left:-20px;
@@ -349,11 +353,12 @@ li > a{
 		display:inline-block;
 	}
 	#inGallery img{
-		float:none;
 		vertical-align:middle;
-		height:250px;
 	}
-
+	.inline > img{
+		width:100%;
+		height:60%;
+	}
 	#img-profile{
 		margin-right:-20px;
 	}
@@ -371,7 +376,7 @@ li > a{
 	}
 	.gallery_expansion{
 		position:fixed;
-		left:0;
+		left:0%;
 		top:6%;
 		height:100%;
 		float:inherit;
@@ -443,6 +448,7 @@ li > a{
 	}
 	.inline{
 		width:70px;
+		display:inline-block;
 	}
 	.inline > h6{
 		width:65px;
@@ -556,14 +562,19 @@ and (max-width: 480px)
 		font-size:0.9em;
 		margin-left:-9px;
 	}
+	.inline > img{
+		height:60%;
+		width:100%;
+		
+	}
 	#gallery .nav-tabs{
 		margin-left:0 auto;
 		margin-right:0 auto;
 		display:block;
 	}
 	#inGallery img{
-		float:none;
 		vertical-align:middle;
+		width:120%;
 	}
 	button{
 	    width:50.5%;
@@ -673,7 +684,7 @@ and (max-width: 480px)
 		font-weight:normal;
 	}
 	#reply{
-		background-color: #edeff2;
+		background-color: #ffffff;
 	}
 	.phone_part{
 		margin-top:-10px;
