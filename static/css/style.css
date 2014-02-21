@@ -11,11 +11,11 @@ body{
 	width:100%; 
 	height:100%;
 	background-size:100%; 
-	background-repeat:no-repeat; 
+	background-repeat:no-repeat;
+	-ms-filter:“alpha(opacity=75)”;
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40); 
 	-webkit-filter: blur(30px);
 	-moz-filter: blur(30px); 
-    filter: url(#blur);
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
 .show-menu, .show-reward{
 	cursor:pointer;
@@ -24,7 +24,6 @@ body{
     filter: blur(30px);
    }
 .icn{
-	opacity:0.4;
 	height:23px;
 	width:23px;
 }
@@ -44,11 +43,6 @@ body{
 }
 #count, .point_expansion,.question_editor{
 	display:none;
-}
-#write{
-	height:100px;
-	overflow:auto;
-	margin-top:10px;
 }
 #footer{
 	font-size:0.5em;
@@ -277,6 +271,7 @@ li > a{
 	width:20px;
 }
 
+
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -325,7 +320,14 @@ li > a{
 		height:15px;
 		width:15px;
 	}
-	button{
+	.question_button> button{
+	    color: #333333;
+	    outline:none;
+	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.reply_button> button{
 	    color: #333333;
 	    outline:none;
 	    width:50.5%;
@@ -466,7 +468,7 @@ li > a{
 	#profile > .kakao{
 		position:absolute;
 		top:63%;
-		left:75%;
+		left:70%;
 		background-color: #080808;
 		opacity:0.7;
 		color:#FFFFFF;
@@ -511,6 +513,10 @@ li > a{
 	}
 	.phone_part{
 		margin-top:-10px;
+	}
+	#reply_write ,#write{
+		height:100px;
+		overflow:auto;
 	}
 }
 @media only screen 
@@ -565,8 +571,13 @@ and (max-width: 480px)
 		float:none;
 		vertical-align:middle;
 	}
-	button{
+	.question_button > button{
 	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.reply_button > button{
+	    width:50%;
 	    margin-right:-5px;
 	    border:none;
 	}
@@ -617,7 +628,7 @@ and (max-width: 480px)
 	#profile > .kakao{
 		position:absolute;
 		top:63%;
-		left:78%;
+		left:70%;
 		background-color: #080808;
 		opacity:0.7;
 		color:#FFFFFF;
@@ -677,6 +688,10 @@ and (max-width: 480px)
 	}
 	.phone_part{
 		margin-top:-10px;
+	}
+	#reply_write ,#write{
+		height:100px;
+		overflow:auto;
 	}
 }
 /* 웹페이지 화면 상에서의 query*/
