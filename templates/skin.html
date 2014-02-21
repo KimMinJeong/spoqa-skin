@@ -9,8 +9,16 @@
 	<script src="../static/js/bootstrap.js"></script>
 	<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../static/css/style.css" rel="stylesheet" type="text/css">
-    <!--[if gt IE 6]> <link rel="stylesheet" type="text/css" href="ie7-and-up.css" /> <![endif]-->
-    <!--[if IE 6]> <link rel="stylesheet" type="text/css" href="ie6.css" /> <![endif]-->
+    
+    <link rel="stylesheet" type="text/css" href="ie7-and-up.css" />
+    <link rel="stylesheet" type="text/css" href="ie6.css" />
+   	<link rel="stylesheet" type="text/css" media="all" href="style-ie.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+   	<link rel="stylesheet" type="text/css" href="style.css" media="only all and (max-width: 480px)" id="stylesheet-480" />
+   	<link rel="stylesheet" type="text/css" href="style.css" media="only all and (min-width: 480px) and (max-width: 1024px)" id="stylesheet-1024" />
+   	<link rel="stylesheet" type="text/css" href="style.css" media="only all and (min-width: 1200px)" id="stylesheet-1280" />
+ 
+
 </head>
 
 <body>
@@ -33,17 +41,19 @@
 				<div class="mobile_panel">
 					<h6>역삼,논현 > 레스토랑</h6>
 					<h3>타코드부로</h3>
-					<h6><img src="../static/img/icn_user_black.png" height="15px" width="15px">1명 적립중</h6>
+					<h6><img src="../static/img/icn_user_grey.png" height="15px" width="15px">1명 적립중</h6>
 				</div>
 				<div class="kakao">
-					<img src="../static/img/img_katalk.png" height="40px" width="40px"style="margin-left:5px">
+					<button type="button" class="btn btn-default kakao_btn">
+					<img src="../static/img/img_katalk.png" height="40px" width="40px">
 					<p>카톡문의</p>
+					</button>
 				</div>
 				<div class="navbar navbar-default">
 				    <ul class="nav nav-tabs nav-stacked" id="mainTab">
 						<li><h6>역삼,논현 > 레스토랑</h6>
 						<h3>타코드부로</h3>
-						<p><img src="../static/img/icn_users.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
+						<p><img src="../static/img/icn_user_grey.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
 						<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
 						<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
 						<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
@@ -505,6 +515,7 @@ $.partlyShow = function(){
 		$('.show-reward').show();
 		$('.reward_part').show();
 		$('.show-menu').show();
+		$('.point_part').show();
 		});
 	$('#mobileTab a[href="#chat"]').on('click', function(){
 		$('#chat .panel-heading').show();
@@ -607,4 +618,26 @@ function placehold(id, placeholder) {
             });
     });
 </script>
-</html>
+<script>
+$(document).ready(function(){
+ 
+     var browserName = navigator.appName;
+     if(browserName == 'Microsoft Internet Explorer'){
+         $('.bgImage').css('background', '#edeff2 ');
+     }
+     else if(navigator.userAgent.indexOf("Firefox")!=-1){
+        $('.bgImage').css('background', '#edeff2 ');
+
+     }
+     else if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)    {
+            $('.bgImage').css('background', '#edeff2 ');
+    }
+    });
+</script>
+<script>
+	var width = $('.gallery_expansion .panel').width();
+    var topMargin = width * 0.11;
+    if (navigator.userAgent.indexOf('Safari') != -1) {                  
+        $('.gallery_expansion').css('margin-top', topMargin+'px');
+    }
+</script>

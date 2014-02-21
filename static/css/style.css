@@ -12,11 +12,18 @@ body{
 	height:100%;
 	background-size:100%; 
 	background-repeat:no-repeat;
-	-ms-filter:“alpha(opacity=75)”;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40); 
 	-webkit-filter: blur(30px);
 	-moz-filter: blur(30px); 
 }
+img.blur{ 
+	width:100%; 
+	height:100%; 
+	-webkit-filter: blur(30px); 
+	-moz-filter: blur(30px); 
+	-o-filter: blur(30px); 
+	-ms-filter: blur(30px);	
+	filter: blur(30px); 
+	}
 .show-menu, .show-reward{
 	cursor:pointer;
 	color: #b2b2b2;
@@ -157,7 +164,7 @@ body{
 	color:#b2b2b2;
 }
 .panel > .panel-heading{
-	margin-bottom:-10px;
+	margin-bottom:0px;
 }
 /*cardUI에 들어가는 css*/
 .panel-body{
@@ -182,7 +189,7 @@ body{
 }
 #inGallery img{
 	height:300px;
-	width:700px;
+	width:100%;
 	vertical-align:middle;
 }
 #inGallery .panel-body{
@@ -270,6 +277,9 @@ li > a{
 	height:20px;
 	width:20px;
 }
+.kakao_btn{
+	background-color: #080808; 
+}
 
 
 /* 미디어쿼리에 따른 css변경 사항*/
@@ -355,10 +365,6 @@ li > a{
 		vertical-align:middle;
 		height:250px;
 	}
-
-	#img-profile{
-		margin-right:-20px;
-	}
 	.media{
 		border-bottom:1px solid #c9ced6;
 		margin-bottom: 5px;
@@ -393,7 +399,7 @@ li > a{
 		display:none;
 	}
 	.gallery_expansion > .panel > .panel-body{
-		margin-bottom:50px;	
+		margin-bottom:60px;	
 		padding-top:0px;
 	}
 	.gallery_expansion >.panel > .panel-body img{
@@ -467,10 +473,13 @@ li > a{
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:63%;
-		left:70%;
+		top:55%;
+		left:65%;
+		color:#FFFFFF;
 		background-color: #080808;
 		opacity:0.7;
+	}
+	#profile > .kakao > p{
 		color:#FFFFFF;
 	}
 	.reward_part{
@@ -627,8 +636,8 @@ and (max-width: 480px)
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:63%;
-		left:70%;
+		top:55%;
+		left:65%;
 		background-color: #080808;
 		opacity:0.7;
 		color:#FFFFFF;
