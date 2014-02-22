@@ -16,11 +16,20 @@ body{
 	width:100%; 
 	height:100%;
 	background-size:100%; 
-	background-repeat:no-repeat; 
+	background-repeat:no-repeat;
 	-webkit-filter: blur(30px);
 	-moz-filter: blur(30px); 
 	filter:blur(30px);
 }
+img.blur{ 
+	width:100%; 
+	height:100%; 
+	-webkit-filter: blur(30px); 
+	-moz-filter: blur(30px); 
+	-o-filter: blur(30px); 
+	-ms-filter: blur(30px);	
+	filter: blur(30px); 
+	}
 .show-menu, .show-reward{
 	cursor:pointer;
 	color: #b2b2b2;
@@ -167,7 +176,7 @@ body{
 	color:#b2b2b2;
 }
 .panel > .panel-heading{
-	margin-bottom:-10px;
+	margin-bottom:0px;
 }
 /*cardUI에 들어가는 css*/
 .panel-body{
@@ -182,7 +191,7 @@ body{
 .gallery_expansion > .panel{
 	max-width:700px;
 	margin-left:-15px;
-	margin-top: 10px;
+	margin-top: 0px;
 }
 .gallery_expansion >.panel > .panel-body img{
 	display:inline-block;
@@ -281,6 +290,9 @@ li > a{
 	height:20px;
 	width:20px;
 }
+.kakao_btn{
+	background-color: #080808; 
+}
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
 	body{
@@ -329,7 +341,14 @@ li > a{
 		height:15px;
 		width:15px;
 	}
-	button{
+	.question_button> button{
+	    color: #333333;
+	    outline:none;
+	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.reply_button> button{
 	    color: #333333;
 	    outline:none;
 	    width:50.5%;
@@ -396,7 +415,7 @@ li > a{
 		display:none;
 	}
 	.gallery_expansion > .panel > .panel-body{
-		margin-bottom:50px;	
+		margin-bottom:60px;	
 		padding-top:0px;
 	}
 	.gallery_expansion >.panel > .panel-body img{
@@ -471,10 +490,13 @@ li > a{
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:65%;
-		left:72%;
+		top:55%;
+		left:65%;
+		color:#FFFFFF;
 		background-color: #080808;
 		opacity:0.7;
+	}
+	#profile > .kakao > p{
 		color:#FFFFFF;
 	}
 	.reward_part{
@@ -517,6 +539,10 @@ li > a{
 	}
 	.phone_part{
 		margin-top:-10px;
+	}
+	#reply_write ,#write{
+		height:100px;
+		overflow:auto;
 	}
 }
 @media only screen 
@@ -576,8 +602,13 @@ and (max-width: 480px)
 		vertical-align:middle;
 		width:120%;
 	}
-	button{
+	.question_button > button{
 	    width:50.5%;
+	    margin-right:-5px;
+	    border:none;
+	}
+	.reply_button > button{
+	    width:50%;
 	    margin-right:-5px;
 	    border:none;
 	}
@@ -592,8 +623,8 @@ and (max-width: 480px)
 	.gallery_expansion{
 		position:fixed;
 		left:0;
-		top:2%;
-		height:100%;
+		top:4%;
+		height:90%;
 		float:inherit;
 	}
 	.gallery_expansion > .panel{
@@ -627,8 +658,8 @@ and (max-width: 480px)
 	}
 	#profile > .kakao{
 		position:absolute;
-		top:63%;
-		left:78%;
+		top:55%;
+		left:65%;
 		background-color: #080808;
 		opacity:0.7;
 		color:#FFFFFF;
@@ -688,6 +719,10 @@ and (max-width: 480px)
 	}
 	.phone_part{
 		margin-top:-10px;
+	}
+	#reply_write ,#write{
+		height:100px;
+		overflow:auto;
 	}
 }
 /* 웹페이지 화면 상에서의 query*/
