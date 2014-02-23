@@ -63,6 +63,9 @@ img.blur{
 	margin-top:10px;
 	background-color:#FFFFFF;
 }
+.question-heading{
+	cursor:pointer;
+}
 #footer{
 	font-size:0.5em;
 	position:absolute;
@@ -355,7 +358,7 @@ li > a{
 	    margin-right:-5px;
 	    border:none;
 	}
-	#cover, #mainTab, #profile > .navbar{
+	#cover, #mainTab, #profile > .navbar, .gallery_expansion .panel-heading{
 		display:none;
 	}
 	.mobile_nav{
@@ -411,18 +414,16 @@ li > a{
 		height:100%;
 		margin:0 auto;
 	}
-	.gallery_expansion .panel-heading{
-		display:none;
-	}
 	.gallery_expansion > .panel > .panel-body{
-		margin-bottom:60px;	
+		margin-top:10px;
+		margin-bottom:40px;	
 		padding-top:0px;
 	}
 	.gallery_expansion >.panel > .panel-body img{
 		display:inline-block;
 		margin: 0px;
-		height:60px;
-		width:60px;
+		height:50px;
+		width:50px;
 	}
 	.reward_part{
 		position:relative;
@@ -511,9 +512,6 @@ li > a{
 	#point_reward{
 		margin-top:10px;
 	}
-	.point_panel{
-		display:none;
-	}
 	.notice_expansion{
 		margin-top:10px;
 		margin-right:10px;
@@ -557,7 +555,7 @@ and (max-width: 480px)
 		margin:0 auto;
 		background-color:#EDEFF2;
 	}
-	.bgImage{
+	.bgImage, #cover, #mainTab, #profile > .navbar, .gallery_expansion .panel-heading{
 		display:none;
 		}
 	#cover_photo{
@@ -573,8 +571,8 @@ and (max-width: 480px)
 		height:250px;
 		margin-bottom:20px;
 	}
-	#cover, #mainTab, #profile > .navbar{
-		display:none;
+	#inGallery{
+		height:500px;
 	}
 	.mobile_nav{
 		background-color:#FFFFFF;
@@ -617,24 +615,32 @@ and (max-width: 480px)
 		box-shadow: 0px 1px 1px rgba(255,255,255,0.2);	
 		opacity:0.85;
 	}
-	.reward_part > .panel > .panel-body > div {
+	.reward_part > .panel > .panel-body > div, #count {
 		display:inline-block;
 	}
 	.gallery_expansion{
 		position:fixed;
 		left:0;
-		top:4%;
-		height:90%;
+		top:3.5%;
+		height:100%;
 		float:inherit;
 	}
 	.gallery_expansion > .panel{
 		margin-top: 15px;
+		background-color:#FFFFFF;
 	}
+	.gallery_expansion .panel-body{
+		margin-top:10px;
+		margin-bottom:40px;
+		height:100%;
+		width:100%;
+	}
+
 	.gallery_expansion > .panel > .panel-body img{
 		display:inline-block;
 		margin: 0 auto;
-		height:40px;
-		width:40px;
+		height:60px;
+		width:60px;
 	}
 	.gallery{
 		height:64px;
