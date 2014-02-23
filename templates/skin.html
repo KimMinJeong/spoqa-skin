@@ -614,15 +614,23 @@ function placehold(id, placeholder) {
 <script>
 $(document).ready(function(){
      var browserName = navigator.appName;
+     var width = window.screen.availWidth;
      if(browserName == 'Microsoft Internet Explorer'){
-         $('.bgImage').css('background', '#edeff2 ');
+         $('.bgImage').css('background', '#edeff2');
+         if(width < 400){
+         	$('.gallery_expnasion').css('top', '4.5%');
+         }
+         if(width > 500){
+         	$('.gallery_expansion').css('top', '2.5%');
+         }
      }
      else if(navigator.userAgent.indexOf("Firefox")!=-1){
-        $('.bgImage').css('background', '#edeff2 ');
+        $('.bgImage').css('background', '#edeff2');
 
      }
      else if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)    {
             $('.bgImage').css('background', '#edeff2 ');
+            $('.gallery_expansion').css('top', '2.0%');
     }
     });
 </script>
