@@ -2,11 +2,6 @@
 body{
 	font-family:'Nanum Gothic', sans-serif;
 }
-@-moz-document url-prefix() {
-    .bgImage {
-        background-color:#C9CED6;
-    }
-}
 .row > .col-md-3, .col-md-9{
 	vertical-align:middle!important;
 }
