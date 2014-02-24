@@ -443,7 +443,7 @@
 		$('#img-profile').hide();
 		$('.mobile_panel').hide();
 		$('.kakao').hide();
-		if(($(window).width() >= 400)){
+		if(($(window).width() >= 480)){
             $('#img-profile').fadeIn();
         }
 		$('#mainTab li:nth-child(2)').attr('class', '#tab1');
@@ -493,14 +493,14 @@ $.partlyShow = function(){
 		$('.media:lt(3)').show();
 		return true;
 	};
-	if(($(window).width() <= 400)){
+	if(($(window).width() <= 480)){
 		$.partlyShow();
 	}
 	$(window).resize(function(){
-		if(($(window).width() <= 400)){
+		if(($(window).width() <= 480)){
 			$.partlyShow();
 		}
-		if(($(window).width() >= 400)){
+		if(($(window).width() >= 480)){
 			$('#img-profile').fadeIn();
 		}
 	});
@@ -631,6 +631,20 @@ $(document).ready(function(){
 	var width = $('.gallery_expansion .panel').width();
     var topMargin = width * 0.005;
     if (navigator.userAgent.indexOf('Safari') != -1) {                  
+        $('.gallery_expansion').css('margin-top', topMargin+'px');
+    }
+</script>
+<script>
+	var width = $('.gallery_expansion .panel').width();
+    var topMargin = width * 0.005;
+    if (navigator.userAgent.indexOf('Firefox') != -1) {                  
+        $('.gallery_expansion').css('margin-top', topMargin+'px');
+    }
+</script>
+<script>
+	var width = $('.gallery_expansion .panel').outerWidth();
+    var topMargin = width * 0.005;
+    if (navigator.userAgent.indexOf('Microsoft Internet Explorer') != -1) {                  
         $('.gallery_expansion').css('margin-top', topMargin+'px');
     }
 </script>
