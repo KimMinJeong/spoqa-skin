@@ -29,15 +29,15 @@ body {
     height: 180px; 
     width: 300px; 
 } 
+.rpad{
+	padding-left:0px;
+}
 .address_part { 
     width:100%;
     margin: 0 auto;
     margin-top:-10px;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85;
-}
-#phone_address_padding{
-	padding-left:0px;
 }
 .black_text { 
     color: #333333 
@@ -49,6 +49,13 @@ body {
     margin: 0 auto;
     max-width:700px;
     padding-top:20px;
+} 
+#cardUI .panel-heading{
+	margin-bottom:-1em;
+}
+#profile { 
+    padding-top:20px; 
+    margin-right:-1em;
 } 
 #count, .point_expansion, .question_editor { 
     display: none 
@@ -126,7 +133,7 @@ body {
     background-color: #080808 
 } 
 .navbar { 
-    max-width:230px; 
+    max-width:100%; 
     background-color: #edeff2; 
     border-color: #c9ced6; 
     filter: blur(1px); 
@@ -170,6 +177,9 @@ body {
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
 } 
+.gallery_part .panel-body{
+	display:inline-block;
+}
 .notice_part h5, .orange_font { 
     color : #e66125 
 } 
@@ -218,7 +228,7 @@ body {
     filter: blur(1px); 
 } 
 
-#profile > img, .navbar{
+#profile .wrapper{
 	float:none;
 	margin:0 auto;
 }
@@ -254,6 +264,7 @@ body {
     margin-top:10px;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
+    padding-left:0px;
 } 
 .question_box { 
     height: 100px; 
@@ -286,8 +297,8 @@ body {
     filter: blur(30px); 
 } 
 .small_img { 
-    height: 70px; 
-    width: 70px; 
+    height: 60px; 
+    width: 60px; 
     display: inline-block; 
     margin: 0 auto; 
 } 
@@ -307,6 +318,7 @@ li > a {
     .address_part { 
         position: relative; 
         margin: 0 auto; 
+        padding-left:0px;
     } 
     .address_part .panel-body { 
         font-size: 0.9em 
@@ -340,7 +352,7 @@ li > a {
         padding-top: 10px; 
         margin: 0 auto; 
     } 
-    #cover, #mainTab, #profile > .navbar, .gallery_expansion .panel-heading { 
+    #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
         display: none 
     } 
     #footer { 
@@ -432,11 +444,11 @@ li > a {
         margin-top: 10px;
     } 
     #profile { 
-        margin: 0 auto; 
-        position: relative; 
+        margin: 0px;
+        padding:0px;
     } 
-    #profile > img { 
-        width: 90%; 
+    #profile .wrapper > img { 
+        width: 100%; 
         height: 250px; 
         margin-bottom: 20px; 
     } 
@@ -542,7 +554,7 @@ li > a {
     body { 
         background-color: #EDEFF2;
     } 
-    .bgImage, #cover, #mainTab, #profile > .navbar, .gallery_expansion .panel-heading { 
+    .bgImage, #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
         display: none;
     } 
     #cover_photo { 
@@ -632,11 +644,12 @@ li > a {
         display: inline-block;
     } 
     #profile { 
-        margin: 0 auto 
+        margin: 0px;
+        padding:0px;
     } 
-    #profile > img { 
+    #profile .wrapper > img { 
         width: 100%; 
-        height: 250px; 
+        height: 300px; 
         margin-bottom: 20px; 
     } 
     #profile >.mobile_panel { 
@@ -715,27 +728,39 @@ li > a {
     .mobile_panel, .kakao, .point_part, .point_panel, .calling, .show-menu { 
         display: none 
     } 
-    #chat { 
-        display: none 
-    } 
 }
 @media (min-width:480px) and (max-width:768px) { 
+	.mobile_nav{
+		display:block;
+		margin:0 auto;
+	}
+	.mobile_nav li{
+		margin:0 auto;
+	}
+	.rpad{
+		padding-left:20px;
+	}
    .phone_part, .address_part, .notice_part{
        margin:0 auto;
        width:100%;
+       padding-left:0px;
    }
    .address_part .panel-body > img, .gallery_part{
        display:none;
    }
    .navbar{
-        max-width:100%;
+        max-width:90%;
    }
    #section{
        float:none;
        margin:0 auto;
    }
-   #profile img, #img-profile{
-       display:none;
+   .wrapper{
+   	width:50%;
+   }
+   #img-profile{
+       width:90%;
+       height:300px;
    }
    #cover{display:none;}
    #coverformobile{display:block;width:93%}
@@ -746,6 +771,7 @@ li > a {
    }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {  
+	
      #profile{
      	width:25%;
      }
@@ -761,4 +787,17 @@ li > a {
     #mainTab h6{
         font-size:1em;
     }
+    .small_img{
+    	height:45px;
+    	width:45px;
+    }
+} 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {  
+     #profile{
+     	width:25%;
+     }
+     #cover_photo{
+     	width:65%;
+     }
+     
 } 
