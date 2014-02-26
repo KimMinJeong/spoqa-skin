@@ -155,11 +155,7 @@ body {
     border: 1px;
 } 
 .navbar > .nav > li { 
-    border-bottom: 1px solid #C9CED6;
-    border-left: 1px solid #C9CED6;
-    border-right: 1px solid #C9CED6;
     border-top: 1px solid #C9CED6;
-    border-color: #f5f7fa; 
 } 
 #mainTab > li > a{
 	border-top:1px solid #C9CED6;
@@ -305,7 +301,8 @@ body {
 .reward_part { 
     max-width: 100%;
     margin: 0 auto;
-    margin-top:-2em;
+    margin-top:-1em;
+   
 } 
 .reward_part .panel_body { 
     display: inline-block;
@@ -336,6 +333,7 @@ li > a {
 } 
 /* 미디어쿼리에 따른 css변경 사항*/ 
 @media only screen and (max-width: 320px) {  
+	body{overflow-y:scroll;}
     .address_part { 
         position: relative; 
         margin: 0 auto; 
@@ -343,9 +341,7 @@ li > a {
     .address_part .panel-body { 
         font-size: 0.9em 
     } 
-    body { 
-        background-color: #EDEFF2;
-    } 
+    body { background-color: #EDEFF2; } 
     .bgImage, .gallery_part, .address_part .panel-body > img { 
         display: none;
     } 
@@ -366,13 +362,9 @@ li > a {
         background-color: #EDEFF2; 
     } 
     #phone_address_padding{padding-left:1em;}
-    #cover_photo { 
+    #cover_photo, #chat { 
         margin: 0 auto; 
-    } 
-    #chat { 
-        padding-top: 10px; 
-        margin: 0 auto; 
-    } 
+    }
     #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
         display: none;
     } 
@@ -530,7 +522,7 @@ li > a {
     } 
     .reward_part { 
         position: relative; 
-        margin: 0 auto; 
+        margin-top:-2.2em; 
         width: 100%; 
     } 
     .reward_part span, .menu_part span { 
@@ -581,6 +573,7 @@ li > a {
         margin: 0 auto; 
     } 
     body { 
+    	overflow-y:auto;
         background-color: #EDEFF2;
     } 
     .bgImage, #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
@@ -743,7 +736,7 @@ li > a {
     } 
     .reward_part { 
         position: relative; 
-        margin: 0 auto; 
+        margin:0 auto;
         width: 100% display: inline-block; 
     } 
     .reward_part span { 
@@ -775,14 +768,11 @@ li > a {
    		background:#FFFFFF;
    	}
    	
-   	#profile, #cover , .gallery_part{
-   		display:none;
+   	#profile, #cover , .gallery_part, .address_part .panel-body > img, .gallery_part, #profile img, #img-profile{
+       display:none;
    	}
    	.phone_part{
    	 	p:15px;
-   	}
-   	.address_part .panel-body > img, .gallery_part{
-   	    display:none;
    	}
    	.navbar{
    	     max-width:100%;
@@ -790,9 +780,6 @@ li > a {
    	#section{
        float:none;
        margin:0 auto;
-   	}
-   	#profile img, #img-profile{
-       display:none;
    	}
    	.question_button > button {
 		width: 50%;
