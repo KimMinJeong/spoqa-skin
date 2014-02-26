@@ -590,20 +590,22 @@ $(document).ready(function(){
      var browserName = navigator.appName;
      var width = window.screen.availWidth;
      if(browserName == 'Microsoft Internet Explorer'){
-         $('.bgImage').css('background', '#edeff2');
+         $('.bgImage').css('background', '#f5f7fa');
      }
      else if(navigator.userAgent.indexOf('Firefox')!=-1){
-        $('.bgImage').css('background', '#edeff2');
+        $('.bgImage').css('background', '#f5f7fa');
      }
      else if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)    {
-            $('.bgImage').css('background', '#edeff2 ');
     }
     });
 </script>
 <script>
     var width = $('.gallery_expansion .panel').width();
    var topMargin = width * 0.005;
-   if (navigator.userAgent.indexOf('Firefox') != -1) {                  
+   if (navigator.userAgent.indexOf('Firefox') != -1) {  
+   		if((window).width() > 320){
+   			$('.gallery_expansion').css('top', '6.5%');
+   		}                
        $('.gallery_expansion').css('margin-top', topMargin+'px');
    }
    if (navigator.userAgent.indexOf('Safari') != -1) {                  
