@@ -30,20 +30,20 @@
 			</div>
 		</div>
 		<div class="row">
-				<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="profile">
+				<div class="col-sm-3 col-md-3" id="profile">
 					<div class="wrapper">
-					<img src="../static/img/taco1.png" id="img-profile" class="img-responsive">
-					<div class="navbar navbar-default">
-					    <ul class="nav nav-tabs nav-stacked" id="mainTab">
-							<li><h6>역삼,논현 > 레스토랑</h6>
-							<h3>타코드부로</h3>
-							<p><img src="../static/img/icn_user_grey.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
-							<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
-							<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
-							<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
-							<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"></a></li>
-						</ul>
-					</div>
+					<img src="../static/img/230.png" id="img-profile" class="img-responsive">
+						<div class="navbar navbar-default">
+						    <ul class="nav nav-tabs nav-stacked" id="mainTab">
+								<li><h6>역삼,논현 > 레스토랑</h6>
+								<h3>타코드부로</h3>
+								<p><img src="../static/img/icn_user_grey.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
+								<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
+								<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
+								<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
+								<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"></a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="mobile_panel">
 						<h6>역삼,논현 > 레스토랑</h6>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="tab-content">
 				<div class="tab-pane" id="gallery">
-				<div class="col-xs-12 col-md-12 col-sm-12">
+				<div class="col-xs-12 col-md-12 col-sm-12" id="gallery_padding">
 					<div class="gallery_expansion">
 						<div class="panel panel-default">
 							<div class="panel-heading"> 
@@ -221,7 +221,7 @@
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
 								<span class="show-point pull-right" >156 <img src="../static/img/point.png" class="point_icn">
-									<span class="glyphicon glyphicon-chevron-right grey_text"></span>
+									<span class="glyphicon glyphicon-chevron-right grey_text"> </span>
 								</span>
 							</div>
 							<!--포인트 상세보기-->
@@ -386,13 +386,11 @@
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
-						 			<img src="../static/img/dodo.jpg" class="small_img">	
-						 			<img src="../static/img/dodo.jpg" class="small_img">	
 							  	</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 col-md-6 rpad">
+					<div class="col-sm-6 col-md-6" id="phone_address_padding">
 						<div class="phone_part">
 							<div class="panel panel-default">
 								<div class="panel-heading">
@@ -416,18 +414,21 @@
 	                		</div>
 	            	 	</div>
 	            	 </div>
-	         <div id="footer">
-	         	<div class="container">
-	            	<p class="text-muted">Copyrightⓒ2013 스포카 패밀리 레스토랑 All Rights Reserved.<br>
-	            							  Copyrightⓒ2013 Spoqa Inc. All Rights Reserved.	</p>
-	            </div>
-	         </div>	
-				</div>		
-			</div>
-			</div>
-			 </div>
+		         	<div class="col-xs-12 col-sm-12 col-md-12" id="footer">
+		         		<div class="panel panel-default">
+		         			<div class="panel-body">
+		         				<div class="col-md-1 col-sm-1" id="footer_margin"><img src="../static/img/img_dodosymbol.png" id="dodosymbol"></div>
+		         				<div class="col-md-11 col-sm-11">콘텐츠에 대한 저작권은 주식회사 스포카, 스포카패밀리레스토랑에 있으며 내용 및 이미지의 무단복제를 금합니다.
+			            		<br>ⓒSpoqa Inc. All rights reseved</div>
+	            			</div>
+	            		</div>
+		            </div>
+					</div>		
+				</div>
 			</div>
 		</div>
+	</div>
+</div>
 </body>	
 
 
@@ -565,8 +566,6 @@ $.partlyShow = function(){
            placehold(child, newText);
        }
    	});
-        
-        
     });
 });
 function placehold(id, placeholder) {
@@ -596,6 +595,7 @@ $(document).ready(function(){
         $('.bgImage').css('background', '#f5f7fa');
      }
      else if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)    {
+            $('.bgImage').css('background', '#f5f7fa ');
     }
     });
 </script>

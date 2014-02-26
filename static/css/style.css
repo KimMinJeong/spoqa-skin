@@ -5,16 +5,6 @@ body {
 .row > .col-md-3, .col-md-9 { 
     vertical-align: middle!important 
 } 
-@-moz-document url-prefix() {
-   .gallery_expansion {top:100%;   }
-}
-@media screen and (-webkit-min-device-pixel-ratio:0){
-	            $('.bgImage').css('background', '#f5f7fa');
-
-}
-body{
-	overflow:hidden;
-}
 .bgImage { 
     background-image: url('../img/taco.png'); 
     position: absolute; 
@@ -39,9 +29,6 @@ body{
     height: 180px; 
     width: 300px; 
 } 
-.rpad{
-	padding-left:0px;
-}
 .address_part { 
     width:100%;
     margin: 0 auto;
@@ -57,17 +44,13 @@ body{
 }
 #cover_photo { 
     margin: 0 auto;
+    margin-top:20px;
     max-width:700px;
-    padding-top:20px;
-} 
+}
 #cardUI .panel-heading{
 	margin-bottom:-1em;
 }
-#profile { 
-    padding-top:20px; 
-    margin-right:-1em;
-} 
-#count, .point_expansion, .question_editor, .mobile_panel, .kakao, .calling, .show-menu, .point_part, .point_panel { 
+#count, .point_expansion, .question_editor { 
     display: none 
 } 
 #chat .panel > .panel-body { 
@@ -79,30 +62,44 @@ body{
 } 
 .displayed { 
     display: block; 
-    margin: 0 auto; 
-} 
+    margin: 0 auto;
+}
+#dodosymbol{
+	width: 30px;
+	height: 30px;
+}
 #footer { 
-    font-size: 0.5em; 
+    font-size: 0.6em;
+    color:#B2B2B2;
     position: absolute; 
-    top: 100%; 
-} 
+    top: 100%;
+    margin-top:-10px;
+}
+#footer_margin{
+	margin-left:-15px;
+	margin-right:-15px;
+}
+#gallery_padding{
+	margin-top:10px;
+	padding:0px;
+}
 .gallery_part { 
     width:100%;
     margin: 0 auto;
     margin-top:-10px;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
-} 
-.gallery_expansion { 
+}
+.gallery_part .panel-body{
+	display:inline-block;
+}
+.gallery_expansion li{ 
     margin: 0 auto;
-} 
-.gallery_expansion li { 
-    margin: 0 auto;
-} 
-.gallery_expansion > .panel { 
-    max-width: 700px; 
-    margin: 0 auto; 
-} 
+}
+.gallery_expansion > .panel  {
+	margin : 0 auto;
+	max-width:700px;
+}
 .gallery_expansion >.panel > .panel-body img { 
     display: inline-block; 
     margin: 10px; 
@@ -110,7 +107,7 @@ body{
     width: 40px; 
 } 
 .grey_text { 
-    color: #b2b2b2 
+    color: #b2b2b2;
 } 
 #inGallery img { 
     height: 300px; 
@@ -137,24 +134,28 @@ body{
     max-height: 110px; 
 } 
 .inline > h6 { 
-    text-align: center 
+    text-align: center;
 } 
 .kakao_btn { 
-    background-color: #080808 
+    background-color: #080808;
 } 
 .navbar { 
-    max-width:100%; 
-    background-color: #edeff2; 
-    border-color: #c9ced6; 
-    filter: blur(1px); 
-    box-shadow: 0px 0px 0px rgba(255,255,255,0.2); 
+    max-width:230px; 
+    background-color: #FFFFFF;  
+    border-color: #f5f7fa; 
+    filter: blur(1px);
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
+    
 } 
 .navbar > .nav > ul { 
-    border: 1px 
+    border: 1px;
 } 
 .navbar > .nav > li { 
-    border-bottom: 1px solid #C9CED6; 
-    border-color: #c9ced6; 
+    border-bottom: 1px solid #C9CED6;
+    border-left: 1px solid #C9CED6;
+    border-right: 1px solid #C9CED6;
+    border-top: 1px solid #C9CED6;
+    border-color: #f5f7fa; 
 } 
 .navbar > .nav > li > h6 { 
     padding-top: 10px; 
@@ -169,14 +170,17 @@ body{
     padding-left: 20px; 
     color: #888888; 
 } 
-.navbar >.nav > a:link, a:hover { 
-    background-color: #f5f7fa; 
+.navbar >.nav > li >a:hover {
+    background-color: #f5f7fa;
     color: #e66125; 
 } 
 .notice_expansion {
 	position: absolute; 
    	width: 100%; 
     margin: 0 auto;
+    margin-top:10px;
+    padding-left:15px;
+    padding-right:15px;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
 } 
@@ -187,9 +191,6 @@ body{
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
 } 
-.gallery_part .panel-body{
-	display:inline-block;
-}
 .notice_part h5, .orange_font { 
     color : #e66125 
 } 
@@ -202,7 +203,7 @@ body{
     max-height: 100px; 
 } 
 .media-heading { 
-    color: #333333 
+    color: #333333;
 } 
 .media-body { 
     max-width: 300px; 
@@ -221,7 +222,7 @@ body{
     margin-right: -50px; 
 } 
 .menu_part { 
-    max-width: 700px; 
+    max-width: 100%; 
     padding-top: 10px; 
 } 
 .panel-heading > a { 
@@ -237,11 +238,12 @@ body{
     box-shadow: 0px 0px 0px rgba(255,255,255,0.2); 
     filter: blur(1px); 
 } 
-
 #profile .wrapper{
-	float:none;
-	margin:0 auto;
-}
+	float:none; 
+    margin: 0 auto;
+    padding-top:20px;
+    margin-right:-1em;
+} 
 .point_icn { 
     height: 20px; 
     width: 20px; 
@@ -251,14 +253,14 @@ body{
     width: 12px; 
 } 
 .point_part { 
-    max-width: 700px; 
+    max-width: 100%; 
     display: none; 
 } 
 .point_part .panel-body { 
     margin: 0 auto; 
 } 
 .point_panel { 
-    max-width: 700px; 
+    max-width: 100%; 
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
 } 
@@ -267,14 +269,16 @@ body{
 } 
 #phone { 
     margin-top: 1.3em 
-} 
+}
+#phone_address_padding{
+	padding-left:0px;
+}
 .phone_part { 
    	width:100%;
     margin: 0 auto;
     margin-top:10px;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
-    padding-left:0px;
 } 
 .question_box { 
     height: 100px; 
@@ -287,20 +291,20 @@ body{
     width: 20px; 
 } 
 .question-heading { 
-    cursor: pointer 
+    cursor: pointer;
 } 
 .reward_part { 
-    max-width: 700px; 
-    margin: 0 auto; 
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top:-10px;
 } 
 .reward_part .panel_body { 
-    display: inline-block 
+    display: inline-block;
 } 
 .reward_part > .panel > .panel-body > img { 
     display: block 
 } 
-.show-menu, 
-.show-reward { 
+.show-menu, .show-reward { 
     cursor: pointer; 
     color: #b2b2b2; 
     display: none; 
@@ -312,35 +316,29 @@ body{
     display: inline-block; 
     margin: 0 auto; 
 } 
-.thumbnail:hover, 
-.thumbnail.active, 
-li.active a { 
-    opacity: 1 
+.thumbnail:hover, .thumbnail.active, li.active a { 
+    opacity: 1;
 } 
 .thumbnail { 
-    opacity: 0.3 
+    opacity: 0.; 
 } 
 li > a { 
-    color: #333333 
+    color: #333333;
 } 
 /* 미디어쿼리에 따른 css변경 사항*/ 
 @media only screen and (max-width: 320px) {  
     .address_part { 
         position: relative; 
         margin: 0 auto; 
-        padding-left:0px;
     } 
-    .rpad{
-		padding-left:1em;
-	}
     .address_part .panel-body { 
         font-size: 0.9em 
     } 
     body { 
-        background-color: #EDEFF2 
+        background-color: #EDEFF2;
     } 
     .bgImage, .gallery_part, .address_part .panel-body > img { 
-        display: none 
+        display: none;
     } 
     .buttons { 
         margin-top: 0; 
@@ -366,11 +364,11 @@ li > a {
         margin: 0 auto; 
     } 
     #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
-        display: none 
+        display: none;
     } 
     #footer { 
         font-size: 0.7em; 
-        background-color: #C9CED6; 
+        background-color: #C9CED6;
     } 
     #gallery { 
         width: 100%; 
@@ -399,10 +397,10 @@ li > a {
         width: 50px; 
     } 
     .gallery_part, .point_panel, .displayed, .reward_part small { 
-        display: none 
+        display: none;
     } 
     #inGallery img { 
-        vertical-align: middle 
+        vertical-align: middle; 
     } 
     .inline { 
         width: 70px; 
@@ -413,7 +411,7 @@ li > a {
         height: 60%; 
     } 
     .inline > h6 { 
-        width: 65px 
+        width: 65px;
     } 
     #img-profile { 
         margin: 0 auto; 
@@ -457,12 +455,12 @@ li > a {
         margin-top: 10px;
     } 
     #profile { 
-        margin: 0px;
-        padding:0px;
+        margin: 0 auto; 
+        padding: 0px;
+        position: relative; 
     } 
-    #profile .wrapper > img { 
+    #profile .wrapper> img { 
         width: 100%; 
-        
         margin-bottom: 20px; 
     } 
     #profile >.mobile_panel { 
@@ -474,7 +472,7 @@ li > a {
     } 
     #profile >.mobile_panel > h6, 
     h3 { 
-        background-color: #080808 
+        background-color: #080808;
     } 
     #profile > .kakao { 
         position: absolute; 
@@ -510,7 +508,7 @@ li > a {
         border: none; 
     } 
     .reward_part .panel-body { 
-        display: inline-block 
+        display: inline-block;
     } 
     .reward_part { 
         position: relative; 
@@ -530,10 +528,10 @@ li > a {
         width: 90%; 
     } 
     .reward_part .panel { 
-        margin-top: 10px 
+        margin-top: 10px;
     } 
     .reward_part, .point_panel { 
-        display: inline-block 
+        display: inline-block; 
     } 
     .reply_button> button { 
         color: #333333; 
@@ -547,7 +545,7 @@ li > a {
         overflow: auto; 
     } 
     #showMore, #count, .show-menu { 
-        display: block 
+        display: block;
     } 
     .show-point, #chat .panel-heading { 
         cursor: pointer; 
@@ -559,14 +557,11 @@ li > a {
         margin-top: 30px;
     } 
 } 
-@media only screen and (min-width: 320px) and (max-width: 480px) {  
+@media only screen and (min-width: 321px) and (max-width: 480px) {  
     .address_part { 
         position: relative; 
         margin: 0 auto; 
     } 
-    .rpad{
-		padding-left:1em;
-	}
     body { 
         background-color: #EDEFF2;
     } 
@@ -594,9 +589,8 @@ li > a {
     } 
     .gallery_expansion { 
         position: fixed; 
-        left: 0%; 
-        top: 5%; 
-        top:6%; /* target only IE8 + Firefox browsers */
+        left: 0%;
+        top: 6%; 
         height: 100%; 
         width: 100%; 
     } 
@@ -630,10 +624,7 @@ li > a {
         height: 60%; 
         width: 100%; 
     } 
-    .notice_part { 
-        margin: 0 auto;
-    } 
-    .notice_expansion { 
+    .notice_part , .notice_expansion { 
         margin: 0 auto;
     } 
     #menu_reward { 
@@ -661,8 +652,8 @@ li > a {
         display: inline-block;
     } 
     #profile { 
-        margin: 0px;
-        padding:0px;
+        margin: 0 auto;
+        padding : 0px;
     } 
     #profile .wrapper > img { 
         width: 100%; 
@@ -677,7 +668,7 @@ li > a {
         opacity: 0.7; 
     } 
     #profile >.mobile_panel > h6, h3 { 
-        background-color: #080808 
+        background-color: #080808;
     } 
     #profile > .kakao { 
         position: absolute; 
@@ -695,7 +686,7 @@ li > a {
         margin: 0 auto; 
     } 
     .point_panel, .gallery_expansion .panel-heading { 
-        display: none 
+        display: none;
     } 
     .phone_part, .address_part, .notice_part, .menu_part, .reward_part, .point_part, .point_panel { 
         margin: 0 auto; 
@@ -708,7 +699,7 @@ li > a {
         border: none; 
     } 
     #reply { 
-        background-color: #ffffff 
+        background-color: #ffffff;
     } 
     #reply_write, #write { 
         height: 100px; 
@@ -734,37 +725,72 @@ li > a {
         font-weight: normal; 
     } 
     .reward_part > .panel >.panel-heading > small { 
-        display: none 
+        display: none;
     } 
     .wrapper { 
-        margin-top: 30px 
+        margin-top: 30px; 
     } 
 } 
-@media (min-width:480px) and (max-width:767px){
-	.bgImage{background:#FFFFFF}
-	#profile{ display:none }
-	.mobile_nav{display:block}
-	#cover{display:none}
-	 .mobile_nav { 
-        background-color: #FFFFFF; 
-        vertical-align: middle; 
-        width: 100%; 
+/* 웹페이지 화면 상에서의 query*/ 
+@media only screen and (min-width: 480px) {  
+    .mobile_panel, .kakao, .point_part, .point_panel, .calling, .show-menu { 
+        display: none 
     } 
-    .mobile_nav li { 
+    #chat { 
+        display: none;
+    } 
+}
+@media (min-width:480px) and (max-width:767px) {
+	.address_part, .phone_part, .notice_part{
+    	margin:0 auto;
+       	width:100%;
+   	}
+   	.bgImage{
+   		background:#FFFFFF;
+   	}
+   	
+   	#profile, #cover , .gallery_part{
+   		display:none;
+   	}
+   	.phone_part{
+   	 	p:15px;
+   	}
+   	.address_part .panel-body > img, .gallery_part{
+   	    display:none;
+   	}
+   	.navbar{
+   	     max-width:100%;
+   	}
+   	#section{
+       float:none;
+       margin:0 auto;
+   	}
+   	#profile img, #img-profile{
+       display:none;
+   	}
+   	.mobile_nav{
+   		display:block;
+   		background-color:#FFFFFF;
+   		vertical-align: middle;
+   		width:100%;
+   	}
+   	.mobile_nav li { 
         font-size: 1.3em; 
        margin:0 auto;
     } 
     .mobile_nav > .nav-tabs > li { 
        margin:0 auto;
     } 
-    .gallery_part{display:none}
-    .phone_part, .address_part{
-    	padding-left:1em;
-    }
+   	.gallery_expansion{
+       max-width:100%;
+       margin: 0 auto;
+       float:none;
+   	}
+   	.phone_part, .address_part{
+   		padding-left:1em;
+   	}
 }
-/* 웹페이지 화면 상에서의 query*/ 
 @media only screen and (min-width: 768px) and (max-width: 992px) {  
-	
      #profile{
      	width:25%;
      }
@@ -772,18 +798,21 @@ li > a {
      	width:65%;
      }
      #mainTab li{
-        font-size:0.8em;
-    }
-    #mainTab h3{
-        font-size:1.9em;
-    }
-    #mainTab h6{
-        font-size:1em;
-    }
-    .small_img{
-    	height:45px;
-    	width:45px;
-    }
+     	font-size:0.8em;
+     }
+     #mainTab h3{
+     	font-size:1.9em;
+     }
+     #mainTab h6{
+     	font-size:1em;
+     }
+     #img-profile{
+     	display:none;
+     }
+     .small_img{
+     	height:45px;
+     	width:45px;
+     }
 } 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {  
      #profile{
@@ -792,5 +821,4 @@ li > a {
      #cover_photo{
      	width:65%;
      }
-     
-} 
+}
