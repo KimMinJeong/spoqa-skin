@@ -30,9 +30,21 @@
 			</div>
 		</div>
 		<div class="row">
-			<section id="menu">
 				<div class="col-sm-3 col-md-3" id="profile">
+					<div class="wrapper">
 					<img src="../static/img/230.png" id="img-profile" class="img-responsive">
+						<div class="navbar navbar-default">
+						    <ul class="nav nav-tabs nav-stacked" id="mainTab">
+								<li><h6>역삼,논현 > 레스토랑</h6>
+								<h3>타코드부로</h3>
+								<p><img src="../static/img/icn_user_grey.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
+								<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
+								<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
+								<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
+								<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"></a></li>
+							</ul>
+						</div>
+					</div>
 					<div class="mobile_panel">
 						<h6>역삼,논현 > 레스토랑</h6>
 						<h3>타코드부로</h3>
@@ -44,22 +56,10 @@
 						<p style="color:#FFFFFF">카톡문의</p>
 						</button>
 					</div>
-					<div class="navbar navbar-default">
-					    <ul class="nav nav-tabs nav-stacked" id="mainTab">
-							<li><h6>역삼,논현 > 레스토랑</h6>
-							<h3>타코드부로</h3>
-							<p><img src="../static/img/icn_user_grey.png" height="15px" width="15px" style="opacity: 0.4">1명이 도도 적립중입니다.</p></li>
-							<li class="#tab1 active"><a href="#cardUI" data-toggle="tab">매장정보</a></li>
-							<li class="#tab2"><a href="#menu_reward" data-toggle="tab">메뉴 &amp; 리워드</a></li>
-							<li class="#tab3"><a href="#gallery" data-toggle="tab">갤러리</a></li>
-							<li class="#tab4 hidden"><a href="#notice" data-toggle="tab"></a></li>
-						</ul>
-					</div>
 				</div>
-			</section>
 			<!-- COVER PHOTO 
 				=======================================-->
-			<div class="col-sm-8 col-md-8" id="cover_photo">
+			<div class="col-sm-9 col-md-9" id="cover_photo">
 				<div id="cover">
 					<img src="../static/img/700x300.png" class="img-responsive">
 				</div>
@@ -221,7 +221,7 @@
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
 								<span class="show-point pull-right" >156 <img src="../static/img/point.png" class="point_icn">
-									<span class="glyphicon glyphicon-chevron-right grey_text"></span>
+									<span class="glyphicon glyphicon-chevron-right grey_text"> </span>
 								</span>
 							</div>
 							<!--포인트 상세보기-->
@@ -602,7 +602,10 @@ $(document).ready(function(){
 <script>
     var width = $('.gallery_expansion .panel').width();
    var topMargin = width * 0.005;
-   if (navigator.userAgent.indexOf('Firefox') != -1) {                  
+   if (navigator.userAgent.indexOf('Firefox') != -1) {  
+   		if((window).width() > 320){
+   			$('.gallery_expansion').css('top', '6.5%');
+   		}                
        $('.gallery_expansion').css('margin-top', topMargin+'px');
    }
    if (navigator.userAgent.indexOf('Safari') != -1) {                  

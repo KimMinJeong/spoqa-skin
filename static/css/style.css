@@ -36,9 +36,6 @@ body {
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85;
 }
-#phone_address_padding{
-	padding-left:0px;
-}
 .black_text { 
     color: #333333 
 }
@@ -49,7 +46,10 @@ body {
     margin: 0 auto;
     margin-top:20px;
     max-width:700px;
-} 
+}
+#cardUI .panel-heading{
+	margin-bottom:-1em;
+}
 #count, .point_expansion, .question_editor { 
     display: none 
 } 
@@ -69,7 +69,7 @@ body {
 	height: 30px;
 }
 #footer { 
-    font-size: 0.7em;
+    font-size: 0.6em;
     color:#B2B2B2;
     position: absolute; 
     top: 100%;
@@ -89,10 +89,17 @@ body {
     margin-top:-10px;
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2); 
     opacity: 0.85; 
-} 
-.gallery_expansion li,.gallery_expansion > .panel  { 
+}
+.gallery_part .panel-body{
+	display:inline-block;
+}
+.gallery_expansion li{ 
     margin: 0 auto;
-} 
+}
+.gallery_expansion > .panel  {
+	margin : 0 auto;
+	max-width:700px;
+}
 .gallery_expansion >.panel > .panel-body img { 
     display: inline-block; 
     margin: 10px; 
@@ -100,7 +107,7 @@ body {
     width: 40px; 
 } 
 .grey_text { 
-    color: #b2b2b2 
+    color: #b2b2b2;
 } 
 #inGallery img { 
     height: 300px; 
@@ -127,10 +134,10 @@ body {
     max-height: 110px; 
 } 
 .inline > h6 { 
-    text-align: center 
+    text-align: center;
 } 
 .kakao_btn { 
-    background-color: #080808 
+    background-color: #080808;
 } 
 .navbar { 
     max-width:230px; 
@@ -146,7 +153,8 @@ body {
 .navbar > .nav > li { 
     border-bottom: 1px solid #C9CED6;
     border-left: 1px solid #C9CED6;
-    border-right: 1px solid #C9CED6
+    border-right: 1px solid #C9CED6;
+    border-top: 1px solid #C9CED6;
     border-color: #f5f7fa; 
 } 
 .navbar > .nav > li > h6 { 
@@ -195,7 +203,7 @@ body {
     max-height: 100px; 
 } 
 .media-heading { 
-    color: #333333 
+    color: #333333;
 } 
 .media-body { 
     max-width: 300px; 
@@ -230,9 +238,11 @@ body {
     box-shadow: 0px 0px 0px rgba(255,255,255,0.2); 
     filter: blur(1px); 
 } 
-#profile { 
-    margin: 0 auto; 
-    margin-top:20px;
+#profile .wrapper{
+	float:none; 
+    margin: 0 auto;
+    padding-top:20px;
+    margin-right:-1em;
 } 
 .point_icn { 
     height: 20px; 
@@ -259,7 +269,10 @@ body {
 } 
 #phone { 
     margin-top: 1.3em 
-} 
+}
+#phone_address_padding{
+	padding-left:0px;
+}
 .phone_part { 
    	width:100%;
     margin: 0 auto;
@@ -278,7 +291,7 @@ body {
     width: 20px; 
 } 
 .question-heading { 
-    cursor: pointer 
+    cursor: pointer;
 } 
 .reward_part { 
     max-width: 100%;
@@ -286,32 +299,31 @@ body {
     margin-top:-10px;
 } 
 .reward_part .panel_body { 
-    display: inline-block 
+    display: inline-block;
 } 
 .reward_part > .panel > .panel-body > img { 
     display: block 
 } 
-.show-menu, 
-.show-reward { 
+.show-menu, .show-reward { 
     cursor: pointer; 
     color: #b2b2b2; 
     display: none; 
     filter: blur(30px); 
 } 
 .small_img { 
-    height: 70px; 
-    width: 70px; 
+    height: 60px; 
+    width: 60px; 
     display: inline-block; 
     margin: 0 auto; 
 } 
 .thumbnail:hover, .thumbnail.active, li.active a { 
-    opacity: 1 
+    opacity: 1;
 } 
 .thumbnail { 
-    opacity: 0.3 
+    opacity: 0.; 
 } 
 li > a { 
-    color: #333333 
+    color: #333333;
 } 
 /* 미디어쿼리에 따른 css변경 사항*/ 
 @media only screen and (max-width: 320px) {  
@@ -323,10 +335,10 @@ li > a {
         font-size: 0.9em 
     } 
     body { 
-        background-color: #EDEFF2 
+        background-color: #EDEFF2;
     } 
     .bgImage, .gallery_part, .address_part .panel-body > img { 
-        display: none 
+        display: none;
     } 
     .buttons { 
         margin-top: 0; 
@@ -351,8 +363,8 @@ li > a {
         padding-top: 10px; 
         margin: 0 auto; 
     } 
-    #cover, #mainTab, #profile > .navbar, .gallery_expansion .panel-heading { 
-        display: none 
+    #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
+        display: none;
     } 
     #footer { 
         font-size: 0.7em; 
@@ -385,10 +397,10 @@ li > a {
         width: 50px; 
     } 
     .gallery_part, .point_panel, .displayed, .reward_part small { 
-        display: none 
+        display: none;
     } 
     #inGallery img { 
-        vertical-align: middle 
+        vertical-align: middle; 
     } 
     .inline { 
         width: 70px; 
@@ -399,7 +411,7 @@ li > a {
         height: 60%; 
     } 
     .inline > h6 { 
-        width: 65px 
+        width: 65px;
     } 
     #img-profile { 
         margin: 0 auto; 
@@ -444,11 +456,11 @@ li > a {
     } 
     #profile { 
         margin: 0 auto; 
+        padding: 0px;
         position: relative; 
     } 
-    #profile > img { 
-        width: 90%; 
-        height: 250px; 
+    #profile .wrapper> img { 
+        width: 100%; 
         margin-bottom: 20px; 
     } 
     #profile >.mobile_panel { 
@@ -460,7 +472,7 @@ li > a {
     } 
     #profile >.mobile_panel > h6, 
     h3 { 
-        background-color: #080808 
+        background-color: #080808;
     } 
     #profile > .kakao { 
         position: absolute; 
@@ -496,7 +508,7 @@ li > a {
         border: none; 
     } 
     .reward_part .panel-body { 
-        display: inline-block 
+        display: inline-block;
     } 
     .reward_part { 
         position: relative; 
@@ -516,10 +528,10 @@ li > a {
         width: 90%; 
     } 
     .reward_part .panel { 
-        margin-top: 10px 
+        margin-top: 10px;
     } 
     .reward_part, .point_panel { 
-        display: inline-block 
+        display: inline-block; 
     } 
     .reply_button> button { 
         color: #333333; 
@@ -533,7 +545,7 @@ li > a {
         overflow: auto; 
     } 
     #showMore, #count, .show-menu { 
-        display: block 
+        display: block;
     } 
     .show-point, #chat .panel-heading { 
         cursor: pointer; 
@@ -553,7 +565,7 @@ li > a {
     body { 
         background-color: #EDEFF2;
     } 
-    .bgImage, #cover, #mainTab, #profile > .navbar, .gallery_expansion .panel-heading { 
+    .bgImage, #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
         display: none;
     } 
     #cover_photo { 
@@ -577,8 +589,8 @@ li > a {
     } 
     .gallery_expansion { 
         position: fixed; 
-        left: 0%; 
-        top: 4%; 
+        left: 0%;
+        top: 6%; 
         height: 100%; 
         width: 100%; 
     } 
@@ -612,10 +624,7 @@ li > a {
         height: 60%; 
         width: 100%; 
     } 
-    .notice_part { 
-        margin: 0 auto;
-    } 
-    .notice_expansion { 
+    .notice_part , .notice_expansion { 
         margin: 0 auto;
     } 
     #menu_reward { 
@@ -643,11 +652,12 @@ li > a {
         display: inline-block;
     } 
     #profile { 
-        margin: 0 auto 
+        margin: 0 auto;
+        padding : 0px;
     } 
-    #profile > img { 
+    #profile .wrapper > img { 
         width: 100%; 
-        height: 250px; 
+        height: 50%; 
         margin-bottom: 20px; 
     } 
     #profile >.mobile_panel { 
@@ -658,7 +668,7 @@ li > a {
         opacity: 0.7; 
     } 
     #profile >.mobile_panel > h6, h3 { 
-        background-color: #080808 
+        background-color: #080808;
     } 
     #profile > .kakao { 
         position: absolute; 
@@ -676,7 +686,7 @@ li > a {
         margin: 0 auto; 
     } 
     .point_panel, .gallery_expansion .panel-heading { 
-        display: none 
+        display: none;
     } 
     .phone_part, .address_part, .notice_part, .menu_part, .reward_part, .point_part, .point_panel { 
         margin: 0 auto; 
@@ -689,7 +699,7 @@ li > a {
         border: none; 
     } 
     #reply { 
-        background-color: #ffffff 
+        background-color: #ffffff;
     } 
     #reply_write, #write { 
         height: 100px; 
@@ -715,10 +725,10 @@ li > a {
         font-weight: normal; 
     } 
     .reward_part > .panel >.panel-heading > small { 
-        display: none 
+        display: none;
     } 
     .wrapper { 
-        margin-top: 30px 
+        margin-top: 30px; 
     } 
 } 
 /* 웹페이지 화면 상에서의 query*/ 
@@ -727,16 +737,23 @@ li > a {
         display: none 
     } 
     #chat { 
-        display: none 
+        display: none;
     } 
 }
-@media (min-width:480px) and (max-width:768px) { 
+@media (min-width:480px) and (max-width:767px) {
 	.address_part, .phone_part, .notice_part{
     	margin:0 auto;
        	width:100%;
    	}
-   	.phone_part, .address_part{
-   	 	padding-left:15px;
+   	.bgImage{
+   		background:#FFFFFF;
+   	}
+   	
+   	#profile, #cover , .gallery_part{
+   		display:none;
+   	}
+   	.phone_part{
+   	 	p:15px;
    	}
    	.address_part .panel-body > img, .gallery_part{
    	    display:none;
@@ -751,12 +768,26 @@ li > a {
    	#profile img, #img-profile{
        display:none;
    	}
-   	#cover{display:none;}
-   	#coverformobile{display:block;width:93%}
+   	.mobile_nav{
+   		display:block;
+   		background-color:#FFFFFF;
+   		vertical-align: middle;
+   		width:100%;
+   	}
+   	.mobile_nav li { 
+        font-size: 1.3em; 
+       margin:0 auto;
+    } 
+    .mobile_nav > .nav-tabs > li { 
+       margin:0 auto;
+    } 
    	.gallery_expansion{
        max-width:100%;
        margin: 0 auto;
        float:none;
+   	}
+   	.phone_part, .address_part{
+   		padding-left:1em;
    	}
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {  
@@ -764,7 +795,7 @@ li > a {
      	width:25%;
      }
      #cover_photo{
-     	width:75%;
+     	width:65%;
      }
      #mainTab li{
      	font-size:0.8em;
@@ -778,4 +809,16 @@ li > a {
      #img-profile{
      	display:none;
      }
+     .small_img{
+     	height:45px;
+     	width:45px;
+     }
 } 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {  
+     #profile{
+     	width:25%;
+     }
+     #cover_photo{
+     	width:65%;
+     }
+}
