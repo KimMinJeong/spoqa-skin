@@ -59,7 +59,7 @@
 				</div>
 			<!-- COVER PHOTO 
 				=======================================-->
-			<div class="col-sm-9 col-md-9" id="cover_photo">
+			<div class="col-sm-8 col-md-8" id="cover_photo">
 				<div id="cover">
 					<img src="../static/img/700x300.png" class="img-responsive">
 				</div>
@@ -441,26 +441,21 @@
 
 
 <script type="text/javascript">
-	var is_chrome = window.chrome;
+//공지사항, 갤러리 펼쳐
 	$(document).ready(function(){
-	var browser = navigator.userAgent;
 	$('.show-notice').on('click', function(){
 		$('#mainTab a:eq(3)').tab('show');
 		$('#img-profile').hide();
 		$('.mobile_panel').hide();
 		$('.kakao').hide();
+		$('#footer').hide();
 		if(($(window).width() >= 480)){
             $('#img-profile').fadeIn();
         }
-		$('#mainTab li:nth-child(2)').attr('class', '#tab1');
 		});
-	});
-	$('.show-image').on('click', function(){
-		$('#mainTab a:eq(2)').tab('show');
 	});
 </script>	
 <script type="text/javascript">
-	
    $('#mobileTab li').on('click', function(){
       if($(this).attr('class').search('#tab1') != 0) {
          $('#img-profile').fadeOut();
@@ -472,7 +467,7 @@
          $('#img-profile').fadeIn();
          $('.mobile_panel').fadeIn();
          $('.kakao').fadeIn();
-       
+         $('#footer').fadeIn(); 
       }
    });
 </script>
@@ -480,7 +475,7 @@
 	$(document).ready(function(){
 	$('.show-notice').on('click', function(){
 		$('#mobileTab a:eq(3)').tab('show');
-		$('#mobileTab li:nth-child(1)').attr('class', '#tab1');
+		$('#mobileTab li:nth-child(1)').attr('class', '#tab1 active');
 		});
 	});
 	$('.show-image').on('click', function(){
@@ -493,13 +488,9 @@
 		$('.point_part').hide();
 	});
 </script>
-<script type="text/javascript">
-	$('tab1').click(function(){
-		$('#cardUI').show();
-	});
-</script>
 
 <script type="text/javascript">
+//메뉴 리워드 전체보기 및 모바일에서 뿌려주는 이미지 개수 줄임
 $.partlyShow = function(){
 		$('.inline').hide();
 		$('.inline:lt(3)').show();	
@@ -524,6 +515,9 @@ $.partlyShow = function(){
 			$('.show-reward').fadeOut();
 			$('.point_part').fadeOut();
 		});
+</script>
+<script type="text/javascript">
+// 사라졌던 클래스 및 아이디를 다시 보여줌
 	$('#mobileTab a[href="#menu_reward"]').on('click', function(){
 		$('.menu_part').show();
 		$.partlyShow();
@@ -541,6 +535,7 @@ $.partlyShow = function(){
 </script>
 
 <script>
+//포인트 전체보기
 	$('.show-point').on('click', function(){
 		$('.point_expansion').slideToggle('slow');
 		$('#open').toggle('slow');
@@ -550,7 +545,7 @@ $.partlyShow = function(){
 	});	
 </script>
 <script>
-
+//placeholder 부분
 	$(document).ready(function () {    
 	$('.question-heading').on('click', function(){
 		$(this).siblings('.question_editor').slideToggle('slow');
