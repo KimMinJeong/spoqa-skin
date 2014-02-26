@@ -562,10 +562,10 @@ $.partlyShow = function(){
    	$('#'+child).html(function () {  
        if ($.trim($(this).length) < 2) {
        	if(child=='reply'){
-       		placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>답변을 작성해주세요.</span>");
+       		placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png class=chat_icn>답변을 작성해주세요.</span>");
        	}
        	else if(child=='question'){
-           placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>매장에 궁금한 점을 작성해주세요.</span>");
+           placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png class=chat_icn>매장에 궁금한 점을 작성해주세요.</span>");
          }
            text = $.trim($('#'+child).html());
        }
