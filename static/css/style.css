@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); 
 body { 
-    font-family: 'Nanum Gothic', sans-serif 
+    font-family: 'Nanum Gothic', sans-serif ;
+    overflow-y:hidden;
 } 
 .row > .col-md-3, .col-md-9 { 
     vertical-align: middle!important 
@@ -16,6 +17,12 @@ body {
     -moz-filter: blur(30px); 
     filter: blur(30px); 
 } 
+#footer { 
+    font-size: 0.6em;
+    color:#B2B2B2;
+    max-width:670px;
+    margin-top:-10px;
+}
 .blur { 
     width: 100%; 
     height: 100%; 
@@ -50,6 +57,13 @@ body {
 #cardUI .panel-heading{
 	margin-bottom:-1em;
 }
+.gallery_expansion .panel-body{
+	padding:0px;
+}
+.gallery_expansion li > a{
+	padding:0px;
+	padding-bottom:1em;
+}
 #count, .point_expansion, .question_editor { 
     display: none 
 } 
@@ -68,17 +82,7 @@ body {
 	width: 30px;
 	height: 30px;
 }
-#footer { 
-    font-size: 0.6em;
-    color:#B2B2B2;
-    position: absolute; 
-    top: 100%;
-    margin-top:-10px;
-}
-#footer_margin{
-	margin-left:-15px;
-	margin-right:-15px;
-}
+
 #gallery_padding{
 	margin-top:10px;
 	padding:0px;
@@ -142,7 +146,7 @@ body {
 .navbar { 
     max-width:230px; 
     background-color: #FFFFFF;  
-    border-color: #f5f7fa; 
+    border-color: #C9CED6; 
     filter: blur(1px);
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
     
@@ -151,12 +155,11 @@ body {
     border: 1px;
 } 
 .navbar > .nav > li { 
-    border-bottom: 1px solid #C9CED6;
-    border-left: 1px solid #C9CED6;
-    border-right: 1px solid #C9CED6;
     border-top: 1px solid #C9CED6;
-    border-color: #f5f7fa; 
 } 
+#mainTab > li > a{
+	border-top:1px solid #C9CED6;
+}
 .navbar > .nav > li > h6 { 
     padding-top: 10px; 
     padding-left: 20px; 
@@ -238,11 +241,13 @@ body {
     box-shadow: 0px 0px 0px rgba(255,255,255,0.2); 
     filter: blur(1px); 
 } 
+#profile{
+	margin-right:-2em;
+}
 #profile .wrapper{
 	float:none; 
     margin: 0 auto;
     padding-top:20px;
-    margin-right:-1em;
 } 
 .point_icn { 
     height: 20px; 
@@ -296,7 +301,8 @@ body {
 .reward_part { 
     max-width: 100%;
     margin: 0 auto;
-    margin-top:-10px;
+    margin-top:-1em;
+   
 } 
 .reward_part .panel_body { 
     display: inline-block;
@@ -327,6 +333,7 @@ li > a {
 } 
 /* 미디어쿼리에 따른 css변경 사항*/ 
 @media only screen and (max-width: 320px) {  
+	body{overflow-y:scroll;}
     .address_part { 
         position: relative; 
         margin: 0 auto; 
@@ -334,9 +341,7 @@ li > a {
     .address_part .panel-body { 
         font-size: 0.9em 
     } 
-    body { 
-        background-color: #EDEFF2;
-    } 
+    body { background-color: #EDEFF2; } 
     .bgImage, .gallery_part, .address_part .panel-body > img { 
         display: none;
     } 
@@ -356,13 +361,10 @@ li > a {
         margin: 0 auto; 
         background-color: #EDEFF2; 
     } 
-    #cover_photo { 
+    #phone_address_padding{padding-left:1em;}
+    #cover_photo, #chat { 
         margin: 0 auto; 
-    } 
-    #chat { 
-        padding-top: 10px; 
-        margin: 0 auto; 
-    } 
+    }
     #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
         display: none;
     } 
@@ -396,6 +398,11 @@ li > a {
         height: 50px; 
         width: 50px; 
     } 
+     .gallery_expansion li > a{
+    	padding-top:1em;
+    	padding-left:0.5em;
+    	margin-right:0.5em;
+    }
     .gallery_part, .point_panel, .displayed, .reward_part small { 
         display: none;
     } 
@@ -459,6 +466,9 @@ li > a {
         padding: 0px;
         position: relative; 
     } 
+    #profile .wrapper{
+    	padding-top:0px;
+    }
     #profile .wrapper> img { 
         width: 100%; 
         margin-bottom: 20px; 
@@ -512,7 +522,7 @@ li > a {
     } 
     .reward_part { 
         position: relative; 
-        margin: 0 auto; 
+        margin-top:-2.2em; 
         width: 100%; 
     } 
     .reward_part span, .menu_part span { 
@@ -563,6 +573,7 @@ li > a {
         margin: 0 auto; 
     } 
     body { 
+    	overflow-y:auto;
         background-color: #EDEFF2;
     } 
     .bgImage, #cover, #mainTab, #profile .wrapper > .navbar, .gallery_expansion .panel-heading { 
@@ -571,6 +582,8 @@ li > a {
     #cover_photo { 
         margin: 0 auto; 
     } 
+    #phone_address_padding{padding-left:1em;}
+
     .container { 
         float: none; 
         margin: 0 auto; 
@@ -603,6 +616,11 @@ li > a {
         height: 100%; 
         width: 100%; 
     } 
+    .gallery_expansion li > a{
+    	padding-top:1em;
+    	padding-left:1em;
+    	margin-right:0.5em;
+    }
     .gallery_expansion > .panel > .panel-body { 
         margin: 0 auto; 
         padding-top: 0px; 
@@ -634,7 +652,7 @@ li > a {
         padding-top: 0px; 
         position: absolute; 
         top: 100%; 
-        width: 90%; 
+        width: 93%; 
     } 
     .mobile_nav { 
         background-color: #FFFFFF; 
@@ -655,6 +673,9 @@ li > a {
         margin: 0 auto;
         padding : 0px;
     } 
+    #profile .wrapper{
+    	padding-top:0px;
+    }
     #profile .wrapper > img { 
         width: 100%; 
         height: 50%; 
@@ -715,7 +736,7 @@ li > a {
     } 
     .reward_part { 
         position: relative; 
-        margin: 0 auto; 
+        margin:0 auto;
         width: 100% display: inline-block; 
     } 
     .reward_part span { 
@@ -736,9 +757,7 @@ li > a {
     .mobile_panel, .kakao, .point_part, .point_panel, .calling, .show-menu { 
         display: none 
     } 
-    #chat { 
-        display: none;
-    } 
+    
 }
 @media (min-width:480px) and (max-width:767px) {
 	.address_part, .phone_part, .notice_part{
@@ -749,14 +768,11 @@ li > a {
    		background:#FFFFFF;
    	}
    	
-   	#profile, #cover , .gallery_part{
-   		display:none;
+   	#profile, #cover , .gallery_part, .address_part .panel-body > img, .gallery_part, #profile img, #img-profile{
+       display:none;
    	}
    	.phone_part{
    	 	p:15px;
-   	}
-   	.address_part .panel-body > img, .gallery_part{
-   	    display:none;
    	}
    	.navbar{
    	     max-width:100%;
@@ -765,9 +781,11 @@ li > a {
        float:none;
        margin:0 auto;
    	}
-   	#profile img, #img-profile{
-       display:none;
-   	}
+   	.question_button > button {
+		width: 50%;
+		margin-right: -5px;
+		border: none;
+	}
    	.mobile_nav{
    		display:block;
    		background-color:#FFFFFF;
@@ -821,4 +839,9 @@ li > a {
      #cover_photo{
      	width:65%;
      }
+   
 }
+@media (min-width:762px){
+
+}
+

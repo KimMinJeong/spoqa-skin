@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="row">
-				<div class="col-sm-3 col-md-3" id="profile">
+				<div class="col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1" id="profile">
 					<div class="wrapper">
 					<img src="../static/img/230.png" id="img-profile" class="img-responsive">
 						<div class="navbar navbar-default">
@@ -221,7 +221,8 @@
 							<div class="panel-body">
 								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
 								<span class="show-point pull-right" >156 <img src="../static/img/point.png" class="point_icn">
-									<span class="glyphicon glyphicon-chevron-right grey_text"> </span>
+									<span class="glyphicon glyphicon-chevron-right grey_text" id="open"> </span>
+									<span class="glyphicon glyphicon-chevron-left grey_text" id="close"> </span>
 								</span>
 							</div>
 							<!--포인트 상세보기-->
@@ -304,7 +305,7 @@
 						<div class="col-xs-12 col-md-12 col-sm-12">
 							<div class="panel panel-default">
 								<div class="panel-heading question-heading" id="test">
-									<img src="../static/img/icn_message_orangep5.png" class="chat_icn">1:1 문의하기
+									<img src="../static/img/icn_message_orangep5.png" class="chat_icn orange_font"><span class="orange_font">1:1문의하기</span>
 								</div>
 								<div class="question_editor">
 									<div id="question" class="question_box" contenteditable="true"> 
@@ -336,7 +337,7 @@
 									안녕하세요, 고객님^^ 그건 쉐프님 마음이라 안알랴줌.
 								</div>
 								<div class="panel-heading question-heading" id="test2">
-									<img src="../static/img/icn_message_orangep5.png" class="chat_icn">답변하기
+									<img src="../static/img/icn_message_orangep5.png" class="chat_icn"><span class="orange_font">답변하기</span>
 								</div>
 								<div class="question_editor">
 									<div class="question_box" id="reply" contenteditable="true"> 
@@ -385,6 +386,8 @@
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
+						 			<img src="../static/img/dodo.jpg" class="small_img">
+						 			<img src="../static/img/dodo.jpg" class="small_img">	
 						 			<img src="../static/img/dodo.jpg" class="small_img">	
 							  	</div>
 							</div>
@@ -414,20 +417,25 @@
 	                		</div>
 	            	 	</div>
 	            	 </div>
-		         	<div class="col-xs-12 col-sm-12 col-md-12" id="footer">
-		         		<div class="panel panel-default">
-		         			<div class="panel-body">
-		         				<div class="col-md-1 col-sm-1" id="footer_margin"><img src="../static/img/img_dodosymbol.png" id="dodosymbol"></div>
-		         				<div class="col-md-11 col-sm-11">콘텐츠에 대한 저작권은 주식회사 스포카, 스포카패밀리레스토랑에 있으며 내용 및 이미지의 무단복제를 금합니다.
-			            		<br>ⓒSpoqa Inc. All rights reseved</div>
-	            			</div>
-	            		</div>
-		            </div>
+		         	
 					</div>		
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-sm-12">
+			<div id="footer">
+			<div class="panel panel-default">
+		         <div class="panel-body">
+		         	<div class="col-md-1 col-sm-1" id="footer_margin"><img src="../static/img/img_dodosymbol.png" id="dodosymbol"></div>
+		         	<div class="col-md-11 col-sm-11">콘텐츠에 대한 저작권은 주식회사 스포카, 스포카패밀리레스토랑에 있으며 내용 및 이미지의 무단복제를 금합니다.
+			           <br>ⓒSpoqa Inc. All rights reseved</div>
+	            	</div>
+	       </div>	
+			</div>
+			</div>
 		</div>
 	</div>
+</div>
 </div>
 </body>	
 
@@ -458,11 +466,13 @@
          $('#img-profile').fadeOut();
          $('.mobile_panel').fadeOut();
          $('.kakao').fadeOut();
+         $('#footer').fadeOut();
       }
       else{
          $('#img-profile').fadeIn();
          $('.mobile_panel').fadeIn();
          $('.kakao').fadeIn();
+       
       }
    });
 </script>
@@ -521,6 +531,7 @@ $.partlyShow = function(){
 		$('.reward_part').show();
 		$('.show-menu').show();
 		$('.point_part').show();
+		$('#close').hide();
 		});
 	$('#mobileTab a[href="#chat"]').on('click', function(){
 		$('.question-heading').show();
@@ -532,7 +543,8 @@ $.partlyShow = function(){
 <script>
 	$('.show-point').on('click', function(){
 		$('.point_expansion').slideToggle('slow');
-		$('.glyphicon').toggle('hide');
+		$('#open').toggle('slow');
+		$('#close').toggle('slow');
 		$('.reward_part').toggle('hide');
 		$('.menu_part').toggle('hide');
 	});	
@@ -550,10 +562,10 @@ $.partlyShow = function(){
    	$('#'+child).html(function () {  
        if ($.trim($(this).length) < 2) {
        	if(child=='reply'){
-       		placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>답변을 작성해주세요.</span>");
+       		placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png class=chat_icn>답변을 작성해주세요.</span>");
        	}
        	else if(child=='question'){
-           placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png style=height:50px;width:50px;>매장에 궁금한 점을 작성해주세요.</span>");
+           placehold(child, "<span class=grey_text><img src=../static/img/icn_message_orangep5.png class=chat_icn>매장에 궁금한 점을 작성해주세요.</span>");
          }
            text = $.trim($('#'+child).html());
        }
