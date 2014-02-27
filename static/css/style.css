@@ -47,8 +47,8 @@ body {
     box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
     opacity: 0.85;
 }
-.black_text { color: #333333 }
-#cover { width: 100% }
+.black_text { color: #333333; }
+#cover { width: 100%; }
 #cover_photo {
     margin: 0 auto;
     margin-top: 20px;
@@ -150,7 +150,7 @@ body {
     padding-left: 20px;
     color: #888888;
 }
-.nav > li > a:hover {
+.navbar > .nav > li > a:hover {
     background-color: #f5f7fa;
     color: #e66125;
 }
@@ -255,14 +255,13 @@ body {
 }
 .question-heading { cursor: pointer }
 .reward_part {
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     margin-top: -1em;
 }
 .reward_part .panel_body { display: inline-block }
 .reward_part > .panel > .panel-body > img { display: block }
-.show-menu,
-.show-reward {
+.show-menu, .show-reward {
     cursor: pointer;
     color: #b2b2b2;
     display: none;
@@ -664,10 +663,7 @@ li > a { color: #333333 }
     .show-menu { display: none }
 }
 @media (min-width:480px) and (max-width:767px) { 
-	body{overflow-y:auto;}
-    .address_part,
-    .phone_part,
-    .notice_part {
+    .address_part, .phone_part, .notice_part {
         margin: 0 auto;
         width: 100%;
     }
@@ -675,13 +671,9 @@ li > a { color: #333333 }
     	margin-top:-1.5em;
     }
     .bgImage { background: #FFFFFF }
-    #profile,
-    #cover,
-    .gallery_part,
-    .address_part .panel-body > img,
-    .gallery_part,
-    #profile img,
-    #img-profile { display: none }
+    #profile,#cover,.gallery_part,.address_part .panel-body > img,.gallery_part,#profile img, #img-profile {
+    	 display: none
+    }
     .phone_part { p: 15px }
     .navbar { max-width: 100% }
     #section {
@@ -709,8 +701,27 @@ li > a { color: #333333 }
         margin: 0 auto;
         float: none;
     }
-    .phone_part,
-    .address_part { padding-left: 1em }
+    .phone_part,.address_part { padding-left: 1em }
+    .point_part{
+    	position:absolute;
+    	top:10px;
+    	width:100%;
+    	margin: 0 auto;
+    	padding-right:30px;
+    }
+    .reward_part{
+    	position:absolute;
+    	top:76px;
+    	width:100%;
+		padding-right:30px;   	
+    }
+    .menu_part{
+    	position:absolute;
+    	top:340px;
+    	width:100%;
+    	padding-right:30px;
+    }
+    
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) { 
     #profile { width: 25% }

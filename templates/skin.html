@@ -439,22 +439,6 @@
 </div>
 </body>	
 
-
-<script type="text/javascript">
-//공지사항, 갤러리 펼쳐
-	$(document).ready(function(){
-	$('.show-notice').on('click', function(){
-		$('#mainTab a:eq(3)').tab('show');
-		$('#img-profile').hide();
-		$('.mobile_panel').hide();
-		$('.kakao').hide();
-		$('#footer').hide();
-		if(($(window).width() >= 480)){
-            $('#img-profile').fadeIn();
-        }
-		});
-	});
-</script>	
 <script type="text/javascript">
    $('#mobileTab li').on('click', function(){
       if($(this).attr('class').search('#tab1') != 0) {
@@ -471,16 +455,24 @@
       }
    });
    $('#mainTab').on('click', function(){
-   	$('#footer').fadeIn();
+   	$('#footer').show();
    });
 </script>
 <script type="text/javascript">
+//공지사항, 이미지, 갤러리 펼쳐보기
 	$(document).ready(function(){
-	$('.show-notice').on('click', function(){
+		$('.show-notice').on('click', function(){
 		$('#mobileTab a:eq(3)').tab('show');
 		$('#mobileTab li:nth-child(1)').attr('class', '#tab1 active');
-		});
-	});
+		$('#mainTab a:eq(3)').tab('show');
+		$('#img-profile').hide();
+		$('.mobile_panel').hide();
+		$('.kakao').hide();
+		$('#footer').hide();
+		if($(window).width() >= 480){
+            $('#img-profile').fadeIn();
+        }
+     });
 	$('.show-image').on('click', function(){
 		$('#mobileTab a:eq(2)').tab('show');
 	});
@@ -489,6 +481,7 @@
 		$('.media').show();
 		$('.show-menu').hide();
 		$('.point_part').hide();
+	});
 	});
 </script>
 
@@ -541,13 +534,27 @@ $.partlyShow = function(){
 
 <script>
 //포인트 전체보기
+	if(($(window).width() >= 480) && $(window).width() <=767){
+			$('.show-reward').click (function(){
+				$('.reward_part').css({'top':'10px'});
+			});
+			$('.show-menu').click (function(){
+				$('.menu_part').css({'top':'10px'});
+			});
+			$('.tab2').click( function(){
+				$('.point_part').css({'top':'10px'});
+				$('.reward_part').css({'top':'76px'});
+				$('.menu_part').css({'top':'340px'});
+			});
+	}
 	$('.show-point').on('click', function(){
 		$('.point_expansion').slideToggle('slow');
 		$('#open').toggle('slow');
 		$('#close').toggle('slow');
 		$('.reward_part').toggle('hide');
 		$('.menu_part').toggle('hide');
-	});	
+	});
+	
 </script>
 <script>
 //placeholder 부분
