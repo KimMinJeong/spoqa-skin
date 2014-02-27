@@ -219,7 +219,7 @@
 					<div class="point_part">
 						<div class="panel panel-default">
 							<div class="panel-body">
-								<img src="../static/img/icn_wallet_orangep5.png" class="icn">내 포인트
+								<img src="../static/img/icn_wallet_orangep5.png" class="icn"> 포인트
 								<span class="show-point pull-right" >156 <img src="../static/img/point.png" class="point_icn">
 									<span class="glyphicon glyphicon-chevron-right grey_text" id="open"> </span>
 									<span class="glyphicon glyphicon-chevron-left grey_text" id="close"> </span>
@@ -439,22 +439,6 @@
 </div>
 </body>	
 
-
-<script type="text/javascript">
-//공지사항, 갤러리 펼쳐
-	$(document).ready(function(){
-	$('.show-notice').on('click', function(){
-		$('#mainTab a:eq(3)').tab('show');
-		$('#img-profile').hide();
-		$('.mobile_panel').hide();
-		$('.kakao').hide();
-		$('#footer').hide();
-		if(($(window).width() >= 480)){
-            $('#img-profile').fadeIn();
-        }
-		});
-	});
-</script>	
 <script type="text/javascript">
    $('#mobileTab li').on('click', function(){
       if($(this).attr('class').search('#tab1') != 0) {
@@ -470,14 +454,25 @@
          $('#footer').fadeIn(); 
       }
    });
+   $('#mainTab').on('click', function(){
+   	$('#footer').show();
+   });
 </script>
 <script type="text/javascript">
+//공지사항, 이미지, 갤러리 펼쳐보기
 	$(document).ready(function(){
-	$('.show-notice').on('click', function(){
+		$('.show-notice').on('click', function(){
 		$('#mobileTab a:eq(3)').tab('show');
 		$('#mobileTab li:nth-child(1)').attr('class', '#tab1 active');
-		});
-	});
+		$('#mainTab a:eq(3)').tab('show');
+		$('#img-profile').hide();
+		$('.mobile_panel').hide();
+		$('.kakao').hide();
+		$('#footer').hide();
+		if($(window).width() >= 480){
+            $('#img-profile').fadeIn();
+        }
+     });
 	$('.show-image').on('click', function(){
 		$('#mobileTab a:eq(2)').tab('show');
 	});
@@ -486,6 +481,7 @@
 		$('.media').show();
 		$('.show-menu').hide();
 		$('.point_part').hide();
+	});
 	});
 </script>
 
@@ -507,6 +503,8 @@ $.partlyShow = function(){
 		}
 		if(($(window).width() >= 480)){
 			$('#img-profile').fadeIn();
+			$('.kakao').fadeOut();
+			$('.mobile_panel').fadeOut();
 		}
 	});
 		$('.show-reward').click( function(){
