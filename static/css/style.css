@@ -150,7 +150,7 @@ body {
     padding-left: 20px;
     color: #888888;
 }
-.navbar >.nav > li >a:hover {
+.nav > li > a:hover {
     background-color: #f5f7fa;
     color: #e66125;
 }
@@ -643,7 +643,7 @@ li > a { color: #333333 }
     .reward_part {
         position: relative;
         margin: 0 auto;
-        width: 100% display: inline-block;
+        width: 100%; display: inline-block;
     }
     .reward_part span {
         vertical-align: middle;
