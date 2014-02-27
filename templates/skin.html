@@ -536,13 +536,27 @@ $.partlyShow = function(){
 
 <script>
 //포인트 전체보기
+	if(($(window).width() >= 480) && $(window).width() <=767){
+			$('.show-reward').click (function(){
+				$('.reward_part').css({'top':'10px'});
+			});
+			$('.show-menu').click (function(){
+				$('.menu_part').css({'top':'10px'});
+			});
+			$('.tab2').click( function(){
+				$('.point_part').css({'top':'10px'});
+				$('.reward_part').css({'top':'76px'});
+				$('.menu_part').css({'top':'340px'});
+			});
+	}
 	$('.show-point').on('click', function(){
 		$('.point_expansion').slideToggle('slow');
 		$('#open').toggle('slow');
 		$('#close').toggle('slow');
 		$('.reward_part').toggle('hide');
 		$('.menu_part').toggle('hide');
-	});	
+	});
+	
 </script>
 <script>
 //placeholder 부분
