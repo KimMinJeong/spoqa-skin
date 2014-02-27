@@ -93,6 +93,9 @@ body {
     margin : 0 auto;
     max-width: 700px;
 }
+.gallery_expansion a{
+	filter:blur(20px)
+}
 .gallery_expansion >.panel > .panel-body img {
     display: inline-block;
     margin: 10px;
@@ -271,14 +274,13 @@ body {
     display: inline-block;
     margin: 0 auto;
 }
-.thumbnail:hover,
-.thumbnail.active,
+a.thumbnail:hover,
 li.active a { opacity: 1 }
-.thumbnail { opacity: 0. }
+a.thumbnail.active,
+.thumbnail { opacity: 0.5 }
 li > a { color: #333333 }
 /* 미디어쿼리에 따른 css변경 사항*/
 @media only screen and (max-width: 320px) { 
-    body { overflow-y: scroll }
     .address_part {
         position: relative;
         margin: 0 auto;
@@ -662,11 +664,15 @@ li > a { color: #333333 }
     .show-menu { display: none }
 }
 @media (min-width:480px) and (max-width:767px) { 
+	body{overflow-y:auto;}
     .address_part,
     .phone_part,
     .notice_part {
         margin: 0 auto;
         width: 100%;
+    }
+    .reward_part{
+    	margin-top:-1.5em;
     }
     .bgImage { background: #FFFFFF }
     #profile,
