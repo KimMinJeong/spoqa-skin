@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 body {
     font-family: 'Nanum Gothic', sans-serif;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .row > .col-md-3,
 .col-md-9 { vertical-align: middle!important }
