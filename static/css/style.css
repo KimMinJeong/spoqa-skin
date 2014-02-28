@@ -404,8 +404,10 @@ li > a { color: #333333 }
         color: #FFFFFF;
         opacity: 0.7;
     }
-    #profile >.mobile_panel > h6,
-    h3 { background-color: #080808 }
+    #profile >.mobile_panel > h6,h3 { 
+    	background-color: #080808;
+    	padding:4px;
+    }
     #profile > .kakao {
         position: absolute;
         top: 63%;
@@ -435,7 +437,7 @@ li > a { color: #333333 }
     .question_button > button {
         color: #333333;
         outline: none;
-        width: 50.5%;
+        width: 50%;
         margin-right: -5px;
         border: none;
     }
@@ -485,10 +487,12 @@ li > a { color: #333333 }
     }
     .wrapper { margin-top: 30px }
 }
-@media only screen and (min-width: 321px) and (max-width: 480px) { 
+@media only screen and (min-width: 320px) and (max-width: 480px) { 
     .address_part {
         position: relative;
-        margin: 0 auto;
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
+        opacity: 0.85;
+        margin-top:-10px;
     }
     body {
         overflow-y: auto;
@@ -547,12 +551,28 @@ li > a { color: #333333 }
         vertical-align: middle;
         width: 120%;
     }
+    .inline{
+    	width:30%;
+    }
     .inline > img {
         height: 60%;
-        width: 100%;
+        width:100%;
     }
-    .notice_part,
-    .notice_expansion { margin: 0 auto }
+    .nav-tabs > li{
+       float:none;
+       display:inline-block;
+       *display:inline;/*ie7 ifx*/
+       zoom:1;
+  	}
+   	.nav-tabs{text-align:center;}
+   	.notice_part{
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
+        opacity: 0.85;
+        margin-top:-10px;
+    }
+    .notice_expansion{ 
+    	margin-top:10px;
+    }
     #menu_reward { margin-top: -15px }
     .menu_part {
         padding-top: 0px;
@@ -567,6 +587,7 @@ li > a { color: #333333 }
     }
     .mobile_nav li {
         font-size: 0.9em;
+        margin: 2.5px;
         margin-left: -9px;
     }
     .mobile_nav > .nav-tabs > li { margin-right: -5px }
@@ -593,8 +614,10 @@ li > a { color: #333333 }
         color: #FFFFFF;
         opacity: 0.7;
     }
-    #profile >.mobile_panel > h6,
-    h3 { background-color: #080808 }
+    #profile >.mobile_panel > h6,h3 { 
+    	background-color: #080808;
+    	padding:4px;
+    }
     #profile > .kakao {
         position: absolute;
         top: 70%;
@@ -603,26 +626,28 @@ li > a { color: #333333 }
         opacity: 0.7;
         color: #FFFFFF;
     }
-    .phone_part { margin: 0 auto }
+    .phone_part { 
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
+        opacity: 0.85;
+        margin-top:-10px;
+    }
     .point_part {
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
+        opacity: 0.85;
         width: 100%;
-        margin: 0 auto;
+        margin-bottom:-20px;
     }
     .point_panel,
     .gallery_expansion .panel-heading { display: none }
-    .phone_part,
-    .address_part,
-    .notice_part,
     .menu_part,
     .reward_part,
-    .point_part,
     .point_panel {
         margin: 0 auto;
         box-shadow: 0px 1px 1px rgba(255,255,255,0.2);
         opacity: 0.85;
     }
     .question_button > button {
-        width: 50.5%;
+        width: 50%;
         margin-right: -5px;
         border: none;
     }
@@ -693,6 +718,7 @@ li > a { color: #333333 }
     }
     .mobile_nav li {
         font-size: 1.3em;
+        margin: 2.5px;
         margin: 0 auto;
     }
     .mobile_nav > .nav-tabs > li { margin: 0 auto }
